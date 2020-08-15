@@ -17,8 +17,8 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/clock"
-	"magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/clock"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/timestamp"

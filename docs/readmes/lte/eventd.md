@@ -13,7 +13,7 @@ Events are placed into `streams`, which are like logical buckets for events. The
 
 ### Infrastructure
 
-Eventd runs on the gateway under magmad. The files for eventd are under `orc8r/gateway/python`, and it's respective client APIs make RPC calls to the service.
+Eventd runs on the gateway under magmad. The files for eventd are under `magma/gateway/python`, and it's respective client APIs make RPC calls to the service.
 
 #### Dependencies
 

@@ -22,11 +22,11 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/directoryd"
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/state/protos"
-	state_types "magma/orc8r/cloud/go/services/state/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 )
 
 const (

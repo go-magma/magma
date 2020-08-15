@@ -29,8 +29,8 @@ import (
 	"fmt"
 	"sort"
 
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/cloud/go/tools/migrations"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations"
 
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/jsonpb"

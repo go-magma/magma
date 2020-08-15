@@ -14,8 +14,8 @@ limitations under the License.
 package main
 
 import (
-	"magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/pluginimpl"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/pluginimpl"
 )
 
 // plugins must implement a main - these are expected to be empty

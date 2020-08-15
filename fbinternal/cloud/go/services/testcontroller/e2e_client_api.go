@@ -16,12 +16,12 @@ package testcontroller
 import (
 	"context"
 
-	"magma/fbinternal/cloud/go/services/testcontroller/protos"
-	"magma/fbinternal/cloud/go/services/testcontroller/statemachines"
-	"magma/fbinternal/cloud/go/services/testcontroller/storage"
-	"magma/orc8r/cloud/go/serde"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/protos"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/statemachines"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/registry"
 
 	"github.com/golang/glog"
 	"github.com/pkg/errors"

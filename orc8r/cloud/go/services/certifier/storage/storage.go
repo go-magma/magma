@@ -14,7 +14,7 @@ limitations under the License.
 package storage
 
 import (
-	"magma/orc8r/cloud/go/services/certifier/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/protos"
 )
 
 // CertifierStorage provides storage functionality for mapping serial numbers to certificate information.
@@ -23,7 +23,7 @@ type CertifierStorage interface {
 	ListSerialNumbers() ([]string, error)
 
 	// GetCertInfo returns the certificate info associated with the serial number.
-	// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+	// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 	GetCertInfo(serialNumber string) (*protos.CertificateInfo, error)
 
 	// GetManyCertInfo maps the passed serial numbers to their associated certificate info.

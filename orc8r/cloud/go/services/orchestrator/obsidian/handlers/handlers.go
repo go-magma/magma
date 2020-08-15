@@ -17,12 +17,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"magma/orc8r/cloud/go/models"
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/orc8r"
-	eventdh "magma/orc8r/cloud/go/services/eventd/obsidian/handlers"
-	models2 "magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	"magma/orc8r/lib/go/service/config"
+	"github.com/go-magma/magma/lib/go/service/config"
+	"github.com/go-magma/magma/orc8r/cloud/go/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	eventdh "github.com/go-magma/magma/orc8r/cloud/go/services/eventd/obsidian/handlers"
+	models2 "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 
 	"github.com/labstack/echo"
 	"github.com/olivere/elastic/v7"

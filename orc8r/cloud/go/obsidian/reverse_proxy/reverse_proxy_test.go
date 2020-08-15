@@ -21,11 +21,11 @@ import (
 	"net/http"
 	"testing"
 
-	"magma/orc8r/cloud/go/obsidian/access/tests"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/service"
-	"magma/orc8r/cloud/go/test_utils"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/access/tests"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"

@@ -18,10 +18,10 @@ import (
 	"net/http"
 	"sort"
 
-	"magma/fbinternal/cloud/go/services/testcontroller"
-	"magma/fbinternal/cloud/go/services/testcontroller/obsidian/models"
-	"magma/fbinternal/cloud/go/services/testcontroller/storage"
-	"magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/obsidian/models"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"

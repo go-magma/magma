@@ -16,8 +16,8 @@ package servicers
 import (
 	"context"
 
-	"magma/orc8r/cloud/go/services/directoryd/storage"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd/storage"
 
 	"github.com/pkg/errors"
 )

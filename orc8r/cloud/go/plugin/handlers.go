@@ -13,7 +13,7 @@ limitations under the License.
 
 package plugin
 
-import "magma/orc8r/cloud/go/obsidian"
+import "github.com/go-magma/magma/orc8r/cloud/go/obsidian"
 
 // FlattenHandlerLists turns a variadic list of obsidian handlers into a
 // single flattened list of handlers. This is typically used to merge handlers

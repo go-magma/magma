@@ -17,11 +17,11 @@ import (
 	"context"
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/blobstore/mocks"
-	"magma/orc8r/cloud/go/services/state/servicers"
-	"magma/orc8r/cloud/go/storage"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

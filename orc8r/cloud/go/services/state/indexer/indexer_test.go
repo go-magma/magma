@@ -17,8 +17,8 @@ import (
 	"sort"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
-	state_types "magma/orc8r/cloud/go/services/state/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	assert "github.com/stretchr/testify/require"
 )

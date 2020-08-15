@@ -17,8 +17,8 @@ import (
 	"errors"
 	"time"
 
-	"magma/orc8r/cloud/go/services/dispatcher/broker/memstore"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/broker/memstore"
 )
 
 const (

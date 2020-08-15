@@ -21,8 +21,8 @@ import (
 	"strings"
 	"time"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/services/eventd/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/eventd/obsidian/models"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/golang/glog"

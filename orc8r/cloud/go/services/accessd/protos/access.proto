@@ -47,11 +47,11 @@ limitations under the License.
 //
 syntax = "proto3";
 
-import "orc8r/protos/common.proto";
-import "orc8r/protos/identity.proto";
+import "common.proto";
+import "identity.proto";
 
 package magma.orc8r.accessd;
-option go_package = "protos";
+option go_package = "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos";
 
 // Access Control Data Structures & Definitions
 message AccessControl {

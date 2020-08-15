@@ -16,12 +16,12 @@ package storage_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/identity"
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/cloud/go/services/accessd/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/golang/protobuf/proto"
 	_ "github.com/mattn/go-sqlite3"

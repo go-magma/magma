@@ -16,10 +16,10 @@ package storage_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/services/directoryd/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	merrors "magma/orc8r/lib/go/errors"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/stretchr/testify/assert"

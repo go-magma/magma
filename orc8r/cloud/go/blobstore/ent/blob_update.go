@@ -16,10 +16,10 @@ package ent
 import (
 	"context"
 	"fmt"
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
-	"magma/orc8r/cloud/go/blobstore/ent/predicate"
 
 	"github.com/facebookincubator/ent/dialect/sql"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/predicate"
 )
 
 // BlobUpdate is the builder for updating Blob entities.

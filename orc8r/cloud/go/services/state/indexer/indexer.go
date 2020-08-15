@@ -16,7 +16,7 @@ package indexer
 import (
 	"fmt"
 
-	state_types "magma/orc8r/cloud/go/services/state/types"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	"github.com/thoas/go-funk"
 )

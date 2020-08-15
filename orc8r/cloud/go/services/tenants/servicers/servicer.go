@@ -17,10 +17,10 @@ import (
 	"context"
 	"fmt"
 
-	"magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
 
-	"magma/orc8r/cloud/go/services/tenants/servicers/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants/servicers/storage"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

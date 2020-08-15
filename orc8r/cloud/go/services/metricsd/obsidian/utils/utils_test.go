@@ -17,7 +17,7 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/services/metricsd/obsidian/utils"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/obsidian/utils"
 
 	"github.com/stretchr/testify/assert"
 )

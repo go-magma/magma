@@ -17,12 +17,12 @@ import (
 	"errors"
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/blobstore/mocks"
-	"magma/orc8r/cloud/go/services/certifier/protos"
-	cstorage "magma/orc8r/cloud/go/services/certifier/storage"
-	"magma/orc8r/cloud/go/storage"
-	merrors "magma/orc8r/lib/go/errors"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/protos"
+	cstorage "github.com/go-magma/magma/orc8r/cloud/go/services/certifier/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/timestamp"

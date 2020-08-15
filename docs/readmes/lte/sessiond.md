@@ -55,7 +55,7 @@ SessionD interfaces with three distinct external components.
   - GxTrackedRules: Wallet is empty if there are no active PCRF tracked policy.
     PCRF tracked policies are policies with tracking type `PCRF_ONLY` or 
     `PCRF_AND_OCS`. 
-- `magma/lte/gateway/configs/sessiond.yml` has more configurations that are 
+- `magma/modules/lte/gateway/configs/sessiond.yml` has more configurations that are 
    managed on each gateway.
    
 ## Stateless Operation

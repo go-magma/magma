@@ -18,14 +18,14 @@ check & manage Identity access permissions.
 package servicers
 
 import (
-	"magma/orc8r/cloud/go/services/accessd/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd/storage"
 
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
 )
 
 type AccessControlServer struct {

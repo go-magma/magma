@@ -11,8 +11,8 @@ import (
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	storage "magma/fbinternal/cloud/go/services/testcontroller/storage"
-	protos "magma/orc8r/lib/go/protos"
+	storage "github.com/go-magma/fbinternal/cloud/go/services/testcontroller/storage"
+	protos "github.com/go-magma/magma/lib/go/protos"
 	math "math"
 )
 

@@ -2,7 +2,7 @@
 
 package mocks
 
-import configurator "magma/orc8r/cloud/go/services/configurator"
+import configurator "github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 import mock "github.com/stretchr/testify/mock"
 import proto "github.com/golang/protobuf/proto"
 

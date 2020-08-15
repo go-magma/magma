@@ -14,15 +14,15 @@
 package main
 
 import (
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/service"
-	exporter_protos "magma/orc8r/cloud/go/services/metricsd/protos"
-	"magma/orc8r/cloud/go/services/orchestrator"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
-	"magma/orc8r/cloud/go/services/orchestrator/servicers"
-	indexer_protos "magma/orc8r/cloud/go/services/state/protos"
-	streamer_protos "magma/orc8r/cloud/go/services/streamer/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/service"
+	exporter_protos "github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/servicers"
+	indexer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
+	streamer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/streamer/protos"
 
 	"github.com/golang/glog"
 )

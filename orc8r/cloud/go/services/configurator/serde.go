@@ -14,7 +14,7 @@
 package configurator
 
 import (
-	"magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
 )
 
 // NewNetworkConfigSerde returns a network config domain Serde implementation

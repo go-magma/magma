@@ -14,7 +14,7 @@
 package migrate
 
 import (
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
 
 	"github.com/facebookincubator/ent/dialect/sql/schema"
 	"github.com/facebookincubator/ent/schema/field"

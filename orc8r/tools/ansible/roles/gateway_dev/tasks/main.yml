@@ -37,7 +37,7 @@
   when: full_provision
 
 - name: Create a symlink for the basic orc8r templates
-  file: src={{ magma_root }}/orc8r/gateway/configs/templates path=/var/opt/magma/templates state=link force=yes
+  file: src={{ magma_root }}/gateway/configs/templates path=/var/opt/magma/templates state=link force=yes
   when: full_provision
 
 ##################################
@@ -82,7 +82,7 @@
 
 - name: Copy orc8r scripts
   copy:
-    src: '{{ magma_root }}/orc8r/gateway/python/scripts/{{ item }}'
+    src: '{{ magma_root }}/gateway/python/scripts/{{ item }}'
     dest: /usr/local/bin/{{ item }}
     force: yes
     remote_src: yes

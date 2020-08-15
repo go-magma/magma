@@ -22,8 +22,8 @@ import (
 	"log"
 	"os"
 
-	"magma/orc8r/lib/go/security/csr"
-	"magma/orc8r/lib/go/security/key"
+	"github.com/go-magma/magma/lib/go/security/csr"
+	"github.com/go-magma/magma/lib/go/security/key"
 )
 
 var (

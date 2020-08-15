@@ -19,7 +19,7 @@ import (
 	"sort"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/metricsd/prometheus/restrictor"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/prometheus/restrictor"
 
 	"github.com/labstack/echo"
 	"github.com/prometheus/common/model"

@@ -17,11 +17,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
-	"magma/orc8r/cloud/go/blobstore/ent/predicate"
 	"math"
 
 	"github.com/facebookincubator/ent/dialect/sql"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/predicate"
 )
 
 // BlobQuery is the builder for querying Blob entities.

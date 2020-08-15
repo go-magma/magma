@@ -14,9 +14,9 @@
 package models
 
 import (
-	"magma/devmand/cloud/go/devmand"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/devmand/cloud/go/devmand"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 )
 
 // DEVICE HELPERS

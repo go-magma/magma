@@ -14,12 +14,12 @@ limitations under the License.
 package plugin
 
 import (
-	"magma/devmand/cloud/go/devmand"
-	"magma/devmand/cloud/go/protos/mconfig"
-	models2 "magma/devmand/cloud/go/services/devmand/obsidian/models"
-	"magma/orc8r/cloud/go/services/configurator"
-	configuratorprotos "magma/orc8r/cloud/go/services/configurator/protos"
-	merrors "magma/orc8r/lib/go/errors"
+	"github.com/go-magma/devmand/cloud/go/devmand"
+	"github.com/go-magma/devmand/cloud/go/protos/mconfig"
+	models2 "github.com/go-magma/devmand/cloud/go/services/devmand/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	configuratorprotos "github.com/go-magma/magma/orc8r/cloud/go/services/configurator/protos"
+	merrors "github.com/go-magma/magma/lib/go/errors"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"

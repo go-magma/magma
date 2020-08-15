@@ -16,13 +16,13 @@ package test_utils
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/service/middleware/unary/test_utils"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/service/middleware/unary/test_utils"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
 
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"

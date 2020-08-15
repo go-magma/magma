@@ -18,15 +18,15 @@ import (
 	"sync"
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	accessd_test_init "magma/orc8r/cloud/go/services/accessd/test_init"
-	certifier_test_init "magma/orc8r/cloud/go/services/certifier/test_init"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/configurator/protos"
-	"magma/orc8r/cloud/go/services/configurator/servicers"
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/cloud/go/test_utils"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	accessd_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/test_init"
+	certifier_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/certifier/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 )
 
 func StartTestService(t *testing.T) {

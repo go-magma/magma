@@ -34,9 +34,9 @@ import (
 	"strings"
 	"time"
 
-	"magma/orc8r/lib/go/security/cert"
-	"magma/orc8r/lib/go/security/key"
-	"magma/orc8r/lib/go/util"
+	"github.com/go-magma/magma/lib/go/security/cert"
+	"github.com/go-magma/magma/lib/go/security/key"
+	"github.com/go-magma/magma/lib/go/util"
 )
 
 var (

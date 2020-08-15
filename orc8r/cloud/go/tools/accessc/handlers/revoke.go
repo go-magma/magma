@@ -21,8 +21,8 @@ import (
 	"os"
 	"strings"
 
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/cloud/go/tools/commands"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
 )
 
 // Revoke command - prints out all registered Operators and their attributes

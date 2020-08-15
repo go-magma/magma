@@ -21,7 +21,7 @@ import (
 	"os"
 	"strings"
 
-	"magma/orc8r/cloud/go/tools/commands"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
 )
 
 // Add command - Creates a new Operator and its ACL from specified Entities with

@@ -22,9 +22,9 @@ import (
 	"strings"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	storage2 "magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	storage2 "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/protobuf/ptypes/wrappers"
 	"github.com/stretchr/testify/assert"

@@ -17,8 +17,8 @@ import (
 	"flag"
 	"log"
 
-	"magma/orc8r/cloud/go/tools/migrations"
-	"magma/orc8r/cloud/go/tools/migrations/m001_config_service/migration"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations/m001_config_service/migration"
 
 	_ "github.com/lib/pq"
 )

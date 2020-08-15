@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"

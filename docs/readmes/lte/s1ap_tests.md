@@ -25,14 +25,14 @@ acts as the gateway between *magma_test* and *magma_trfserver*.
 
 Spin up and provision the gateway VM, then make and start its services:
 
-1. From `magma/lte/gateway` on the host machine: `vagrant up magma && vagrant ssh magma`
+1. From `magma/modules/lte/gateway` on the host machine: `vagrant up magma && vagrant ssh magma`
 1. Now in the gateway VM: `cd $MAGMA_ROOT/lte/gateway && make run`
 
 ### Test VM setup
 
 Spin up and provision the s1ap tester's VM, make, then make in the integ_tests directory.
 
-1. From `magma/lte/gateway` on the host machine: `vagrant up magma_test && vagrant ssh magma_test`
+1. From `magma/modules/lte/gateway` on the host machine: `vagrant up magma_test && vagrant ssh magma_test`
 1. Now in the *magma_test* VM:
     1. `cd $MAGMA_ROOT/lte/gateway/python && make`
     1. `cd integ_tests && make`

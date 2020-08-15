@@ -20,8 +20,8 @@ import (
 	"log"
 	"os"
 
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/cloud/go/tools/commands"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
 )
 
 // List-certs command - prints out all registered certificates & associated with

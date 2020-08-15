@@ -18,8 +18,8 @@ import (
 	"sort"
 	"strconv"
 
-	"magma/orc8r/cloud/go/services/metricsd/protos"
-	"magma/orc8r/lib/go/metrics"
+	"github.com/go-magma/magma/lib/go/metrics"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
 
 	prometheus_models "github.com/prometheus/client_model/go"
 )

@@ -16,17 +16,17 @@ package providers_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/configurator/mocks"
-	configurator_test_init "magma/orc8r/cloud/go/services/configurator/test_init"
-	orchestrator_test_init "magma/orc8r/cloud/go/services/orchestrator/test_init"
-	"magma/orc8r/cloud/go/services/streamer"
-	streamer_test_init "magma/orc8r/cloud/go/services/streamer/test_init"
-	"magma/orc8r/cloud/go/services/streamer/test_utils/mconfig/factory"
-	"magma/orc8r/cloud/go/services/streamer/test_utils/mconfig/test_protos"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/mocks"
+	configurator_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/configurator/test_init"
+	orchestrator_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer"
+	streamer_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/streamer/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/test_utils/mconfig/factory"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/test_utils/mconfig/test_protos"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
@@ -93,7 +93,7 @@ func TestMconfigStreamer_Configurator(t *testing.T) {
 	actual := &protos.GatewayConfigs{}
 	err = protos.Unmarshal(actualMarshaled.Updates[0].Value, actual)
 	assert.NoError(t, err)
-	assert.Equal(t, expected, actual.ConfigsByKey)
+	equalMap(t, expected, actual.ConfigsByKey)
 
 	// Make optimized call for config updates--when passed config digest
 	// matches provider's digest, empty update batch is returned
@@ -119,4 +119,13 @@ type mockMconfigBuilder struct {
 
 func (builder *mockMconfigBuilder) Build(networkId string, gatewayId string) (map[string]proto.Message, error) {
 	return builder.retVal, builder.retErr
+}
+
+func equalMap(t *testing.T, expected, actual map[string]*any.Any) {
+	assert.Equal(t, len(expected), len(actual))
+	for k, v := range expected {
+		v1, ok := actual[k]
+		assert.True(t, ok)
+		assert.Equal(t, protos.TestMarshal(v), protos.TestMarshal(v1))
+	}
 }

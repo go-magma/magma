@@ -17,12 +17,12 @@ import (
 	"context"
 	"fmt"
 
-	"magma/orc8r/cloud/go/services/configurator/protos"
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	storage2 "magma/orc8r/cloud/go/storage"
-	merrors "magma/orc8r/lib/go/errors"
-	commonProtos "magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/registry"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	commonProtos "github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
+	storage2 "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/ptypes/wrappers"
@@ -228,7 +228,7 @@ func LoadNetworksByType(typeVal string, loadMetadata bool, loadConfigs bool) ([]
 }
 
 // LoadNetwork loads the network identified by the network ID.
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func LoadNetwork(networkID string, loadMetadata bool, loadConfigs bool) (Network, error) {
 	networks, _, err := LoadNetworks([]string{networkID}, loadMetadata, loadConfigs)
 	if err != nil {
@@ -241,7 +241,7 @@ func LoadNetwork(networkID string, loadMetadata bool, loadConfigs bool) (Network
 }
 
 // LoadNetworkConfig loads network config of type configType registered under the network ID.
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func LoadNetworkConfig(networkID, configType string) (interface{}, error) {
 	network, err := LoadNetwork(networkID, false, true)
 	if err != nil {
@@ -473,7 +473,7 @@ func DeleteInternalEntity(entityType, entityKey string) error {
 }
 
 // GetPhysicalIDOfEntity gets the physicalID associated with the entity identified by (networkID, entityType, entityKey)
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func GetPhysicalIDOfEntity(networkID, entityType, entityKey string) (string, error) {
 	entity, err := LoadEntity(networkID, entityType, entityKey, EntityLoadCriteria{})
 	if err != nil {
@@ -516,7 +516,7 @@ func ListInternalEntityKeys(entityType string) ([]string, error) {
 }
 
 // LoadEntity loads the network entity identified by (network ID, entity type, entity key).
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func LoadEntity(networkID string, entityType string, entityKey string, criteria EntityLoadCriteria) (NetworkEntity, error) {
 	ret := NetworkEntity{}
 	loaded, notFound, err := LoadEntities(
@@ -535,7 +535,7 @@ func LoadEntity(networkID string, entityType string, entityKey string, criteria 
 }
 
 // LoadEntityConfig loads the config for the entity identified by (network ID, entity type, entity key).
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func LoadEntityConfig(networkID, entityType, entityKey string) (interface{}, error) {
 	entity, err := LoadEntity(networkID, entityType, entityKey, EntityLoadCriteria{LoadConfig: true})
 	if err != nil {
@@ -548,7 +548,7 @@ func LoadEntityConfig(networkID, entityType, entityKey string) (interface{}, err
 }
 
 // LoadEntityForPhysicalID loads the network entity identified by the physical ID.
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func LoadEntityForPhysicalID(physicalID string, criteria EntityLoadCriteria) (NetworkEntity, error) {
 	ret := NetworkEntity{}
 	loaded, _, err := LoadEntities(
@@ -569,7 +569,7 @@ func LoadEntityForPhysicalID(physicalID string, criteria EntityLoadCriteria) (Ne
 }
 
 // GetNetworkAndEntityIDForPhysicalID gets the network ID and entity ID for the associated physical ID.
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func GetNetworkAndEntityIDForPhysicalID(physicalID string) (string, string, error) {
 	if len(physicalID) == 0 {
 		return "", "", errors.New("Empty Hardware ID")
@@ -626,7 +626,7 @@ func LoadEntities(
 }
 
 // LoadInternalEntity calls LoadEntity with the internal network ID.
-// If not found, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If not found, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func LoadInternalEntity(entityType string, entityKey string, criteria EntityLoadCriteria) (NetworkEntity, error) {
 	return LoadEntity(storage.InternalNetworkID, entityType, entityKey, criteria)
 }

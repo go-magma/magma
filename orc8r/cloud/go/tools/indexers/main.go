@@ -14,7 +14,7 @@ limitations under the License.
 package main
 
 import (
-	"magma/orc8r/cloud/go/tools/indexers/cmd"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/indexers/cmd"
 )
 
 func main() {

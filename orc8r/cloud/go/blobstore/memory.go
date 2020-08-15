@@ -19,8 +19,8 @@ import (
 	"sort"
 	"sync"
 
-	"magma/orc8r/cloud/go/storage"
-	magmaerrors "magma/orc8r/lib/go/errors"
+	magmaerrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/thoas/go-funk"
 )

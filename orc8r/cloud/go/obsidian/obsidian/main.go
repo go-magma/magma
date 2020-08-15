@@ -15,13 +15,13 @@ package main
 
 import (
 	"flag"
+	"github.com/go-magma/magma/lib/go/definitions"
 	"log"
-	"magma/orc8r/lib/go/definitions"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/obsidian/server"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/server"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/service"
 )
 
 func main() {

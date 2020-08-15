@@ -20,7 +20,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/golang/glog"
 )

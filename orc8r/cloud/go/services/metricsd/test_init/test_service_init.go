@@ -16,10 +16,10 @@ package test_init
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/metricsd"
-	"magma/orc8r/cloud/go/services/metricsd/protos"
-	"magma/orc8r/cloud/go/test_utils"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 )
 
 func StartTestServiceInternal(t *testing.T, exporter protos.MetricsExporterServer) {

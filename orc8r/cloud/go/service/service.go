@@ -22,11 +22,11 @@ import (
 	"fmt"
 	"net"
 
-	"magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/service/middleware/unary"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/registry"
-	platform_service "magma/orc8r/lib/go/service"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
+	platform_service "github.com/go-magma/magma/lib/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/service/middleware/unary"
 
 	"github.com/golang/glog"
 	"github.com/labstack/echo"

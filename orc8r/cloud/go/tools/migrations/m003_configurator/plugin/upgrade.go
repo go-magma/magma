@@ -14,9 +14,9 @@
 package main
 
 import (
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/cloud/go/tools/migrations/m003_configurator/migration"
-	"magma/orc8r/cloud/go/tools/migrations/m003_configurator/plugin/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations/m003_configurator/migration"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations/m003_configurator/plugin/types"
 
 	"github.com/Masterminds/squirrel"
 	"github.com/google/uuid"

@@ -17,7 +17,7 @@ import (
 	"sort"
 	"strings"
 
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/thoas/go-funk"
 )
@@ -74,7 +74,7 @@ type TransactionalBlobStorage interface {
 
 	// Get loads a specific blob from storage.
 	// If there is no blob matching the given ID, ErrNotFound from
-	// magma/orc8r/lib/go/errors will be returned.
+	// "github.com/go-magma/magma/lib/go/errors will be returned.
 	Get(networkID string, id storage.TypeAndKey) (Blob, error)
 
 	// GetMany loads and returns a collection of blobs matching the

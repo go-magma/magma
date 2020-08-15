@@ -18,13 +18,13 @@ import (
 	"fmt"
 	"time"
 
-	"magma/orc8r/cloud/go/clock"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/state/indexer/metrics"
-	state_types "magma/orc8r/cloud/go/services/state/types"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/util"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/util"
+	"github.com/go-magma/magma/orc8r/cloud/go/clock"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/metrics"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	"github.com/golang/glog"
 	"github.com/pkg/errors"
@@ -136,7 +136,7 @@ func (r *reindexerImpl) GetIndexerVersions() ([]*indexer.Versions, error) {
 	return r.queue.GetIndexerVersions()
 }
 
-// If no job available, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If no job available, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func (r *reindexerImpl) claimAndReindexOne(ctx context.Context, batches []reindexBatch) error {
 	job, err := r.queue.ClaimAvailableJob()
 	if err != nil {

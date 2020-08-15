@@ -114,6 +114,22 @@ def _create_build_context_if_necessary(args: argparse.Namespace) -> None:
     os.mkdir(BUILD_CONTEXT)
 
     print("Creating build context in '%s'..." % BUILD_CONTEXT)
+
+    shutil.copytree(
+        os.path.join(HOST_MAGMA_ROOT, 'protos'),
+        os.path.join(BUILD_CONTEXT, SRC_ROOT, GUEST_MAGMA_ROOT, 'protos')
+    )
+    lib_path = os.path.join(BUILD_CONTEXT, SRC_ROOT, GUEST_MAGMA_ROOT, 'lib')
+    shutil.copytree(
+        os.path.join(HOST_MAGMA_ROOT, 'lib'),
+        lib_path
+    )
+    gw_path = os.path.join(BUILD_CONTEXT, SRC_ROOT, GUEST_MAGMA_ROOT, 'gateway', 'go')
+    shutil.copytree(
+        os.path.join(HOST_MAGMA_ROOT, 'gateway', 'go'),
+        gw_path,
+    )
+
     modules = []
     for module in _get_modules():
         _copy_module(module)
@@ -168,17 +184,6 @@ def _copy_module(module: MagmaModule) -> None:
         os.path.join(dst, 'cloud'),
     )
 
-    # Handle orc8r lib/ and gateway/go/
-    if module.name == 'orc8r':
-        shutil.copytree(
-            os.path.join(module.host_path, 'lib'),
-            os.path.join(dst, 'lib'),
-        )
-        shutil.copytree(
-            os.path.join(module.host_path, 'gateway', 'go'),
-            os.path.join(dst, 'gateway', 'go'),
-        )
-
     # Optionally copy tools/
     if os.path.isdir(os.path.join(module.host_path, 'tools')):
         shutil.copytree(
@@ -225,8 +230,11 @@ def _get_modules() -> List[MagmaModule]:
     with open(filename) as file:
         conf = yaml.safe_load(file)
         for module in conf['native_modules']:
+            mod_root = HOST_MAGMA_ROOT
+            if module != "orc8r":
+                mod_root = os.path.join(mod_root, "modules")
             module_abspath = os.path.abspath(
-                os.path.join(HOST_MAGMA_ROOT, module)
+                os.path.join(mod_root, module)
             )
             modules.append(
                 MagmaModule(
@@ -269,7 +277,11 @@ def _get_module_destination(module: MagmaModule) -> str:
                             module_parent_dir, module.name)
     # We mount internal modules straight to MAGMA_ROOT as-is
     else:
-        return os.path.join(SRC_ROOT, GUEST_MAGMA_ROOT, module.name)
+        if module.name == 'orc8r':
+            return os.path.join(SRC_ROOT, GUEST_MAGMA_ROOT, module.name)
+        else:
+            return os.path.join(SRC_ROOT, GUEST_MAGMA_ROOT, 'modules', module.name)
+
 
 
 def _parse_args() -> argparse.Namespace:

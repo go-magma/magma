@@ -17,9 +17,9 @@ import (
 	"testing"
 	"time"
 
-	"magma/fbinternal/cloud/go/services/testcontroller/obsidian/models"
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/DATA-DOG/go-sqlmock.v1"

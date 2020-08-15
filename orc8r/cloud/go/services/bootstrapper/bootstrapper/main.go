@@ -18,12 +18,12 @@ import (
 	"flag"
 	"log"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/service"
-	"magma/orc8r/cloud/go/services/bootstrapper"
-	"magma/orc8r/cloud/go/services/bootstrapper/servicers"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/security/key"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/security/key"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/bootstrapper"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/bootstrapper/servicers"
 )
 
 var (

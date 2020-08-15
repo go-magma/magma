@@ -19,10 +19,10 @@ import (
 	"log"
 	"os"
 
-	"magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/services/state"
-	indexer_protos "magma/orc8r/cloud/go/services/state/protos"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
+	indexer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
 
 	"github.com/spf13/cobra"
 )

@@ -22,7 +22,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
 
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"

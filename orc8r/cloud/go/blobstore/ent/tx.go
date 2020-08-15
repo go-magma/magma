@@ -15,9 +15,9 @@ package ent
 
 import (
 	"context"
-	"magma/orc8r/cloud/go/blobstore/ent/migrate"
 
 	"github.com/facebookincubator/ent/dialect"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/migrate"
 )
 
 // Tx is a transactional client that is created by calling Client.Tx().

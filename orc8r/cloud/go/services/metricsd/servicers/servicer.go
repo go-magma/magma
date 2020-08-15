@@ -16,11 +16,11 @@ package servicers
 import (
 	"time"
 
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/metricsd"
-	"magma/orc8r/cloud/go/services/metricsd/exporters"
-	"magma/orc8r/lib/go/metrics"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/metrics"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/exporters"
 
 	"github.com/golang/glog"
 	prom_proto "github.com/prometheus/client_model/go"

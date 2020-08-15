@@ -21,9 +21,9 @@ import (
 	"net/http"
 	neturl "net/url"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
-	"magma/orc8r/lib/go/metrics"
+	"github.com/go-magma/magma/lib/go/metrics"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
 
 	"github.com/facebookincubator/prometheus-configmanager/prometheus/alert"
 	"github.com/labstack/echo"

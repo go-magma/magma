@@ -16,7 +16,7 @@ ENV PYTHON_BUILD /build/python
 ENV PIP_CACHE_HOME ~/.pipcache
 ENV PROTO_LIST orc8r_protos devmand_protos
 
-WORKDIR $PKG_REPO_DIR/orc8r/gateway/python
+WORKDIR $PKG_REPO_DIR/gateway/python
 RUN make protos
 
 RUN cp -r /usr/include/prometheus/* /usr/include
@@ -25,10 +25,10 @@ WORKDIR $PKG_BUILD_DIR
 RUN cmake -GNinja -DCMAKE_BUILD_TYPE=release  \
           -DGRPC_CPP_PLUGIN_PATH=/usr/bin \
           -DCMAKE_PREFIX_PATH=/cache/install \
-          $PKG_REPO_DIR/orc8r/gateway/c/common
+          $PKG_REPO_DIR/gateway/c/common
 RUN ninja -C .
 RUN mkdir -p ${PKG_INSTALL_DIR}/lib
-RUN mkdir -p ${PKG_INSTALL_DIR}/include/orc8r/protos
+RUN mkdir -p ${PKG_INSTALL_DIR}/include/protos
 RUN find . -iname "*.a" -exec cp {} ${PKG_INSTALL_DIR}/lib \;
 RUN find $PKG_REPO_DIR -iname "*.h" -exec cp {} ${PKG_INSTALL_DIR}/include \;
-RUN cp -r ${PKG_BUILD_DIR}/service303/orc8r/protos ${PKG_INSTALL_DIR}/include/orc8r
+RUN cp -r ${PKG_BUILD_DIR}/service303/protos ${PKG_INSTALL_DIR}/include/orc8r

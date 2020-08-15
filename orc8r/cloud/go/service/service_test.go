@@ -18,11 +18,11 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/cloud/go/test_utils"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 
 	assert "github.com/stretchr/testify/require"
 	"golang.org/x/net/context"
@@ -69,7 +69,7 @@ func TestServiceRun(t *testing.T) {
 		StartTimeSecs: actualServiceInfo.StartTimeSecs,
 	}
 	assert.NoError(t, err, "err in getting service info after srv started")
-	assert.Equal(t, expectedServiceInfo, *actualServiceInfo)
+	assert.Equal(t, protos.TestMarshal(&expectedServiceInfo), protos.TestMarshal(actualServiceInfo))
 	assert.InDelta(t, testStartTime, actualServiceInfo.StartTimeSecs, allowedStartRange)
 
 	// check StopService rpc call.

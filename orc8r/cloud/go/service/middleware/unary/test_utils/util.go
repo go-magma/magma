@@ -18,11 +18,11 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/cloud/go/services/certifier/test_init"
-	"magma/orc8r/lib/go/security/cert"
-	"magma/orc8r/lib/go/security/csr"
+	"github.com/go-magma/magma/lib/go/security/cert"
+	"github.com/go-magma/magma/lib/go/security/csr"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/test_init"
 
 	"github.com/stretchr/testify/assert"
 )

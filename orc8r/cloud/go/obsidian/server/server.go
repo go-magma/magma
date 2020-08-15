@@ -22,9 +22,9 @@ import (
 	"log"
 	"time"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/obsidian/access"
-	"magma/orc8r/cloud/go/obsidian/reverse_proxy"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/access"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/reverse_proxy"
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"

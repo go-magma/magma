@@ -14,7 +14,7 @@ limitations under the License.
 package indexer
 
 import (
-	"magma/orc8r/cloud/go/services/state/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
 )
 
 func MakeProtoInfos(vs []*Versions) map[string]*protos.IndexerInfo {

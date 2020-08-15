@@ -17,12 +17,12 @@ import (
 	"context"
 	"fmt"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/configurator/protos"
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	orc8rStorage "magma/orc8r/cloud/go/storage"
-	commonProtos "magma/orc8r/lib/go/protos"
+	commonProtos "github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
+	orc8rStorage "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/protobuf/ptypes/wrappers"
 	"github.com/thoas/go-funk"

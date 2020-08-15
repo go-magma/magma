@@ -17,12 +17,12 @@ import (
 	"encoding/json"
 	"time"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/clock"
-	"magma/orc8r/cloud/go/services/state/indexer/index"
-	state_types "magma/orc8r/cloud/go/services/state/types"
-	"magma/orc8r/cloud/go/storage"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/clock"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/index"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/pkg/errors"
 	"github.com/thoas/go-funk"

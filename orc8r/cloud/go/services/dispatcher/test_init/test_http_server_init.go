@@ -17,8 +17,8 @@ import (
 	"net"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/dispatcher/broker/mocks"
-	"magma/orc8r/cloud/go/services/dispatcher/httpserver"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/broker/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/httpserver"
 )
 
 func StartTestHttpServer(t *testing.T) (net.Addr, *mocks.GatewayRPCBroker) {

@@ -21,9 +21,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/tools/accessc/handlers"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/accessc/handlers"
 )
 
 func main() {

@@ -19,9 +19,9 @@ import (
 	"sync"
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/sqorc"
-	storage2 "magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	storage2 "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/stretchr/testify/assert"

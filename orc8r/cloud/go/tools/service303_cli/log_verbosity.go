@@ -19,10 +19,10 @@ import (
 	"os"
 	"strconv"
 
-	"magma/orc8r/cloud/go/services/dispatcher/gateway_registry"
-	"magma/orc8r/cloud/go/services/dispatcher/gw_client_apis/service303"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/service/client"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/service/client"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/gateway_registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/gw_client_apis/service303"
 
 	"github.com/golang/glog"
 	"github.com/spf13/cobra"

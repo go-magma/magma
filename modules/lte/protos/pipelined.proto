@@ -1,0 +1,271 @@
+/*
+Copyright 2020 The Magma Authors.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+syntax = "proto3";
+
+package magma.lte;
+
+import "common.proto";
+import "policydb.proto";
+import "session_manager.proto";
+import "subscriberdb.proto";
+
+option go_package = "github.com/go-magma/magma/modules/lte/cloud/go/protos";
+
+// Deprecated
+message SetupFlowsRequest {
+  // List of requests to activate
+  repeated ActivateFlowsRequest requests = 1;
+  // epoch to prevent outdated setup calls
+  uint64 epoch = 2;
+  // List of subscriber quota updates
+  UpdateSubscriberQuotaStateRequest quota_updates = 3;
+}
+
+message SetupUEMacRequest {
+  // List of UEs to activate
+  repeated UEMacFlowRequest requests = 1;
+  // epoch to prevent outdated setup calls
+  uint64 epoch = 2;
+}
+
+message SetupPolicyRequest {
+  // List of requests to activate
+  repeated ActivateFlowsRequest requests = 1;
+  // epoch to prevent outdated setup calls
+  uint64 epoch = 2;
+}
+
+message SetupQuotaRequest {
+  // List of quota rules to activate
+  UpdateSubscriberQuotaStateRequest quota_updates = 1;
+  // epoch to prevent outdated setup calls
+  uint64 epoch = 2;
+}
+
+message SetupFlowsResult {
+  enum Result {
+    SUCCESS = 0;
+    FAILURE = 1;
+    OUTDATED_EPOCH = 2;
+  }
+  Result result = 1;
+}
+
+message RequestOriginType {
+  enum OriginType {
+    GX = 0;
+    GY = 1;
+  }
+  OriginType type = 1;
+}
+
+message ActivateFlowsRequest {
+  SubscriberID sid = 1;
+
+  // Subscriber session ipv4 address
+  string ip_addr = 2;
+
+  // List of static rules obtained from PCRF
+  repeated string rule_ids = 3;
+
+  // List of dynamic rules obtained from PCRF
+  repeated PolicyRule dynamic_rules = 4;
+
+  // Activate flow source (GX/GY)
+  RequestOriginType request_origin = 5;
+}
+
+// DeactivateFlowsRequest can be used to deactivate all flows for a subscriber,
+// all flows for some rules, or particular rules for a subscriber, depending on
+// which parameters are passed. Rule IDs can apply to static rules or dynamic
+// rules
+// If no rule ids are given, all flows are deactivated
+message DeactivateFlowsRequest {
+  SubscriberID sid = 1;
+  repeated string rule_ids = 2;
+  RequestOriginType request_origin = 3;
+}
+
+message RuleModResult {
+  string rule_id = 1;
+  enum Result {
+    SUCCESS = 0;
+    PARTIAL_SUCCESS = 1;
+    FAILURE = 2;
+  }
+  Result result = 2;
+}
+
+message ActivateFlowsResult {
+  repeated RuleModResult static_rule_results = 1;
+  repeated RuleModResult dynamic_rule_results = 2;
+}
+
+message DeactivateFlowsResult {
+  enum Result {
+    SUCCESS = 0;
+    FAILURE = 1;
+    OUTDATED_EPOCH = 2;
+  }
+  Result result = 1;
+}
+
+message FlowRequest {
+  FlowMatch match = 1;
+  string app_name = 2;
+  uint64 bytes_rx = 3;
+  string service_type = 4;
+  string src_mac = 5;
+  string dst_mac = 6;
+  enum FlowState {
+    FLOW_CREATED = 0;
+    FLOW_PARTIAL_CLASSIFICATION = 1;
+    FLOW_FINAL_CLASSIFICATION = 2;
+    FLOW_EXPIRED = 3;
+  }
+  FlowState state = 7;
+}
+
+message FlowResponse {
+  enum Result {
+    SUCCESS = 0;
+    FAILURE = 1;
+    OUTDATED_EPOCH = 2;
+  }
+  Result result = 1;
+}
+
+// UEMacFlowRequest is used to link a subscriber ID to a MAC address.
+// This is used for Carrier WiFi data session establishment
+message UEMacFlowRequest {
+  SubscriberID sid = 1;
+
+  // UE MAC address
+  string mac_addr = 2;
+
+  string msisdn = 3;
+
+  // AP MAC address
+  string ap_mac_addr = 4;
+
+  // AP Name
+  string ap_name = 5;
+}
+
+message SubscriberQuotaUpdate{
+  SubscriberID sid = 1;
+  enum Type {
+    VALID_QUOTA = 0;
+    NO_QUOTA = 1;
+    TERMINATE = 2;
+  }
+  // UE MAC address
+  string mac_addr = 2;
+  Type update_type = 3;
+}
+
+message UpdateSubscriberQuotaStateRequest {
+  repeated SubscriberQuotaUpdate updates = 1;
+}
+
+message TableAssignment {
+  string app_name = 1;
+  uint64 main_table = 2;
+  repeated uint64 scratch_tables = 3;
+}
+
+message AllTableAssignments {
+  repeated TableAssignment table_assignments = 1;
+}
+
+message SerializedRyuPacket {
+  bytes pkt = 1;
+  string imsi = 2;
+}
+
+message PacketDropTableId {
+  int32 table_id = 1;
+}
+
+// --------------------------------------------------------------------------
+// Pipelined gateway RPC service
+// --------------------------------------------------------------------------
+service Pipelined {
+  // ----------------
+  // Enforcement App:
+  // ----------------
+
+  // Setup flows for subscribers (used on restarts)
+  rpc SetupPolicyFlows (SetupPolicyRequest) returns (SetupFlowsResult) {}
+
+  // Activate flows for a subscriber based on predefined flow templates
+  rpc ActivateFlows (ActivateFlowsRequest) returns (ActivateFlowsResult) {}
+
+  // Deactivate flows for a subscriber
+  rpc DeactivateFlows (DeactivateFlowsRequest) returns (DeactivateFlowsResult) {}
+
+  // Get policy usage stats
+  rpc GetPolicyUsage (magma.orc8r.Void) returns (RuleRecordTable) {}
+
+  // --------
+  // DPI App:
+  // --------
+
+  // Add new dpi flow
+  rpc CreateFlow (FlowRequest) returns (FlowResponse) {};
+
+  // Remove dpi flow
+  rpc RemoveFlow (FlowRequest) returns (FlowResponse) {};
+
+  // Update flow stats
+  rpc UpdateFlowStats (FlowRequest) returns (FlowResponse) {};
+
+  // ----------------
+  // Quota Check App:
+  // ----------------
+
+  // Setup subscribers flows (used on restarts)
+  rpc SetupQuotaFlows (SetupQuotaRequest) returns (SetupFlowsResult) {}
+
+  // Synchronize subscribers quota check flows
+  rpc UpdateSubscriberQuotaState (UpdateSubscriberQuotaStateRequest) returns (FlowResponse) {}
+
+  // -----------
+  // UE MAC App:
+  // -----------
+
+  // Setup subscribers flows (used on restarts)
+  rpc SetupUEMacFlows (SetupUEMacRequest) returns (SetupFlowsResult) {}
+
+  // Add a flow for a subscriber by matching the provided UE MAC address
+  rpc AddUEMacFlow (UEMacFlowRequest) returns (FlowResponse) {}
+
+  // Delete a flow for a subscriber by matching the provided UE MAC address
+  rpc DeleteUEMacFlow (UEMacFlowRequest) returns (FlowResponse) {}
+
+  // -----------
+  // IPFIX App:
+  // -----------
+
+  // Update subscriber IPFIX flows
+  rpc UpdateIPFIXFlow (UEMacFlowRequest) returns (FlowResponse) {}
+
+  // --------
+  // Debugging:
+  // --------
+
+  // Get the flow table assignment for all apps ordered by main table number
+  // and name
+  rpc GetAllTableAssignments (magma.orc8r.Void) returns (AllTableAssignments);
+}

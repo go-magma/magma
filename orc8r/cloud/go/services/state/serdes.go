@@ -16,7 +16,7 @@ package state
 import (
 	"encoding/json"
 
-	"magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
 )
 
 const StringMapSerdeType = "string_map"

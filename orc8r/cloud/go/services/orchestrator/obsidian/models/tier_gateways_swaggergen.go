@@ -6,9 +6,9 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	models1 "magma/orc8r/cloud/go/models"
 	"strconv"
 
+	models1 "github.com/go-magma/magma/orc8r/cloud/go/models"
 	strfmt "github.com/go-openapi/strfmt"
 
 	"github.com/go-openapi/errors"

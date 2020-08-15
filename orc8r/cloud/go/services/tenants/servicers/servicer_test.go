@@ -4,13 +4,13 @@ import (
 	"context"
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/tenants"
-	"magma/orc8r/cloud/go/services/tenants/servicers"
-	"magma/orc8r/cloud/go/services/tenants/servicers/storage"
-	"magma/orc8r/cloud/go/test_utils"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants/servicers/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc/codes"
@@ -48,7 +48,7 @@ func TestTenantsServicer(t *testing.T) {
 	// Get "test" tenant
 	getResp, err := srv.GetTenant(context.Background(), &protos.GetTenantRequest{Id: 1})
 	assert.NoError(t, err)
-	assert.Equal(t, &sampleTenant, getResp)
+	assert.Equal(t, protos.TestMarshal(&sampleTenant), protos.TestMarshal(getResp))
 
 	// Get "other" tenant
 	getResp, err = srv.GetTenant(context.Background(), &protos.GetTenantRequest{Id: 2})
@@ -65,7 +65,7 @@ func TestTenantsServicer(t *testing.T) {
 	// get updated tenant
 	getResp, err = srv.GetTenant(context.Background(), &protos.GetTenantRequest{Id: 1})
 	assert.NoError(t, err)
-	assert.Equal(t, sampleTenant2, *getResp)
+	assert.Equal(t, protos.TestMarshal(&sampleTenant2), protos.TestMarshal(getResp))
 
 	// Update nonexistent tenant
 	setResp, err = srv.SetTenant(context.Background(), &protos.IDAndTenant{

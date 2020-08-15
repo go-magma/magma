@@ -13,11 +13,11 @@ limitations under the License.
 
 syntax = "proto3";
 
-import "orc8r/protos/certifier.proto";
-import "orc8r/protos/common.proto";
+import "protos/certifier.proto";
+import "protos/common.proto";
 
 package magma.fbinternal;
-option go_package = "magma/fbinternal/cloud/go/protos";
+option go_package = "github.com/go-magma/magma/fbinternal/cloud/go/protos";
 
 message VPNCertRequest {
   // Represents an x509 certificate request (.csr file)

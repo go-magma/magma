@@ -11,14 +11,15 @@
  * limitations under the License.
  */
 
-//go:generate bash -c "protoc -I . -I /usr/include --proto_path=$MAGMA_ROOT --go_out=plugins=grpc:. *.proto"
+//go:generate bash -c "protoc -I . -I /usr/include -I $MAGMA_ROOT/protos --go_out=plugins=grpc,Mgoogle/protobuf/wrappers.proto=github.com/golang/protobuf/ptypes/wrappers,paths=source_relative:. *.proto"
+
 package storage
 
 import (
 	"context"
 	"fmt"
 
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/glog"
 	"github.com/thoas/go-funk"

@@ -16,16 +16,16 @@ package servicers_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/pluginimpl"
-	"magma/orc8r/cloud/go/services/directoryd"
-	directoryd_test_init "magma/orc8r/cloud/go/services/directoryd/test_init"
-	"magma/orc8r/cloud/go/services/orchestrator"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	orchestrator_test_init "magma/orc8r/cloud/go/services/orchestrator/test_init"
-	"magma/orc8r/cloud/go/services/state/indexer"
-	state_types "magma/orc8r/cloud/go/services/state/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/pluginimpl"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd"
+	directoryd_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/directoryd/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	orchestrator_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	assert "github.com/stretchr/testify/require"
 )

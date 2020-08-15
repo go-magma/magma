@@ -14,8 +14,8 @@ limitations under the License.
 package reindex
 
 import (
-	"magma/orc8r/cloud/go/blobstore"
-	state_types "magma/orc8r/cloud/go/services/state/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"

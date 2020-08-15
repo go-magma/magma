@@ -16,7 +16,7 @@ package serde
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/serde/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde/mocks"
 
 	"github.com/stretchr/testify/assert"
 )

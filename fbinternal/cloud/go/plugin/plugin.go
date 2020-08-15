@@ -1,21 +1,21 @@
 package plugin
 
 import (
-	fbinternal_service "magma/fbinternal/cloud/go/services/fbinternal"
-	"magma/fbinternal/cloud/go/services/testcontroller"
-	"magma/orc8r/cloud/go/services/state/indexer"
+	fbinternal_service "github.com/go-magma/fbinternal/cloud/go/services/fbinternal"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
 
-	"magma/fbinternal/cloud/go/fbinternal"
-	"magma/fbinternal/cloud/go/services/testcontroller/obsidian/models"
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/metricsd"
-	"magma/orc8r/cloud/go/services/metricsd/collection"
-	"magma/orc8r/cloud/go/services/metricsd/exporters"
-	"magma/orc8r/cloud/go/services/streamer/providers"
-	"magma/orc8r/lib/go/registry"
-	"magma/orc8r/lib/go/service/config"
+	"github.com/go-magma/fbinternal/cloud/go/fbinternal"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/collection"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/exporters"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/providers"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/service/config"
 )
 
 type FbinternalOrchestratorPlugin struct{}

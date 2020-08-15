@@ -16,12 +16,12 @@ package servicers_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/services/directoryd/servicers"
-	"magma/orc8r/cloud/go/services/directoryd/storage"
-	stateTestInit "magma/orc8r/cloud/go/services/state/test_init"
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd/storage"
+	stateTestInit "github.com/go-magma/magma/orc8r/cloud/go/services/state/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/net/context"

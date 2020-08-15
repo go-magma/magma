@@ -14,8 +14,8 @@ limitations under the License.
 package main
 
 import (
-	devmandp "magma/devmand/cloud/go/plugin"
-	"magma/orc8r/cloud/go/plugin"
+	devmandp "github.com/go-magma/devmand/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
 )
 
 func main() {}

@@ -16,9 +16,9 @@ package metricsd
 import (
 	"context"
 
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
-	service_registry "magma/orc8r/lib/go/registry"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	service_registry "github.com/go-magma/magma/lib/go/registry"
 
 	"github.com/golang/glog"
 )

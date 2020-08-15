@@ -27,12 +27,12 @@ import (
 	"math/big"
 	"time"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/device"
-	models2 "magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	models2 "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 
 	"github.com/golang/protobuf/ptypes"
 	"golang.org/x/net/context"

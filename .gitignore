@@ -31,8 +31,8 @@ dist/
 eggs/
 lib/
 lib64/
-!orc8r/lib/
-!feg/radius/lib/
+!lib/
+!modules/feg/radius/lib/
 parts/
 sdist/
 var/

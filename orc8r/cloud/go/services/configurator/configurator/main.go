@@ -19,14 +19,14 @@ and meta data for the network and network entity structures.
 package main
 
 import (
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/service"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/configurator/protos"
-	"magma/orc8r/cloud/go/services/configurator/servicers"
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	storage2 "magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	storage2 "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/glog"
 )

@@ -14,8 +14,8 @@ limitations under the License.
 package metricsd
 
 import (
-	"magma/orc8r/cloud/go/services/metricsd/collection"
-	"magma/orc8r/cloud/go/services/metricsd/exporters"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/collection"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/exporters"
 )
 
 // MetricsProfile is a configuration for the metricsd servicer which specifies

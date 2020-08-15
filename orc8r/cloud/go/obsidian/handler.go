@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"magma/orc8r/lib/go/util"
+	"github.com/go-magma/magma/lib/go/util"
 
 	"github.com/labstack/echo"
 	"google.golang.org/grpc"

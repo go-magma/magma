@@ -17,8 +17,8 @@ import (
 	"sort"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/state/indexer/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/mocks"
 
 	assert "github.com/stretchr/testify/require"
 )

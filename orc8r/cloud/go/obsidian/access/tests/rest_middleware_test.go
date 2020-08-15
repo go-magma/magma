@@ -20,8 +20,8 @@ import (
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"
 
-	"magma/orc8r/cloud/go/obsidian/access"
-	tenantsh "magma/orc8r/cloud/go/services/tenants/obsidian/handlers"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/access"
+	tenantsh "github.com/go-magma/magma/orc8r/cloud/go/services/tenants/obsidian/handlers"
 )
 
 func TestMiddlewareWithoutCertifier(t *testing.T) {

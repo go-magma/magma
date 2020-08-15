@@ -17,11 +17,11 @@ import (
 	"errors"
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/blobstore/mocks"
-	dstorage "magma/orc8r/cloud/go/services/directoryd/storage"
-	"magma/orc8r/cloud/go/storage"
-	merrors "magma/orc8r/lib/go/errors"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/mocks"
+	dstorage "github.com/go-magma/magma/orc8r/cloud/go/services/directoryd/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

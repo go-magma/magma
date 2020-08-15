@@ -67,6 +67,6 @@ service magma@* status
 - Post Install Check
 
 ``` bash
-cd ~/magma/lte/gateway/deploy
+cd ~/magma/modules/lte/gateway/deploy
 ./agw_post_install.sh
 ```

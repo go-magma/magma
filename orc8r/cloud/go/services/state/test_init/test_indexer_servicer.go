@@ -19,11 +19,11 @@ import (
 	"strings"
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/state/protos"
-	"magma/orc8r/cloud/go/services/state/types"
-	"magma/orc8r/cloud/go/test_utils"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 )
 
 type indexerServicer struct {

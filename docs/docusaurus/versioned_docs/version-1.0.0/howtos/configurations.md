@@ -30,16 +30,16 @@ are loaded. Restart the corresponding service after modifying configs to see the
 
 ### Gateway 
 On the Gateway side, service related configuration files are stored in 
-`magma/lte/gateway/configs/`
+`magma/modules/lte/gateway/configs/`
 
 #### Service Registry 
-`magma/lte/gateway/configs/service_registry.yml` lists all services on the gateway
+`magma/modules/lte/gateway/configs/service_registry.yml` lists all services on the gateway
  and stores configurations that all services must have. 
  The information is used for services routing. 
  
 #### Service Specific Configs
 All service specific configurations are stored in 
-`magma/lte/gateway/configs/{SERVICE_NAME}.yml`. 
+`magma/modules/lte/gateway/configs/{SERVICE_NAME}.yml`. 
 
 #### How To Modify Configs
 When the magma VM is provisioned, the service specific configuration files are 
@@ -53,5 +53,5 @@ Restart the service to see the the changes reflected.
 Log level can be modified using the `log_level` field in the configs. Alternatively,
 there is a CLI to change the log level:
 ```bash
-venvsudo magma/orc8r/gateway/python/scripts/config_cli.py set_log_level {SERVICE_NAME} {LOG_LEVEL}
+venvsudo magma/gateway/python/scripts/config_cli.py set_log_level {SERVICE_NAME} {LOG_LEVEL}
 ```

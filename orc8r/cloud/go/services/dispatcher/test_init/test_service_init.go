@@ -16,12 +16,12 @@ package test_init
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/dispatcher"
-	"magma/orc8r/cloud/go/services/dispatcher/broker/mocks"
-	"magma/orc8r/cloud/go/services/dispatcher/servicers"
-	"magma/orc8r/cloud/go/test_utils"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/broker/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 
 	_ "github.com/mattn/go-sqlite3"
 )

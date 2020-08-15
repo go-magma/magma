@@ -19,9 +19,9 @@ import (
 	"testing"
 	"time"
 
-	"magma/fbinternal/cloud/go/services/testcontroller/storage"
-	"magma/orc8r/cloud/go/clock"
-	"magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/fbinternal/cloud/go/services/testcontroller/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/clock"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/pkg/errors"

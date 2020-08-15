@@ -9,12 +9,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-module magma/orc8r/cloud/go
+module github.com/go-magma/magma/orc8r/cloud/go
 
 replace (
-	magma/gateway => ../../gateway/go
-	magma/orc8r/lib/go => ../../lib/go
-	magma/orc8r/lib/go/protos => ../../lib/go/protos
+	github.com/go-magma/magma/gateway/go => ../../../gateway/go
+	github.com/go-magma/magma/lib/go => ../../../lib/go
+	github.com/go-magma/magma/lib/go/protos => ../../../lib/go/protos
 )
 
 require (
@@ -23,6 +23,9 @@ require (
 	github.com/emakeev/snowflake v0.0.0-20200206205012-767080b052fe
 	github.com/facebookincubator/ent v0.0.0-20191128071424-29c7b0a0d805
 	github.com/facebookincubator/prometheus-configmanager v0.0.0-20200717220759-a8282767b087
+	github.com/go-magma/magma/gateway/go v0.0.0
+	github.com/go-magma/magma/lib/go v0.0.0
+	github.com/go-magma/magma/lib/go/protos v0.0.0
 	github.com/go-openapi/analysis v0.18.0 // indirect
 	github.com/go-openapi/errors v0.19.2
 	github.com/go-openapi/jsonpointer v0.18.0 // indirect
@@ -36,7 +39,7 @@ require (
 	github.com/go-swagger/go-swagger v0.18.0
 	github.com/go-swagger/scan-repo-boundary v0.0.0-20180623220736-973b3573c013 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
-	github.com/golang/protobuf v1.3.3
+	github.com/golang/protobuf v1.4.1
 	github.com/google/uuid v1.1.1
 	github.com/gorilla/handlers v1.4.0 // indirect
 	github.com/labstack/echo v0.0.0-20181123063414-c54d9e8eed6c
@@ -61,11 +64,9 @@ require (
 	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
 	golang.org/x/tools v0.0.0-20191012152004-8de300cfc20a
 	google.golang.org/grpc v1.27.1
+	google.golang.org/protobuf v1.25.0
 	gopkg.in/DATA-DOG/go-sqlmock.v1 v1.3.0
 	gopkg.in/yaml.v2 v2.2.8
-	magma/gateway v0.0.0
-	magma/orc8r/lib/go v0.0.0-00010101000000-000000000000
-	magma/orc8r/lib/go/protos v0.0.0
 )
 
 go 1.12

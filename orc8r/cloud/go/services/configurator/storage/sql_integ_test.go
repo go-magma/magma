@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	orc8rStorage "magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	orc8rStorage "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/golang/protobuf/ptypes/wrappers"

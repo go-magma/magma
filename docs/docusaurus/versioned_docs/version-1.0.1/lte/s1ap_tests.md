@@ -22,14 +22,14 @@ These tests use only the *magma* and *magma_test* VMs. The *magma_test* VM abstr
 
 Spin up and provision the gateway VM, then make and start its services:
 
-1. From `magma/lte/gateway` on the host machine: `vagrant up magma && vagrant ssh magma`
+1. From `magma/modules/lte/gateway` on the host machine: `vagrant up magma && vagrant ssh magma`
 1. Now in the gateway VM: `cd $MAGMA_ROOT/lte/gateway && make run`
 
 ### Test VM setup
 
 Spin up and provision the s1ap tester's VM, make, then make in the integ_tests directory.
 
-1. From `magma/lte/gateway` on the host machine: `vagrant up magma_test && vagrant ssh magma_test`
+1. From `magma/modules/lte/gateway` on the host machine: `vagrant up magma_test && vagrant ssh magma_test`
 1. Now in the *magma_test* VM:
     1. cd `$MAGMA_ROOT/lte/gateway/python && make`
     1. cd `$MAGMA_ROOT/lte/gateway/python/integ_tests && make`
@@ -90,7 +90,7 @@ Spin up and provision the *cloud* and *datastore* VMs, then make.
 
 ### Other setup
 
-From `magma/lte/gateway` on your host device run `fab s1ap_setup_cloud`
+From `magma/modules/lte/gateway` on your host device run `fab s1ap_setup_cloud`
 
 Using the *cloud* VM requires a few extra steps, which are handled by the above [fab](http://www.fabfile.org/) command. In summary:
 

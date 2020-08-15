@@ -16,10 +16,10 @@ package access
 import (
 	"fmt"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
 
 	"github.com/golang/glog"
 	"github.com/labstack/echo"

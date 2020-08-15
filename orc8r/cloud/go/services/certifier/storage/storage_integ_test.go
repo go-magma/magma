@@ -16,11 +16,11 @@ package storage_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/services/certifier/protos"
-	"magma/orc8r/cloud/go/services/certifier/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	merrors "magma/orc8r/lib/go/errors"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/timestamp"

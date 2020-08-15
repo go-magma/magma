@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"log"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/state/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
 
 	"github.com/spf13/cobra"
 )

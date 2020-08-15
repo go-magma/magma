@@ -14,9 +14,9 @@
 package servicers
 
 import (
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
 
 	"github.com/pkg/errors"
 	"github.com/thoas/go-funk"

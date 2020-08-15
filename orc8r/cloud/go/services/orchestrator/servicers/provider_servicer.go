@@ -17,10 +17,10 @@ import (
 	"context"
 	"fmt"
 
-	streamer_protos "magma/orc8r/cloud/go/services/streamer/protos"
-	"magma/orc8r/cloud/go/services/streamer/providers"
-	"magma/orc8r/lib/go/definitions"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/definitions"
+	"github.com/go-magma/magma/lib/go/protos"
+	streamer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/streamer/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/providers"
 )
 
 type orchestratorStreamProviderServicer struct{}

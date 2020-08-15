@@ -33,5 +33,5 @@ def gen_prometheus_proto_py(proto_file_dir, output_dir):
 if __name__ == '__main__':
     # ./gen_prometheus_proto.py <magma root> <output_dir>
     magma_root, out_dir = sys.argv[1], sys.argv[2]
-    file_dir = os.path.join(magma_root, 'orc8r/protos/prometheus')
+    file_dir = os.path.join(magma_root, 'protos/prometheus')
     gen_prometheus_proto_py(file_dir, out_dir)

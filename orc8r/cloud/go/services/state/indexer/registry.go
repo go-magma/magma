@@ -23,8 +23,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/thoas/go-funk"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
 )
 
 // GetIndexer returns the remote indexer for a desired service.

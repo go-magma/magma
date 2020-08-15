@@ -17,11 +17,11 @@ import (
 	"errors"
 	"testing"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/plugin/mocks"
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 
 	"github.com/stretchr/testify/mock"
 	assert "github.com/stretchr/testify/require"

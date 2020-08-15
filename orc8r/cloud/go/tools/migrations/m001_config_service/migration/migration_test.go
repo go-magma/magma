@@ -19,7 +19,7 @@ import (
 	"errors"
 	"testing"
 
-	"magma/orc8r/cloud/go/tools/migrations/m001_config_service/migration"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations/m001_config_service/migration"
 
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"

@@ -15,7 +15,7 @@ package models
 
 import (
 	"github.com/go-openapi/swag"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 )
 
 func NewDefaultSymphonyNetwork() *SymphonyNetwork {

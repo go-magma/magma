@@ -15,7 +15,7 @@ There are a couple steps needed to implement a command.
 Create a new RPC method in the service protobuf that you want the method to live in.
 
 ```
-// magma/orc8r/protos/magmad.proto
+// magma/protos/magmad.proto
 
 service Magmad {
   ...
@@ -29,7 +29,7 @@ service Magmad {
 Gateway services should have a gRPC server implementation located in `rpc_servicer.py`. Within the servicer, create a function that implements this RPC method.
 
 ```
-# magma/orc8r/gateway/python/magma/magmad/rpc_servicer.py
+# magma/gateway/python/magma/magmad/rpc_servicer.py
 
 class MagmadRpcServicer(magmad_pb2_grpc.MagmadServicer):
     ...

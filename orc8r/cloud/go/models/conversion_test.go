@@ -17,8 +17,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"magma/orc8r/cloud/go/models"
-
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/models"
 	"github.com/golang/protobuf/jsonpb"
 	structpb "github.com/golang/protobuf/ptypes/struct"
 	"github.com/stretchr/testify/assert"
@@ -43,7 +43,7 @@ func TestJSONMapToProtobufStruct(t *testing.T) {
 	actualProtobufStruct, err := models.JSONMapToProtobufStruct(jsonMap)
 
 	assert.NoError(t, err)
-	assert.Equal(t, expectedProtobufStruct, actualProtobufStruct)
+	assert.Equal(t, protos.TestMarshal(expectedProtobufStruct), protos.TestMarshal(actualProtobufStruct))
 }
 
 func TestProtobufStructToJSONMap(t *testing.T) {

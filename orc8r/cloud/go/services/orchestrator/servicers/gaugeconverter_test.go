@@ -16,8 +16,8 @@ package servicers
 import (
 	"testing"
 
-	tests "magma/orc8r/cloud/go/services/metricsd/test_common"
-	"magma/orc8r/lib/go/metrics"
+	"github.com/go-magma/magma/lib/go/metrics"
+	tests "github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/test_common"
 
 	prometheus_models "github.com/prometheus/client_model/go"
 	assert "github.com/stretchr/testify/require"

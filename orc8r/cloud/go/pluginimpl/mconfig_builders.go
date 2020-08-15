@@ -14,13 +14,13 @@
 package pluginimpl
 
 import (
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
-	configuratorprotos "magma/orc8r/cloud/go/services/configurator/protos"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/protos/mconfig"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos/mconfig"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	configuratorprotos "github.com/go-magma/magma/orc8r/cloud/go/services/configurator/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
