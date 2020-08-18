@@ -17,10 +17,10 @@ import (
 	"errors"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/streamer"
-	streamer_test_init "magma/orc8r/cloud/go/services/streamer/test_init"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer"
+	streamer_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/streamer/test_init"
 
 	"github.com/golang/protobuf/ptypes/any"
 	"github.com/stretchr/testify/assert"

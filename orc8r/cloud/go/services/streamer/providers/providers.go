@@ -14,10 +14,10 @@ limitations under the License.
 package providers
 
 import (
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/streamer"
-	"magma/orc8r/lib/go/definitions"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/definitions"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer"
 
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/ptypes"

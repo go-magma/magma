@@ -1,0 +1,88 @@
+/*
+Copyright 2020 The Magma Authors.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+syntax = "proto3";
+
+import "certifier.proto";
+import "common.proto";
+import "identity.proto";
+import "google/protobuf/timestamp.proto";
+
+package magma.orc8r.certifier;
+option go_package = "github.com/go-magma/magma/orc8r/cloud/go/services/certifier/protos";
+
+message CertificateInfo {
+  Identity id = 1;
+
+  google.protobuf.Timestamp not_before = 2;
+  google.protobuf.Timestamp not_after = 3;
+
+  CertType cert_type = 4;
+}
+
+message CertificateInfoMap {
+  map<string, CertificateInfo> certificates = 1;
+}
+
+message AddCertRequest {
+  Identity id = 1;
+  bytes cert_der = 2; // signed certificate in DER encoding
+  CertType cert_type = 3;
+}
+
+message SerialNumbers {
+  repeated string sns = 1;
+}
+
+message GetCARequest {
+  CertType cert_type = 1;
+}
+
+service Certifier {
+
+  // Returns the cert of the requested CA
+  rpc GetCA (GetCARequest) returns (CACert) {}
+
+  // Signs and adds a new certificate to the store.
+  // Returns signed certificate.
+  //
+  rpc SignAddCertificate (CSR) returns (Certificate) {}
+
+  // Returns the CertificateInfo for a certificate.
+  // Throws NOT_FOUND if the certificate is missing.
+  //
+  rpc GetIdentity (Certificate.SN) returns (CertificateInfo) {}
+
+  // Revoke an existing certificate.
+  // If the certificate does not exist or is expired, this request is ignored.
+  //
+  rpc RevokeCertificate (Certificate.SN) returns (Void) {}
+
+  // Add provided Certificate (AddCertRequest.cert_der) into Certifier table and
+  // associates its Serial Number with given Identity (AddCertRequest.id)
+  rpc AddCertificate(AddCertRequest) returns (Void) {}
+
+  // Finds & returns Serial Numbers of all Certificates associated with the
+  // given Identity
+  rpc FindCertificates(Identity) returns (SerialNumbers) {}
+
+  // Returns serial numbers of all certificates in the table
+  rpc ListCertificates(Void) returns  (SerialNumbers) {}
+
+  // Returns all registered Certificates
+  rpc GetAll(Void) returns (CertificateInfoMap) {}
+
+  // cleanup expired certificates
+  //
+  rpc CollectGarbage (Void) returns (Void) {}
+}

@@ -16,9 +16,9 @@ package tenants
 import (
 	"context"
 
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
-	srvRegistry "magma/orc8r/lib/go/registry"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	srvRegistry "github.com/go-magma/magma/lib/go/registry"
 
 	"github.com/golang/glog"
 	"google.golang.org/grpc/codes"

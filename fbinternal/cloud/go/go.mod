@@ -1,11 +1,6 @@
 module magma/fbinternal/cloud/go
 
 replace (
-	magma/gateway => ./../../../orc8r/gateway/go
-	magma/lte/cloud/go => ./../../../lte/cloud/go
-	magma/orc8r/cloud/go => ./../../../orc8r/cloud/go
-	magma/orc8r/lib/go => ./../../../orc8r/lib/go
-	magma/orc8r/lib/go/protos => ./../../../orc8r/lib/go/protos
 )
 
 require (
@@ -28,10 +23,6 @@ require (
 	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
 	google.golang.org/grpc v1.27.1
 	gopkg.in/DATA-DOG/go-sqlmock.v1 v1.3.0
-	magma/lte/cloud/go v0.0.0-00010101000000-000000000000
-	magma/orc8r/cloud/go v0.0.0
-	magma/orc8r/lib/go v0.0.0
-	magma/orc8r/lib/go/protos v0.0.0
 )
 
 go 1.12

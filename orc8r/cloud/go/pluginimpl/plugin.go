@@ -14,22 +14,22 @@ limitations under the License.
 package pluginimpl
 
 import (
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/device"
-	"magma/orc8r/cloud/go/services/directoryd"
-	"magma/orc8r/cloud/go/services/metricsd"
-	"magma/orc8r/cloud/go/services/metricsd/collection"
-	"magma/orc8r/cloud/go/services/metricsd/exporters"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/streamer/providers"
-	"magma/orc8r/lib/go/definitions"
-	"magma/orc8r/lib/go/registry"
-	"magma/orc8r/lib/go/service/config"
+	"github.com/go-magma/magma/lib/go/definitions"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/service/config"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/collection"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/exporters"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/providers"
 )
 
 // BaseOrchestratorPlugin is the OrchestratorPlugin for the orc8r module

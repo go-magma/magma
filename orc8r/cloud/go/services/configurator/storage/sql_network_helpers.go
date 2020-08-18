@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"sort"
 
-	"magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	sq "github.com/Masterminds/squirrel"
 	"github.com/golang/protobuf/ptypes/wrappers"

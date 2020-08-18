@@ -19,10 +19,10 @@ import (
 	"reflect"
 	"sort"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/configurator"
-	merrors "magma/orc8r/lib/go/errors"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 
 	"github.com/labstack/echo"
 	"github.com/pkg/errors"

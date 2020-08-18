@@ -16,11 +16,11 @@ package test_init
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/streamer"
-	"magma/orc8r/cloud/go/services/streamer/servicers"
-	"magma/orc8r/cloud/go/test_utils"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 )
 
 type testStreamerServer struct {

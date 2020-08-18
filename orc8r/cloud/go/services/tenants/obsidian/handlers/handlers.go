@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/services/tenants"
-	"magma/orc8r/cloud/go/services/tenants/obsidian/models"
-	"magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants/obsidian/models"
 
 	"github.com/labstack/echo"
 )

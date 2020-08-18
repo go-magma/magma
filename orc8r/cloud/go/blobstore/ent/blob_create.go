@@ -16,9 +16,9 @@ package ent
 import (
 	"context"
 	"errors"
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
 
 	"github.com/facebookincubator/ent/dialect/sql"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
 )
 
 // BlobCreate is the builder for creating a Blob entity.

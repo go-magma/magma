@@ -16,11 +16,11 @@ package device
 import (
 	"context"
 
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/device/protos"
-	"magma/orc8r/cloud/go/storage"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/registry"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/glog"
 	"github.com/pkg/errors"

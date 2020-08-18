@@ -18,7 +18,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/eventd/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/eventd/obsidian/models"
 
 	"github.com/labstack/echo"
 	"github.com/olivere/elastic/v7"

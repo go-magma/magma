@@ -16,7 +16,7 @@ package reindex
 import (
 	"fmt"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
 )
 
 // Status of a reindex job.

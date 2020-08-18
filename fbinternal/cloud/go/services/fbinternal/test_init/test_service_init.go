@@ -17,11 +17,11 @@ import (
 	"os"
 	"testing"
 
-	"magma/fbinternal/cloud/go/services/fbinternal"
-	"magma/fbinternal/cloud/go/services/fbinternal/servicers"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/metricsd/protos"
-	"magma/orc8r/cloud/go/test_utils"
+	"github.com/go-magma/fbinternal/cloud/go/services/fbinternal"
+	"github.com/go-magma/fbinternal/cloud/go/services/fbinternal/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 )
 
 func StartTestService(t *testing.T) {

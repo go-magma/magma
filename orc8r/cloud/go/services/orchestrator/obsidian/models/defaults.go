@@ -14,7 +14,7 @@
 package models
 
 import (
-	"magma/orc8r/cloud/go/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/models"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"

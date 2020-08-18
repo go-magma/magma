@@ -16,10 +16,10 @@ package servicers
 import (
 	"fmt"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/services/streamer"
-	"magma/orc8r/cloud/go/services/streamer/providers"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/providers"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

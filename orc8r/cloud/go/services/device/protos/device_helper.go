@@ -14,8 +14,8 @@ limitations under the License.
 package protos
 
 import (
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 )
 
 // EntitiesToBlobs maps a list of PhysicalEntity to a list of blobstore.Blob

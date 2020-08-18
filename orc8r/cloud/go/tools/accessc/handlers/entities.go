@@ -20,7 +20,7 @@ import (
 	"regexp"
 	"strings"
 
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
 )
 
 // Entity is a CLI tool representation of ACLed entity (network, operator, etc.)

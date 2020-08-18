@@ -18,7 +18,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"magma/orc8r/cloud/go/tools/migrations/m002_cleanup_legacy_configs/migration"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations/m002_cleanup_legacy_configs/migration"
 
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"

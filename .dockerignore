@@ -4,28 +4,9 @@
 
 !third_party/
 
-!cwf/cloud/
-!cwf/gateway/
-!cwf/k8s
-!cwf/protos/
-!cwf/swagger/
-
-!feg/cloud/
-!feg/gateway/
-!feg/protos/
-!feg/radius
-!feg/swagger/
-
-!lte/cloud/
-!lte/gateway/configs/
-!lte/gateway/deploy/roles/magma/files/
-!lte/gateway/python/
-!lte/gateway/Makefile
-!lte/gateway/c
-!lte/protos/
-!lte/swagger/
-!lte/gateway/deploy
-!lte/gateway/docker/deploy
+!modules/
+!lib/
+!gateway/
 
 !devmand/cloud/
 !devmand/gateway/
@@ -34,14 +15,11 @@
 !fb/src/dpi/
 
 !orc8r/cloud/configs/
-!orc8r/lib/
 !orc8r/cloud/go/
 !orc8r/cloud/deploy/roles/proxy/files
 !orc8r/cloud/docker/
 !orc8r/cloud/scripts/
 !orc8r/cloud/Makefile
-!orc8r/gateway/
-!orc8r/protos/
 !orc8r/swagger/
 !orc8r/tools/ansible/roles/gateway_services/files
 !orc8r/tools/ansible/roles/pkgrepo/files
@@ -50,5 +28,3 @@
 !orc8r/tools/docker/
 
 !protos/
-
-!xwf/gateway/

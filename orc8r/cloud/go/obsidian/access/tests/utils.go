@@ -22,16 +22,16 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/obsidian/access"
-	"magma/orc8r/cloud/go/services/accessd"
-	"magma/orc8r/cloud/go/services/accessd/protos"
-	accessd_test_service "magma/orc8r/cloud/go/services/accessd/test_init"
-	"magma/orc8r/cloud/go/services/certifier"
-	certifier_test_service "magma/orc8r/cloud/go/services/certifier/test_init"
-	security_cert "magma/orc8r/lib/go/security/cert"
-	certifier_test_utils "magma/orc8r/lib/go/security/csr"
-	"magma/orc8r/lib/go/util"
+	security_cert "github.com/go-magma/magma/lib/go/security/cert"
+	certifier_test_utils "github.com/go-magma/magma/lib/go/security/csr"
+	"github.com/go-magma/magma/lib/go/util"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/access"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
+	accessd_test_service "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	certifier_test_service "github.com/go-magma/magma/orc8r/cloud/go/services/certifier/test_init"
 
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"
@@ -46,9 +46,11 @@ const (
 
 func testGet(t *testing.T, url string) {
 	t.Logf("Testing URL: %s", url)
-	s, _, err := util.SendHttpRequest("GET", url, "")
+	s, ctx, err := util.SendHttpRequest("GET", url, "")
+	t.Logf("URL: %s, status: %d, ctx: %s, err: %v", url, s, ctx, err)
+
 	assert.NoError(t, err)
-	assert.Equal(t, s, 200)
+	assert.Equal(t, 200, s)
 }
 
 func WaitForTestServer(t *testing.T, e *echo.Echo) net.Listener {

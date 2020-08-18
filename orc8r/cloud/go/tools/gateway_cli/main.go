@@ -17,7 +17,7 @@ import (
 	"flag"
 	"os"
 
-	"magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
 
 	"github.com/spf13/cobra"
 )

@@ -10,7 +10,7 @@ import (
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	protos "magma/orc8r/lib/go/protos"
+	protos "github.com/go-magma/magma/lib/go/protos"
 	math "math"
 )
 

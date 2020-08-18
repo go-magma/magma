@@ -19,11 +19,11 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/clock"
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/state/indexer/mocks"
-	"magma/orc8r/cloud/go/services/state/indexer/reindex"
-	"magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/clock"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/reindex"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/DATA-DOG/go-sqlmock"
 	assert "github.com/stretchr/testify/require"

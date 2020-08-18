@@ -19,8 +19,8 @@ import (
 	"encoding/json"
 	"log"
 
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/cloud/go/tools/migrations"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations"
 
 	"github.com/Masterminds/squirrel"
 	_ "github.com/go-sql-driver/mysql"

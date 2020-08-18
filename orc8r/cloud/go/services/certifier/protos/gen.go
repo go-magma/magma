@@ -11,5 +11,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-//go:generate bash -c "protoc -I . -I /usr/include -I $MAGMA_ROOT/protos --proto_path=$MAGMA_ROOT --go_out=plugins=grpc:. *.proto"
+//go:generate bash -c "protoc -I . -I /usr/include -I $MAGMA_ROOT/protos --go_out=plugins=grpc,Mgoogle/protobuf/timestamp.proto=github.com/golang/protobuf/ptypes/timestamp,paths=source_relative:. *.proto"
+
 package protos

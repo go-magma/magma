@@ -27,10 +27,10 @@ import (
 	"sync"
 	"time"
 
-	"magma/fbinternal/cloud/go/metrics/ods"
-	"magma/orc8r/cloud/go/services/metricsd/exporters"
-	"magma/orc8r/cloud/go/services/metricsd/protos"
-	"magma/orc8r/lib/go/metrics"
+	"github.com/go-magma/fbinternal/cloud/go/metrics/ods"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/exporters"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
+	"github.com/go-magma/magma/lib/go/metrics"
 
 	"github.com/golang/glog"
 )

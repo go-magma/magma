@@ -18,9 +18,9 @@ import (
 	"net"
 	"testing"
 
-	cloud_service "magma/orc8r/cloud/go/service"
-	"magma/orc8r/lib/go/registry"
-	platform_service "magma/orc8r/lib/go/service"
+	"github.com/go-magma/magma/lib/go/registry"
+	platform_service "github.com/go-magma/magma/lib/go/service"
+	cloud_service "github.com/go-magma/magma/orc8r/cloud/go/service"
 )
 
 // NewTestService creates and registers a basic test Magma service on a

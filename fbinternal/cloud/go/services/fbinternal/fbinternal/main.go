@@ -16,11 +16,11 @@ package main
 import (
 	"os"
 
-	"magma/fbinternal/cloud/go/fbinternal"
-	fbinternal_service "magma/fbinternal/cloud/go/services/fbinternal"
-	"magma/fbinternal/cloud/go/services/fbinternal/servicers"
-	"magma/orc8r/cloud/go/service"
-	"magma/orc8r/cloud/go/services/metricsd/protos"
+	"github.com/go-magma/fbinternal/cloud/go/fbinternal"
+	fbinternal_service "github.com/go-magma/fbinternal/cloud/go/services/fbinternal"
+	"github.com/go-magma/fbinternal/cloud/go/services/fbinternal/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
 
 	"github.com/golang/glog"
 )

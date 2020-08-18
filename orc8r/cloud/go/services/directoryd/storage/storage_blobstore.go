@@ -16,9 +16,9 @@ package storage
 import (
 	"sort"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/storage"
-	merrors "magma/orc8r/lib/go/errors"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/pkg/errors"
 )

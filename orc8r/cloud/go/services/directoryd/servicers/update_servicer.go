@@ -22,12 +22,12 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/directoryd"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/cloud/go/services/state/types"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 )
 
 type directoryUpdateServicer struct {

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strconv"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/services/tenants"
-	"magma/orc8r/cloud/go/storage"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/pkg/errors"
 )

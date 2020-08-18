@@ -17,8 +17,8 @@ import (
 	"errors"
 	"fmt"
 
-	"magma/orc8r/cloud/go/services/dispatcher/gateway_registry"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/gateway_registry"
 
 	"github.com/golang/glog"
 	"golang.org/x/net/context"

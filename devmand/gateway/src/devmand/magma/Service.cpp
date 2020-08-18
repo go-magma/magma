@@ -18,8 +18,8 @@ limitations under the License.
 
 #include <devmand/Application.h>
 #include <devmand/magma/Service.h>
-#include <orc8r/protos/service303.grpc.pb.h>
-#include <orc8r/protos/service303.pb.h>
+#include <protos/service303.grpc.pb.h>
+#include <protos/service303.pb.h>
 
 namespace devmand {
 namespace magma {

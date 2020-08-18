@@ -19,8 +19,8 @@ import (
 	"sort"
 	"strings"
 
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	sq "github.com/Masterminds/squirrel"
 	"github.com/golang/glog"

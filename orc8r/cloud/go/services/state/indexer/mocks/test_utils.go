@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
-	state_test_init "magma/orc8r/cloud/go/services/state/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	state_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/state/test_init"
 
 	"github.com/stretchr/testify/mock"
 )

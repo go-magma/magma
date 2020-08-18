@@ -15,7 +15,7 @@ limitations under the License.
 package protos
 
 import (
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

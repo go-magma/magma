@@ -17,12 +17,12 @@ import (
 	"context"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
-	reindex_mocks "magma/orc8r/cloud/go/services/state/indexer/reindex/mocks"
-	indexer_protos "magma/orc8r/cloud/go/services/state/protos"
-	state_proto_mocks "magma/orc8r/cloud/go/services/state/protos/mocks"
-	"magma/orc8r/cloud/go/services/state/servicers"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	reindex_mocks "github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/reindex/mocks"
+	indexer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
+	state_proto_mocks "github.com/go-magma/magma/orc8r/cloud/go/services/state/protos/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/servicers"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/mock"

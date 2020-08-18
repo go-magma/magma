@@ -16,10 +16,10 @@ package reindex_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/blobstore/mocks"
-	"magma/orc8r/cloud/go/services/state/indexer/reindex"
-	state_types "magma/orc8r/cloud/go/services/state/types"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/reindex"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

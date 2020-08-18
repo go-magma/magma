@@ -16,10 +16,10 @@ package servicers
 import (
 	"context"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/services/state/indexer/reindex"
-	indexer_protos "magma/orc8r/cloud/go/services/state/protos"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer/reindex"
+	indexer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

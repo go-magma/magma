@@ -14,8 +14,8 @@ limitations under the License.
 package access
 
 import (
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
 
 	"github.com/labstack/echo"
 )

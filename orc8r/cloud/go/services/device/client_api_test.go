@@ -18,10 +18,10 @@ import (
 	"strconv"
 	"testing"
 
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/device"
-	"magma/orc8r/cloud/go/services/device/test_init"
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/stretchr/testify/assert"
 )

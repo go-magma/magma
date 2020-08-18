@@ -19,10 +19,10 @@ import (
 	"sort"
 	"time"
 
-	"magma/orc8r/cloud/go/clock"
-	"magma/orc8r/cloud/go/services/state/indexer"
-	"magma/orc8r/cloud/go/sqorc"
-	merrors "magma/orc8r/lib/go/errors"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/clock"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/Masterminds/squirrel"
 	"github.com/golang/glog"
@@ -418,7 +418,7 @@ func (s *sqlJobQueue) getExistingIncompleteJobs(tx *sql.Tx) (map[string]*reindex
 	return jobs, nil
 }
 
-// If no job available, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If no job available, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func (s *sqlJobQueue) claimAvailableJob() (*reindexJob, error) {
 	txFn := func(tx *sql.Tx) (interface{}, error) {
 		now := clock.Now()
@@ -579,7 +579,7 @@ func (s *sqlJobQueue) overwriteAllVersions(tx *sql.Tx, versions []*indexer.Versi
 	return nil
 }
 
-// If no job available, returns ErrNotFound from magma/orc8r/lib/go/errors.
+// If no job available, returns ErrNotFound from "github.com/go-magma/magma/lib/go/errors.
 func scanJob(rows *sql.Rows) (*reindexJob, error) {
 	jobs, err := scanJobs(rows)
 	if err != nil {

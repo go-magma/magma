@@ -18,12 +18,12 @@ import (
 	"strings"
 	"testing"
 
-	"magma/orc8r/cloud/go/services/metricsd"
-	"magma/orc8r/cloud/go/services/metricsd/exporters"
-	tests "magma/orc8r/cloud/go/services/metricsd/test_common"
-	"magma/orc8r/cloud/go/services/metricsd/test_init"
-	"magma/orc8r/cloud/go/services/orchestrator/servicers"
-	"magma/orc8r/lib/go/metrics"
+	"github.com/go-magma/magma/lib/go/metrics"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/exporters"
+	tests "github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/test_common"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/servicers"
 
 	prometheus_models "github.com/prometheus/client_model/go"
 	assert "github.com/stretchr/testify/require"

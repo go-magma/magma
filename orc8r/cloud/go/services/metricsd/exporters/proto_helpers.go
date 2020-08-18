@@ -14,7 +14,7 @@ limitations under the License.
 package exporters
 
 import (
-	"magma/orc8r/cloud/go/services/metricsd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
 )
 
 // MakeProtoMetrics converts native contextualized metrics to protos.

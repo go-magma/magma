@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/services/streamer/test_utils/mconfig/test_protos"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/test_utils/mconfig/test_protos"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"

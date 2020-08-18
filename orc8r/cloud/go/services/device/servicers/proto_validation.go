@@ -16,9 +16,9 @@ package servicers
 import (
 	"fmt"
 
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/device"
-	"magma/orc8r/cloud/go/services/device/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device/protos"
 )
 
 func ValidateRegisterDevicesRequest(req *protos.RegisterOrUpdateDevicesRequest) error {

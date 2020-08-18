@@ -18,10 +18,10 @@ package handlers
 import (
 	"fmt"
 
-	"magma/orc8r/cloud/go/identity"
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/cloud/go/tools/commands"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
 )
 
 var (

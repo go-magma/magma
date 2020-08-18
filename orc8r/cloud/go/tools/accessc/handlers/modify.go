@@ -21,11 +21,11 @@ import (
 	"os"
 	"strings"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/services/accessd"
-	"magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/cloud/go/tools/commands"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
 )
 
 // Add-existing command - Creates a new Operator and its ACL from specified

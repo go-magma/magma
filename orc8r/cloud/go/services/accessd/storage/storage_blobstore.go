@@ -14,10 +14,10 @@ limitations under the License.
 package storage
 
 import (
-	"magma/orc8r/cloud/go/blobstore"
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/cloud/go/storage"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/protobuf/proto"
 	"google.golang.org/grpc/codes"

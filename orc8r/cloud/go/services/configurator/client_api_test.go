@@ -16,10 +16,10 @@ import (
 	"fmt"
 	"testing"
 
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/configurator/test_init"
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/test_init"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/go-openapi/swag"
 	"github.com/stretchr/testify/assert"

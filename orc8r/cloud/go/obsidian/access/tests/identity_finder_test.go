@@ -17,8 +17,8 @@ import (
 	"net/http"
 	"testing"
 
-	"magma/orc8r/cloud/go/obsidian/access"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/access"
 
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"
@@ -100,7 +100,7 @@ func startTestIdentityServer(t *testing.T) *echo.Echo {
 	})
 
 	// Endpoint requiring specific Network Entity Access Permissions
-	e.GET("magma/operators/:operator_id", func(c echo.Context) error {
+	e.GET("/magma/operators/:operator_id", func(c echo.Context) error {
 		assert.NotNil(t, c)
 		ents := access.FindRequestedIdentities(c)
 		assert.Len(t, ents, 1)

@@ -17,11 +17,11 @@ import (
 	"context"
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	streamer_protos "magma/orc8r/cloud/go/services/streamer/protos"
-	"magma/orc8r/cloud/go/services/streamer/providers"
-	"magma/orc8r/cloud/go/test_utils"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	streamer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/streamer/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/providers"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 )
 
 type providerServicer struct {

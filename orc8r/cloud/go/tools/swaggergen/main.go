@@ -67,7 +67,7 @@ import (
 	"log"
 	"os"
 
-	"magma/orc8r/cloud/go/tools/swaggergen/generate"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/swaggergen/generate"
 )
 
 func main() {

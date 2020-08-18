@@ -16,10 +16,10 @@ package metrics
 import (
 	"time"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
 
 	"github.com/go-openapi/swag"
 	"github.com/golang/glog"

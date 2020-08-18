@@ -20,9 +20,9 @@ import (
 	"log"
 	"os"
 
-	"magma/orc8r/cloud/go/services/accessd"
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/cloud/go/tools/commands"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
 )
 
 // List command - prints out all registered Operators and their attributes

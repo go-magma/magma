@@ -16,8 +16,8 @@ package models
 import (
 	"fmt"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 
 	"github.com/go-openapi/swag"
 	structpb "github.com/golang/protobuf/ptypes/struct"

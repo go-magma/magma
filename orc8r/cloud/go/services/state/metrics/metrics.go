@@ -14,7 +14,7 @@ limitations under the License.
 package metrics
 
 import (
-	"magma/orc8r/lib/go/metrics"
+	"github.com/go-magma/magma/lib/go/metrics"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"

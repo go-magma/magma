@@ -82,7 +82,7 @@ scp ~/.ssh/id_rsa.pub magma@10.0.2.1:/home/magma/.ssh/authorized_keys
 - [AGW_DEPLOY] Run build playbook
 
 ``` bash
-cd ~/magma/lte/gateway/deploy
+cd ~/magma/modules/lte/gateway/deploy
 ansible-playbook -e "MAGMA_ROOT='~/magma' OUTPUT_DIR='/tmp'" -i agw_hosts ovs_build.yml
 ```
 
@@ -90,6 +90,6 @@ ansible-playbook -e "MAGMA_ROOT='~/magma' OUTPUT_DIR='/tmp'" -i agw_hosts ovs_bu
 - [AGW_DEPLOY] Run deploy playbook
 
 ``` bash
-cd ~/magma/lte/gateway/deploy
+cd ~/magma/modules/lte/gateway/deploy
 ansible-playbook -i agw_hosts -e "PACKAGE_LOCATION='/tmp'" ovs_deploy.yml
 ```

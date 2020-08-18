@@ -16,12 +16,12 @@ package state
 import (
 	"context"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	state_types "magma/orc8r/cloud/go/services/state/types"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/registry"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	"github.com/golang/glog"
 	"github.com/thoas/go-funk"

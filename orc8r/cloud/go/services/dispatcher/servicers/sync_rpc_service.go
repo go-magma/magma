@@ -19,10 +19,10 @@ import (
 	"sync"
 	"time"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/services/directoryd"
-	"magma/orc8r/cloud/go/services/dispatcher/broker"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/broker"
 
 	"github.com/golang/glog"
 	"golang.org/x/net/context"

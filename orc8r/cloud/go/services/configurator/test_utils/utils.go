@@ -16,10 +16,10 @@ package test_utils
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/device"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 
 	"github.com/stretchr/testify/assert"
 )

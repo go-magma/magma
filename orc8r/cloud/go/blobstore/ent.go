@@ -19,12 +19,12 @@ import (
 	"fmt"
 	"os"
 
-	"magma/orc8r/cloud/go/blobstore/ent"
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
-	"magma/orc8r/cloud/go/blobstore/ent/predicate"
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/cloud/go/storage"
-	magmaerrors "magma/orc8r/lib/go/errors"
+	magmaerrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/predicate"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	entsql "github.com/facebookincubator/ent/dialect/sql"
 	"github.com/thoas/go-funk"

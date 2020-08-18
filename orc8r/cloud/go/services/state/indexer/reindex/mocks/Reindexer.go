@@ -5,7 +5,7 @@ package mocks
 import (
 	"context"
 
-	"magma/orc8r/cloud/go/services/state/indexer"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
 
 	"github.com/stretchr/testify/mock"
 )

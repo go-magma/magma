@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"log"
 
-	"magma/orc8r/cloud/go/blobstore/ent/migrate"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/migrate"
 
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
 
 	"github.com/facebookincubator/ent/dialect"
 	"github.com/facebookincubator/ent/dialect/sql"

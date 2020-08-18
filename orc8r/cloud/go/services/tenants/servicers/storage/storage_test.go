@@ -4,12 +4,12 @@ import (
 	"errors"
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/blobstore/mocks"
-	"magma/orc8r/cloud/go/services/tenants"
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/mocks"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/tenants"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
@@ -82,10 +82,10 @@ func TestBlobstoreStore_GetAllTenants(t *testing.T) {
 
 	retTenants, err := s.GetAllTenants()
 	assert.NoError(t, err)
-	assert.Equal(t, &protos.TenantList{Tenants: []*protos.IDAndTenant{
+	assert.Equal(t, protos.TestMarshal(&protos.TenantList{Tenants: []*protos.IDAndTenant{
 		{Id: 0, Tenant: &sampleTenant0},
 		{Id: 1, Tenant: &sampleTenant1},
-	}}, retTenants)
+	}}), protos.TestMarshal(retTenants))
 
 	// Error in ListKeys
 	txStore, s = setupTestStore()

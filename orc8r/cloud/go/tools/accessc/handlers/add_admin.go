@@ -22,7 +22,7 @@ import (
 	"os"
 	"strings"
 
-	"magma/orc8r/cloud/go/tools/commands"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
 )
 
 func init() {

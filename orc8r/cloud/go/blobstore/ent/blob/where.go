@@ -14,9 +14,8 @@
 package blob
 
 import (
-	"magma/orc8r/cloud/go/blobstore/ent/predicate"
-
 	"github.com/facebookincubator/ent/dialect/sql"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/predicate"
 )
 
 // ID filters vertices based on their identifier.

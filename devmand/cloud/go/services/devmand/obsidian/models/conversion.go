@@ -16,15 +16,15 @@ package models
 import (
 	"sort"
 
-	"magma/devmand/cloud/go/devmand"
-	"magma/orc8r/cloud/go/models"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
-	models2 "magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	"magma/orc8r/cloud/go/services/state"
-	"magma/orc8r/cloud/go/storage"
-	merrors "magma/orc8r/lib/go/errors"
+	"github.com/go-magma/devmand/cloud/go/devmand"
+	"github.com/go-magma/magma/orc8r/cloud/go/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
+	models2 "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
+	merrors "github.com/go-magma/magma/lib/go/errors"
 
 	"github.com/go-openapi/swag"
 )

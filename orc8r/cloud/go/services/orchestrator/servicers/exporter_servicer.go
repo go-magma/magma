@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"magma/orc8r/cloud/go/services/metricsd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/protos"
 
 	"github.com/golang/glog"
 	"github.com/prometheus/client_model/go"

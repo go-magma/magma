@@ -17,9 +17,9 @@ limitations under the License.
 package metricsd
 
 import (
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/metricsd/exporters"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/exporters"
 )
 
 // GetMetricsExporters returns all registered metrics exporters.

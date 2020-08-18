@@ -16,13 +16,13 @@ package handlers
 import (
 	"net/http"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/device"
-	handlers2 "magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
-	models2 "magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	merrors "magma/orc8r/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	handlers2 "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
+	models2 "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	merrors "github.com/go-magma/magma/lib/go/errors"
 
 	"github.com/labstack/echo"
 )

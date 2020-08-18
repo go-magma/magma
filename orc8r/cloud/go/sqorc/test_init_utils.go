@@ -19,7 +19,7 @@ import (
 	"os"
 	"testing"
 
-	"magma/orc8r/lib/go/definitions"
+	"github.com/go-magma/magma/lib/go/definitions"
 
 	"github.com/golang/glog"
 	"github.com/stretchr/testify/require"

@@ -132,19 +132,19 @@ echo "source ~/ansible/hacking/env-setup" >> ~/.bashrc
   $AGW_IP ansible_ssh_port=22 ansible_ssh_user=$USERNAME ansible_ssh_private_key_file=~/.ssh/id_rsa
   [ovs_deploy]
   $AGW_IP ansible_ssh_port=22 ansible_ssh_user=$USERNAME ansible_ssh_private_key_file=~/.ssh/id_rsa
-  " >> ~/magma/lte/gateway/deploy/agw_hosts
+  " >> ~/magma/modules/lte/gateway/deploy/agw_hosts
   ```
 
  - Build ovs
 
   ``` bash
-  cd ~/magma/lte/gateway/deploy
+  cd ~/magma/modules/lte/gateway/deploy
   ansible-playbook -e "MAGMA_ROOT='~/magma' OUTPUT_DIR='/tmp'" -i agw_hosts ovs_gtp.yml
   ```
 
   - Deploy AGW
 
   ``` bash
-  cd ~/magma/lte/gateway/deploy
+  cd ~/magma/modules/lte/gateway/deploy
   ansible-playbook -i agw_hosts -e "PACKAGE_LOCATION='/tmp'" ovs_deploy.yml
   ```

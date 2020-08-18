@@ -13,7 +13,7 @@ limitations under the License.
 syntax = "proto3";
 
 package magma.mconfig;
-option go_package = "magma/devmand/cloud/go/protos/mconfig";
+option go_package = "github.com/go-magma/magma/devmand/cloud/go/protos/mconfig";
 
 message DevmandGatewayConfig {
   map<string, ManagedDevice> managed_devices = 1;

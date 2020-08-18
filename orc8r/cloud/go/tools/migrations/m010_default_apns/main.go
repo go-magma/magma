@@ -55,12 +55,12 @@ import (
 	"fmt"
 	"sort"
 
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/cloud/go/storage"
-	"magma/orc8r/cloud/go/tools/migrations"
-	"magma/orc8r/cloud/go/tools/migrations/m010_default_apns/types"
-	"magma/orc8r/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations/m010_default_apns/types"
 
 	"github.com/Masterminds/squirrel"
 	_ "github.com/go-sql-driver/mysql"

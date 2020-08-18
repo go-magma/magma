@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/services/metricsd"
-	promH "magma/orc8r/cloud/go/services/metricsd/prometheus/handlers"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/service/config"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/service/config"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
+	promH "github.com/go-magma/magma/orc8r/cloud/go/services/metricsd/prometheus/handlers"
 
 	"github.com/labstack/echo"
 	promAPI "github.com/prometheus/client_golang/api"

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/wrappers.proto";
 
-import "magma/orc8r/protos/common.proto";
+import "magma/protos/common.proto";
 import "magma/fbinternal/cloud/go/services/testcontroller/storage/storage.proto";
 
 package magma.fbinternal.testcontroller;

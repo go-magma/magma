@@ -16,14 +16,14 @@ package plugin_test
 import (
 	"testing"
 
-	"magma/devmand/cloud/go/devmand"
-	"magma/devmand/cloud/go/plugin"
-	"magma/devmand/cloud/go/protos/mconfig"
-	models2 "magma/devmand/cloud/go/services/devmand/obsidian/models"
-	"magma/orc8r/cloud/go/orc8r"
-	orc8rplugin "magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/devmand/cloud/go/devmand"
+	"github.com/go-magma/devmand/cloud/go/plugin"
+	"github.com/go-magma/devmand/cloud/go/protos/mconfig"
+	models2 "github.com/go-magma/devmand/cloud/go/services/devmand/obsidian/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	orc8rplugin "github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"

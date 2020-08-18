@@ -24,12 +24,12 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/cloud/go/services/certifier/servicers"
-	"magma/orc8r/cloud/go/services/certifier/test_init"
-	"magma/orc8r/lib/go/protos"
-	security_cert "magma/orc8r/lib/go/security/cert"
-	certifier_test_utils "magma/orc8r/lib/go/security/csr"
+	"github.com/go-magma/magma/lib/go/protos"
+	security_cert "github.com/go-magma/magma/lib/go/security/cert"
+	certifier_test_utils "github.com/go-magma/magma/lib/go/security/csr"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/test_init"
 )
 
 func TestCertifier(t *testing.T) {

@@ -18,10 +18,10 @@ import (
 	"net/http"
 	"strings"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/services/accessd"
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
 
 	"github.com/golang/glog"
 	"github.com/labstack/echo"

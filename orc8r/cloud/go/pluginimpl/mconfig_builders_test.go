@@ -16,13 +16,13 @@ package pluginimpl_test
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/plugin"
-	"magma/orc8r/cloud/go/pluginimpl"
-	"magma/orc8r/cloud/go/services/configurator"
-	"magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/protos/mconfig"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos/mconfig"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/pluginimpl"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
@@ -79,7 +79,7 @@ func TestBaseOrchestratorMconfigBuilder_Build(t *testing.T) {
 			EventVerbosity: -1,
 		},
 	}
-	assert.Equal(t, expected, actual)
+	equalMap(t, expected, actual)
 	// Put a tier in the graph
 	tier := configurator.NetworkEntity{
 		Type: orc8r.UpgradeTierEntityType,
@@ -130,7 +130,7 @@ func TestBaseOrchestratorMconfigBuilder_Build(t *testing.T) {
 			EventVerbosity: -1,
 		},
 	}
-	assert.Equal(t, expected, actual)
+	equalMap(t, expected, actual)
 
 	// Set list of files for log aggregation
 	testThrottleInterval := "30h"
@@ -197,7 +197,8 @@ func TestBaseOrchestratorMconfigBuilder_Build(t *testing.T) {
 			EventVerbosity: 0,
 		},
 	}
-	assert.Equal(t, expected, actual)
+	equalMap(t, expected, actual)
+
 	// Check default values for log throttling
 	gw.Config = &models.MagmadGatewayConfigs{
 		AutoupgradeEnabled:      swag.Bool(true),
@@ -257,7 +258,7 @@ func TestBaseOrchestratorMconfigBuilder_Build(t *testing.T) {
 			EventVerbosity: -1,
 		},
 	}
-	assert.Equal(t, expected, actual)
+	equalMap(t, expected, actual)
 }
 
 func TestDnsdMconfigBuilder_Build(t *testing.T) {
@@ -287,7 +288,7 @@ func TestDnsdMconfigBuilder_Build(t *testing.T) {
 	expected := map[string]proto.Message{
 		"dnsd": &mconfig.DnsD{},
 	}
-	assert.Equal(t, expected, actual)
+	equalMap(t, expected, actual)
 
 	nw.Configs = map[string]interface{}{
 		"dnsd_network": &models.NetworkDNSConfig{
@@ -330,4 +331,13 @@ func TestDnsdMconfigBuilder_Build(t *testing.T) {
 		},
 	}
 	assert.Equal(t, expected["dnsd"].String(), actual["dnsd"].String())
+}
+
+func equalMap(t *testing.T, expected, actual map[string]proto.Message) {
+	assert.Equal(t, len(expected), len(actual))
+	for k, v := range expected {
+		v1, ok := actual[k]
+		assert.True(t, ok)
+		assert.Equal(t, protos.TestMarshal(v), protos.TestMarshal(v1))
+	}
 }

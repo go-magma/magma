@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/clock"
-	"magma/orc8r/cloud/go/sqorc"
+	"github.com/go-magma/magma/orc8r/cloud/go/clock"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	_ "github.com/lib/pq"
 	"github.com/stretchr/testify/assert"

@@ -1,8 +1,8 @@
 PLUGIN_NAME=orc8r
-TOOL_DEPS:=golang.org/x/lint/golint github.com/golang/protobuf/protoc-gen-go github.com/go-swagger/go-swagger/cmd/swagger magma/orc8r/cloud/go/tools/combine_swagger github.com/vektra/mockery/cmd/mockery magma/orc8r/cloud/go/tools/swaggergen
+TOOL_DEPS:=golang.org/x/lint/golint github.com/golang/protobuf/protoc-gen-go github.com/go-swagger/go-swagger/cmd/swagger github.com/go-magma/magma/orc8r/cloud/go/tools/combine_swagger github.com/vektra/mockery/cmd/mockery github.com/go-magma/magma/orc8r/cloud/go/tools/swaggergen
 include $(MAGMA_ROOT)/orc8r/cloud/go/module.mk
 
-LIB_ROOT=$(MAGMA_ROOT)/orc8r/lib/go
+LIB_ROOT=$(MAGMA_ROOT)/lib/go
 
 # Add targets for Orc8r submodules
 clean::

@@ -24,7 +24,7 @@ import (
 	"sort"
 	"strings"
 
-	"magma/orc8r/cloud/go/tools/swaggergen/generate"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/swaggergen/generate"
 
 	"gopkg.in/yaml.v2"
 )

@@ -459,7 +459,7 @@ jobs:
           workdir: ${MAGMA_ROOT}/cwf/gateway
       - run:
           command: |
-            cd ${MAGMA_ROOT}/orc8r/gateway/go
+            cd ${MAGMA_ROOT}/gateway/go
             go test ./...
             go vet ./...
       - magma_slack_notify

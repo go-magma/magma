@@ -14,9 +14,9 @@
 package configurator
 
 import (
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/cloud/go/services/configurator/storage"
-	storage2 "magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator/storage"
+	storage2 "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/protobuf/ptypes/wrappers"
 	"github.com/pkg/errors"

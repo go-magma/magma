@@ -25,13 +25,13 @@ import (
 	"strings"
 	"time"
 
-	"magma/orc8r/cloud/go/identity"
-	"magma/orc8r/cloud/go/services/accessd"
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/security/cert"
-	"magma/orc8r/lib/go/security/key"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/security/cert"
+	"github.com/go-magma/magma/lib/go/security/key"
+	"github.com/go-magma/magma/orc8r/cloud/go/identity"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/accessd"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
 
 	"github.com/golang/protobuf/ptypes"
 )

@@ -1,8 +1,8 @@
 package main
 
 import (
-	fbinternalp "magma/fbinternal/cloud/go/plugin"
-	"magma/orc8r/cloud/go/plugin"
+	fbinternalp "github.com/go-magma/fbinternal/cloud/go/plugin"
+	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
 )
 
 func main() {}

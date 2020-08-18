@@ -14,8 +14,8 @@ limitations under the License.
 package servicers
 
 import (
-	"magma/orc8r/cloud/go/services/dispatcher/broker"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/broker"
 )
 
 // A little Go "polymorphism" magic for testing

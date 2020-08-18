@@ -18,12 +18,12 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/services/certifier/servicers"
-	"magma/orc8r/cloud/go/services/certifier/storage"
-	"magma/orc8r/cloud/go/sqorc"
-	"magma/orc8r/lib/go/protos"
-	certifierTestUtils "magma/orc8r/lib/go/security/csr"
+	"github.com/go-magma/magma/lib/go/protos"
+	certifierTestUtils "github.com/go-magma/magma/lib/go/security/csr"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"

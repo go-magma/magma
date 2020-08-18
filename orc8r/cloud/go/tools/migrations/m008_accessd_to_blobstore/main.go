@@ -17,9 +17,9 @@ import (
 	"context"
 	"flag"
 
-	accessprotos "magma/orc8r/cloud/go/services/accessd/protos"
-	"magma/orc8r/cloud/go/tools/migrations"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	accessprotos "github.com/go-magma/magma/orc8r/cloud/go/services/accessd/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/golang/glog"

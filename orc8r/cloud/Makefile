@@ -36,6 +36,10 @@ export PLUGIN_DIR
 define add_module
 	$(eval MODULE := $1)
 
+	ifneq ($(MODULE),orc8r)
+		MODULE = modules/$(MODULE)
+	endif
+
 	BUILD_LIST += $(MODULE)_build
 	CLEAN_LIST += $(MODULE)_clean
 	CLEAN_GEN_LIST += $(MODULE)_cleangen

@@ -17,12 +17,12 @@ import (
 	"io"
 	"net/http"
 
-	models2 "magma/orc8r/cloud/go/models"
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/services/magmad"
-	magmadModels "magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	models2 "github.com/go-magma/magma/orc8r/cloud/go/models"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/magmad"
+	magmadModels "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 
 	"github.com/labstack/echo"
 )

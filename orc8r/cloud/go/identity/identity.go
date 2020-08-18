@@ -16,8 +16,8 @@ package identity
 import (
 	"context"
 
-	"magma/orc8r/cloud/go/services/certifier"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/certifier"
 
 	"github.com/golang/glog"
 	"google.golang.org/grpc"

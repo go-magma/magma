@@ -16,12 +16,12 @@ package test_init
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/services/device"
-	"magma/orc8r/cloud/go/services/device/protos"
-	"magma/orc8r/cloud/go/services/device/servicers"
-	"magma/orc8r/cloud/go/test_utils"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 
 	"github.com/stretchr/testify/assert"
 )

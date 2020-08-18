@@ -14,14 +14,14 @@ limitations under the License.
 package main
 
 import (
-	"magma/orc8r/cloud/go/blobstore"
-	"magma/orc8r/cloud/go/orc8r"
-	"magma/orc8r/cloud/go/service"
-	"magma/orc8r/cloud/go/services/device"
-	"magma/orc8r/cloud/go/services/device/protos"
-	"magma/orc8r/cloud/go/services/device/servicers"
-	"magma/orc8r/cloud/go/sqorc"
-	storage2 "magma/orc8r/cloud/go/storage"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
+	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
+	"github.com/go-magma/magma/orc8r/cloud/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/device/servicers"
+	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
+	storage2 "github.com/go-magma/magma/orc8r/cloud/go/storage"
 
 	"github.com/golang/glog"
 )

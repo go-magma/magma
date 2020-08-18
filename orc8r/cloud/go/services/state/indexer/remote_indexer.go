@@ -17,10 +17,10 @@ import (
 	"context"
 	"strings"
 
-	"magma/orc8r/cloud/go/services/state/protos"
-	state_types "magma/orc8r/cloud/go/services/state/types"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/registry"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/orc8r/cloud/go/services/state/protos"
+	state_types "github.com/go-magma/magma/orc8r/cloud/go/services/state/types"
 
 	"github.com/golang/glog"
 )

@@ -36,7 +36,7 @@ We'll be setting up the LTE AGW VM in this tab.
 
 ```bash
 HOST [magma]$ cd lte/gateway
-HOST [magma/lte/gateway]$ vagrant up magma
+HOST [magma/modules/lte/gateway]$ vagrant up magma
 ```
 
 This will take a few minutes to spin up the VM. While that runs, switch over
@@ -68,9 +68,9 @@ Once `vagrant up` in the first tab finishes:
 We will kick off the initial build of the AGW from source here.
 
 ```bash
-HOST [magma/lte/gateway]$ vagrant ssh magma
-MAGMA-VM [/home/vagrant]$ cd magma/lte/gateway
-MAGMA-VM [/home/vagrant/magma/lte/gateway]$ make run
+HOST [magma/modules/lte/gateway]$ vagrant ssh magma
+MAGMA-VM [/home/vagrant]$ cd magma/modules/lte/gateway
+MAGMA-VM [/home/vagrant/magma/modules/lte/gateway]$ make run
 ```
 
 This will take a while (we have a lot of CXX files to build). With 2 extensive
@@ -158,7 +158,7 @@ We have a fabric command set up to do this:
 
 ```bash
 HOST [magma]$ cd lte/gateway
-HOST [magma/lte/gateway]$ fab -f dev_tools.py register_vm
+HOST [magma/modules/lte/gateway]$ fab -f dev_tools.py register_vm
 ```
 
 This command will seed your gateway and network on Orchestrator with some
@@ -167,7 +167,7 @@ local Orchestrator cloud. Wait a minute or 2 for the changes to propagate,
 then you can verify that things are working:
 
 ```bash
-HOST [magma/lte/gateway]$ vagrant ssh magma
+HOST [magma/modules/lte/gateway]$ vagrant ssh magma
 
 MAGMA-VM$ sudo service magma@* stop
 MAGMA-VM$ sudo service magma@magmad restart

@@ -18,8 +18,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"magma/orc8r/cloud/go/serde"
-	"magma/orc8r/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/orc8r/cloud/go/serde"
 
 	"github.com/pkg/errors"
 )

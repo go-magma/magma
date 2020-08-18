@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
 
 	"github.com/golang/glog"
 	"github.com/labstack/echo"

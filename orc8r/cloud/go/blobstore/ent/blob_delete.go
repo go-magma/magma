@@ -15,10 +15,10 @@ package ent
 
 import (
 	"context"
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
-	"magma/orc8r/cloud/go/blobstore/ent/predicate"
 
 	"github.com/facebookincubator/ent/dialect/sql"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/predicate"
 )
 
 // BlobDelete is the builder for deleting a Blob entity.

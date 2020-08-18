@@ -14,7 +14,7 @@
 package blob
 
 import (
-	"magma/orc8r/cloud/go/blobstore/ent/schema"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/schema"
 )
 
 const (

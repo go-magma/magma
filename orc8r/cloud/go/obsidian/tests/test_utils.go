@@ -18,11 +18,11 @@ import (
 	"testing"
 	"time"
 
-	"magma/orc8r/cloud/go/obsidian"
-	"magma/orc8r/cloud/go/obsidian/access"
-	access_tests "magma/orc8r/cloud/go/obsidian/access/tests"
-	"magma/orc8r/cloud/go/obsidian/server"
-	"magma/orc8r/lib/go/util"
+	"github.com/go-magma/magma/lib/go/util"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/access"
+	access_tests "github.com/go-magma/magma/orc8r/cloud/go/obsidian/access/tests"
+	"github.com/go-magma/magma/orc8r/cloud/go/obsidian/server"
 )
 
 const TEST_ADMIN_OPERATOR_ID = "Obsidian_Unit_Test_Admin_Operator"

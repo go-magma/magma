@@ -103,7 +103,7 @@ Control proxy manages the network transport between the gateways and the control
 ## Command Line Interfaces
 
 Several services listed above can be configured using CLIs, located under
-magma/lte/gateway/python/scripts. These are:
+magma/modules/lte/gateway/python/scripts. These are:
 
 1. Health Checker: agw_health_cli.py
 2. Mobilityd: mobility_cli.py

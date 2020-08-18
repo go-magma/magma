@@ -17,10 +17,10 @@ import (
 	"context"
 	"strings"
 
-	streamer_protos "magma/orc8r/cloud/go/services/streamer/protos"
-	merrors "magma/orc8r/lib/go/errors"
-	"magma/orc8r/lib/go/protos"
-	"magma/orc8r/lib/go/registry"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
+	streamer_protos "github.com/go-magma/magma/orc8r/cloud/go/services/streamer/protos"
 
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/ptypes/any"

@@ -16,8 +16,8 @@ package service
 import (
 	"testing"
 
-	"magma/orc8r/cloud/go/service/middleware/unary"
-	platform_service "magma/orc8r/lib/go/service"
+	platform_service "github.com/go-magma/magma/lib/go/service"
+	"github.com/go-magma/magma/orc8r/cloud/go/service/middleware/unary"
 
 	"google.golang.org/grpc"
 )

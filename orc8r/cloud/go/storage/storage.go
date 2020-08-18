@@ -18,7 +18,7 @@ package storage
 import (
 	"fmt"
 
-	"magma/orc8r/lib/go/definitions"
+	"github.com/go-magma/magma/lib/go/definitions"
 
 	"github.com/google/uuid"
 )

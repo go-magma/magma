@@ -16,11 +16,11 @@ package ent
 import (
 	"context"
 	"fmt"
-	"magma/orc8r/cloud/go/blobstore/ent/blob"
 	"strings"
 
 	"github.com/facebookincubator/ent/dialect"
 	"github.com/facebookincubator/ent/dialect/sql"
+	"github.com/go-magma/magma/orc8r/cloud/go/blobstore/ent/blob"
 )
 
 // Order applies an ordering on either graph traversal or sql selector.
