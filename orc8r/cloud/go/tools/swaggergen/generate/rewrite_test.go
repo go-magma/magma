@@ -22,7 +22,6 @@ import (
 	"testing"
 
 	"github.com/go-magma/magma/orc8r/cloud/go/tools/swaggergen/generate"
-
 	"github.com/stretchr/testify/assert"
 )
 
@@ -61,6 +60,6 @@ func runRewriteTestCase(t *testing.T, ymlFile string, outputDir string) {
 		assert.NoError(t, err)
 		actualFileContents, err := ioutil.ReadFile(baseFilename)
 		assert.NoError(t, err)
-		assert.Equal(t, goldenFileContents, actualFileContents)
+		assert.Equal(t, string(goldenFileContents), string(actualFileContents))
 	}
 }

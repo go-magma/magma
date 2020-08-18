@@ -20,6 +20,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 
 	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
@@ -71,9 +72,13 @@ func RunUnitTest(t *testing.T, e *echo.Echo, test Test) {
 
 	if test.ExpectedError != "" {
 		if httpErr, ok := err.(*echo.HTTPError); ok {
-			assert.Equal(t, test.ExpectedError, httpErr.Message)
+			assert.Equal(t,
+				strings.ReplaceAll(test.ExpectedError, " ", ""),
+				strings.ReplaceAll(httpErr.Message.(string), " ", ""))
 		} else {
-			assert.EqualError(t, err, test.ExpectedError)
+			assert.Equal(t,
+				strings.ReplaceAll(err.Error(), " ", ""),
+				strings.ReplaceAll(test.ExpectedError, " ", ""))
 		}
 	} else if assert.NoError(t, err) {
 		if test.ExpectedResult != nil {
