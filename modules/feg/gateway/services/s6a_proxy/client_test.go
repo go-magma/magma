@@ -43,7 +43,7 @@ func TestS6aProxyClient(t *testing.T) {
 		t.Fatalf("GRPC AIR Error: %v", err)
 		return
 	}
-	t.Logf("GRPC AIA: %#+v", *r)
+	t.Logf("GRPC AIA: %s", r)
 	if r.ErrorCode != protos.ErrorCode_UNDEFINED {
 		t.Errorf("Unexpected AIA Error Code: %d", r.ErrorCode)
 	}
@@ -63,7 +63,7 @@ func TestS6aProxyClient(t *testing.T) {
 		t.Fatalf("GRPC ULR Error: %v", err)
 		return
 	}
-	t.Logf("GRPC ULA: %#+v", *ulResp)
+	t.Logf("GRPC ULA: %s", ulResp)
 	if ulResp.ErrorCode != protos.ErrorCode_UNDEFINED {
 		t.Errorf("Unexpected ULA Error Code: %d", r.ErrorCode)
 	}
@@ -76,7 +76,7 @@ func TestS6aProxyClient(t *testing.T) {
 	if err != nil {
 		t.Fatalf("GRPC PUR Error: %v", err)
 	}
-	t.Logf("GRPC PUA: %#+v", *puResp)
+	t.Logf("GRPC PUA: %s", puResp)
 	if puResp.ErrorCode != protos.ErrorCode_SUCCESS {
 		t.Errorf("Unexpected PUA Error Code: %d", r.ErrorCode)
 	}
@@ -110,7 +110,7 @@ func TestS6aProxyClient(t *testing.T) {
 		t.Fatalf("GRPC ULR Error: %v", err)
 		return
 	}
-	t.Logf("GRPC ULA: %#+v", *ulResp)
+	t.Logf("GRPC ULA: %s", ulResp)
 	if ulResp.ErrorCode != protos.ErrorCode_UNDEFINED {
 		t.Errorf("Unexpected ULA Error Code: %d", ulResp.ErrorCode)
 	}

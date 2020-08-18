@@ -223,7 +223,7 @@ func sendSar(addr string, client swxClient) int {
 	if err != nil {
 		fmt.Printf("Unable to convert request to JSON for printing; Still attempting to send request...")
 	} else {
-		fmt.Printf("Sending SAR (REGISTER) to %s:\n%s\n%+#v\n\n", addr, json, *req)
+		fmt.Printf("Sending SAR (REGISTER) to %s:\n%s\n%s\n\n", addr, json, req.String())
 	}
 	res, err := client.Register(req)
 	if err != nil || res == nil {
@@ -246,7 +246,7 @@ func sendMar(addr string, client swxClient) int {
 	if err != nil {
 		fmt.Printf("Unable to convert request to JSON for printing; Still attempting to send request...")
 	} else {
-		fmt.Printf("Sending MAR to %s:\n%s\n%+#v\n\n", addr, json, *req)
+		fmt.Printf("Sending MAR to %s:\n%s\n%s\n\n", addr, json, req.String())
 	}
 	res, err := client.Authenticate(req)
 	if err != nil || res == nil {
@@ -255,10 +255,10 @@ func sendMar(addr string, client swxClient) int {
 	}
 	json, err = orcprotos.MarshalIntern(res)
 	if err != nil {
-		fmt.Printf("Marshal Error %v for result: %+v", err, *res)
+		fmt.Printf("Marshal Error %v for result: %s", err, res.String())
 		return 3
 	}
-	fmt.Printf("Received successful MAA:\n%s\n%+v\n", json, *res)
+	fmt.Printf("Received successful MAA:\n%s\n%s\n", json, req.String())
 	return 0
 }
 

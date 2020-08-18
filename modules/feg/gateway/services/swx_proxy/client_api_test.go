@@ -71,7 +71,7 @@ func standardSwxProxyTest(t *testing.T) {
 			t.Fatalf("GRPC MAR Error: %v", err)
 			return
 		}
-		t.Logf("GRPC MAA: %#+v", *authRes)
+		t.Logf("GRPC MAA: %s", authRes)
 		assert.Equal(t, expectedUsername, authRes.GetUserName())
 		assert.Equal(t, 1, len(authRes.GetSipAuthVectors()))
 		v := authRes.SipAuthVectors[0]
@@ -94,7 +94,7 @@ func standardSwxProxyTest(t *testing.T) {
 	assert.Equal(t,
 		orcprotos.TestMarshal(&protos.RegistrationAnswer{SessionId: regRes.GetSessionId()}),
 		orcprotos.TestMarshal(regRes))
-	t.Logf("GRPC Register SAA: %#+v", *regRes)
+	t.Logf("GRPC Register SAA: %s", regRes)
 
 	regReq.SessionId = regRes.GetSessionId()
 	deregRes, err := swx_proxy.Deregister(regReq)
@@ -105,7 +105,7 @@ func standardSwxProxyTest(t *testing.T) {
 	assert.Equal(t,
 		orcprotos.TestMarshal(&protos.RegistrationAnswer{SessionId: regRes.GetSessionId()}),
 		orcprotos.TestMarshal(deregRes))
-	t.Logf("GRPC Deregister SAA: %#+v", *deregRes)
+	t.Logf("GRPC Deregister SAA: %s", deregRes)
 
 	// Test client error handling
 	authRes, err := swx_proxy.Authenticate(nil)

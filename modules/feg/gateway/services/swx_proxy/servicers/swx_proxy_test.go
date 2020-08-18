@@ -156,11 +156,11 @@ func swxStandardTest(t *testing.T, client protos.SwxProxyClient, test_loops int)
 		for i := uint32(0); i < servicers.MinRequestedVectors; i++ {
 			authRes, err := client.Authenticate(context.Background(), authReq)
 			if err != nil {
+				go func() { complChan <- err }()
 				t.Fatalf("GRPC MAR Error: %v", err)
-				complChan <- err
 				return
 			}
-			t.Logf("GRPC MAA: %#+v", *authRes)
+			t.Logf("GRPC MAA: %s", authRes)
 			assert.Equal(t, userName, authRes.GetUserName())
 			if len(authRes.SipAuthVectors) != 1 {
 				t.Errorf("Unexpected Number of SIPAuthVectors: %d, Expected: %d", len(authRes.SipAuthVectors), 1)
@@ -180,21 +180,21 @@ func swxStandardTest(t *testing.T, client protos.SwxProxyClient, test_loops int)
 		// Only must verify that request was successful (no error) to ensure user
 		// is registered
 		if err != nil {
+			go func() { complChan <- err }()
 			t.Fatalf("GRPC SAR Register Error: %v", err)
-			complChan <- err
 			return
 		}
-		t.Logf("GRPC SAA Register: %#+v", *regRes)
+		t.Logf("GRPC SAA Register: %s", regRes)
 
 		unregRes, err := client.Deregister(context.Background(), regReq)
 		// Only must verify that request was successful (no error) to ensure user
 		// is de-registered
 		if err != nil {
+			go func() { complChan <- err }()
 			t.Fatalf("GRPC SAR De-register Error: %v", err)
-			complChan <- err
 			return
 		}
-		t.Logf("GRPC SAA De-register: %#+v", *unregRes)
+		t.Logf("GRPC SAA De-register: %s", unregRes)
 		complChan <- nil
 	}
 	go testHappyPath(uint32(rand.Intn(100)))

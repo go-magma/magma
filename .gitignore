@@ -56,6 +56,7 @@ orc8r/cloud/docker/controller/apidocs/v1/temp
 
 # Ignore apt/build cache
 .cache/*
+modules/.cache/*
 
 # Packer build artifacts
 *.box

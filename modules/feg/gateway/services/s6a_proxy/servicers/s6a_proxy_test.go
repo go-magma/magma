@@ -97,11 +97,11 @@ func TestS6aProxyService(t *testing.T) {
 		// AIR
 		r, err := c.AuthenticationInformation(context.Background(), req)
 		if err != nil {
+			go func() { complChan <- err }()
 			t.Fatalf("GRPC AIR Error: %v", err)
-			complChan <- err
 			return
 		}
-		t.Logf("GRPC AIA: %#+v", *r)
+		t.Logf("GRPC AIA: %s", r)
 		if r.ErrorCode != protos.ErrorCode_UNDEFINED {
 			t.Errorf("Unexpected AIA Error Code: %d", r.ErrorCode)
 		}
@@ -117,11 +117,11 @@ func TestS6aProxyService(t *testing.T) {
 		// ULR
 		ulResp, err := c.UpdateLocation(context.Background(), ulReq)
 		if err != nil {
+			go func() { complChan <- err }()
 			t.Fatalf("GRPC ULR Error: %v", err)
-			complChan <- err
 			return
 		}
-		t.Logf("GRPC ULA: %#+v", *ulResp)
+		t.Logf("GRPC ULA: %s", ulResp)
 		if ulResp.ErrorCode != protos.ErrorCode_UNDEFINED {
 			t.Errorf("Unexpected ULA Error Code: %d", ulResp.ErrorCode)
 		}
@@ -132,11 +132,10 @@ func TestS6aProxyService(t *testing.T) {
 		// PUR
 		puResp, err := c.PurgeUE(context.Background(), puReq)
 		if err != nil {
+			go func() { complChan <- err }()
 			t.Fatalf("GRPC PUR Error: %v", err)
-			complChan <- err
-			return
 		}
-		t.Logf("GRPC PUA: %#+v", *puResp)
+		t.Logf("GRPC PUA: %s", puResp)
 		if puResp.ErrorCode != protos.ErrorCode_SUCCESS {
 			t.Errorf("Unexpected PUA Error Code: %d", puResp.ErrorCode)
 		}
@@ -197,7 +196,7 @@ func TestS6aProxyService(t *testing.T) {
 		t.Fatalf("GRPC AIR Error: %v", err)
 		return
 	}
-	t.Logf("GRPC AIA: %#+v", *airResp)
+	t.Logf("GRPC AIA: %s", airResp)
 	if airResp.ErrorCode != protos.ErrorCode_UNDEFINED {
 		t.Errorf("Unexpected AIA Error Code: %d", airResp.ErrorCode)
 	}
