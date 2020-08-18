@@ -215,7 +215,7 @@ func air(cmd *commands.Command, args []string) int {
 	}
 	// AIR
 	json, err := orcprotos.MarshalIntern(req)
-	fmt.Printf("Sending AIR to %s:\n%s\n%+#v\n\n", peerAddr, json, *req)
+	fmt.Printf("Sending AIR to %s:\n%s\n%s\n\n", peerAddr, json, req.String())
 	r, err := cli.AuthenticationInformation(req)
 	if err != nil || r == nil {
 		log.Printf("GRPC AIR Error: %v", err)
@@ -223,10 +223,10 @@ func air(cmd *commands.Command, args []string) int {
 	}
 	json, err = orcprotos.MarshalIntern(r)
 	if err != nil {
-		log.Printf("Marshal Error %v for result: %+v", err, *r)
+		log.Printf("Marshal Error %v for result: %s", err, r.String())
 		return 9
 	}
-	fmt.Printf("Received AIA:\n%s\n%+v\n", json, *r)
+	fmt.Printf("Received AIA:\n%s\n%s\n", json, r.String())
 
 	return 0
 }

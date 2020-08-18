@@ -72,7 +72,7 @@ func GetS6aProxyConfigs() (*diameter.DiameterClientConfig, *diameter.DiameterSer
 			}
 	}
 
-	log.Printf("Loaded %s configs: %+v", S6aProxyServiceName, *configsPtr)
+	log.Printf("Loaded %s configs: %s", S6aProxyServiceName, configsPtr.String())
 
 	return &diameter.DiameterClientConfig{
 			Host:             diameter.GetValueOrEnv(diameter.HostFlag, S6aDiamHostEnv, configsPtr.Server.Host),

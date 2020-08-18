@@ -101,7 +101,10 @@ func createChallengeRequest(
 	}
 	if len(ans.SipAuthVectors) == 0 {
 		return aka.EapErrorResPacket(
-			identifier, aka.NOTIFICATION_FAILURE, codes.Internal, "Error: Missing/empty SWx Auth Vector: %+v", *ans)
+			identifier,
+			aka.NOTIFICATION_FAILURE,
+			codes.Internal,
+			"Error: Missing/empty SWx Auth Vector: %s", ans.String())
 	}
 	av := ans.SipAuthVectors[0] // Use first vector for now
 	ra := av.GetRandAutn()
@@ -110,8 +113,8 @@ func createChallengeRequest(
 			identifier,
 			aka.NOTIFICATION_FAILURE,
 			codes.Internal,
-			"Invalid SWx RandAutn len (%d, expected: %d) in Response: %+v",
-			len(ra), aka.RandAutnLen, *ans)
+			"Invalid SWx RandAutn len (%d, expected: %d) in Response: %s",
+			len(ra), aka.RandAutnLen, ans.String())
 	}
 
 	identifier++
