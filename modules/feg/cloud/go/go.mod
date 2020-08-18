@@ -22,6 +22,8 @@ require (
 	github.com/Masterminds/squirrel v1.1.1-0.20190513200039-d13326f0be73
 	github.com/go-magma/magma/lib/go v0.0.0
 	github.com/go-magma/magma/lib/go/protos v0.0.0
+	github.com/go-magma/magma/modules/feg/cloud/go/protos v0.0.0-20200818162846-8db662db3aa7
+	github.com/go-magma/magma/modules/lte/cloud/go v0.0.0-20200818162846-8db662db3aa7
 	github.com/go-magma/magma/orc8r/cloud/go v0.0.0
 	github.com/go-openapi/errors v0.19.2
 	github.com/go-openapi/strfmt v0.19.4

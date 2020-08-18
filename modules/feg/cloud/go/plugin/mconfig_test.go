@@ -16,6 +16,7 @@ package plugin_test
 import (
 	"testing"
 
+	"github.com/go-magma/magma/lib/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	"github.com/go-magma/magma/modules/feg/cloud/go/plugin"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos/mconfig"
@@ -24,10 +25,9 @@ import (
 	orc8rplugin "github.com/go-magma/magma/orc8r/cloud/go/plugin"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 	"github.com/go-magma/magma/orc8r/cloud/go/storage"
-
+	"github.com/go-openapi/swag"
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
-	"github.com/go-openapi/swag"
 )
 
 func TestBuilder_Build(t *testing.T) {
@@ -244,7 +244,7 @@ func TestBuilder_Build(t *testing.T) {
 
 	err = builder.Build("n1", "gw1", graph, nw, actual)
 	assert.NoError(t, err)
-	assert.Equal(t, expected, actual)
+	equalMap(t, expected, actual)
 
 	// put a config on the gw, erase the network config
 	nw.Configs = map[string]interface{}{}
@@ -254,7 +254,7 @@ func TestBuilder_Build(t *testing.T) {
 	actual = map[string]proto.Message{}
 	err = builder.Build("n1", "gw1", graph, nw, actual)
 	assert.NoError(t, err)
-	assert.Equal(t, expected, actual)
+	equalMap(t, expected, actual)
 }
 
 var defaultConfig = &models.NetworkFederationConfigs{
@@ -393,4 +393,13 @@ var defaultConfig = &models.NetworkFederationConfigs{
 
 func uint32Ptr(i uint32) *uint32 {
 	return &i
+}
+
+func equalMap(t *testing.T, expected, actual map[string]proto.Message) {
+	assert.Equal(t, len(expected), len(actual))
+	for k, v := range expected {
+		v1, ok := actual[k]
+		assert.True(t, ok)
+		assert.Equal(t, protos.TestMarshal(v), protos.TestMarshal(v1))
+	}
 }

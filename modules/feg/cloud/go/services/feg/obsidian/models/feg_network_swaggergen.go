@@ -6,10 +6,10 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
 	models3 "github.com/go-magma/magma/modules/lte/cloud/go/services/policydb/obsidian/models"
 	models4 "github.com/go-magma/magma/orc8r/cloud/go/models"
 	models5 "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
+	strfmt "github.com/go-openapi/strfmt"
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/swag"

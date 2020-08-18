@@ -1146,7 +1146,7 @@ func TestCreateGateway(t *testing.T) {
 		ParamNames:     []string{"network_id"},
 		ParamValues:    []string{"n1"},
 		ExpectedStatus: 500,
-		ExpectedError:  "failed to create gateway: rpc error: code = Internal desc = could not find entities matching [type:\"cellular_enodeb\" key:\"dne\" ]",
+		ExpectedError:  "failed to create gateway: rpc error: code = Internal desc = could not find entities matching [type:\"cellular_enodeb\"  key:\"dne\"]",
 	}
 	tests.RunUnitTest(t, e, tc)
 

@@ -22,7 +22,6 @@ import (
 	"testing"
 
 	"github.com/go-magma/magma/orc8r/cloud/go/tools/swaggergen/generate"
-
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v2"
 )

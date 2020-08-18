@@ -6,10 +6,10 @@ magma-gen-meta:
   dependencies:
     - 'orc8r/cloud/go/models/swagger-common.yml'
     - 'orc8r/cloud/go/services/orchestrator/obsidian/models/swagger.v1.yml'
-    - 'lte/cloud/go/services/lte/obsidian/models/swagger.v1.yml'
-    - 'lte/cloud/go/services/policydb/obsidian/models/swagger.v1.yml'
+    - 'modules/lte/cloud/go/services/lte/obsidian/models/swagger.v1.yml'
+    - 'modules/lte/cloud/go/services/policydb/obsidian/models/swagger.v1.yml'
   temp-gen-filename: feg-swagger.yml
-  output-dir: feg/cloud/go/services/feg/obsidian
+  output-dir: modules/feg/cloud/go/services/feg/obsidian
   types:
     - go-struct-name: DiameterClientConfigs
       filename: diameter_client_configs_swaggergen.go
