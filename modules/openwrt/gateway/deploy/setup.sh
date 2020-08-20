@@ -1,13 +1,13 @@
 #!/bin/bash
 
 MY_FULL_PATH="$(cd "$(dirname "${0}")" && pwd)"
-MAGMA_PATH=$(sed -E 's|fbcode/magma/.*|fbcode/magma|'  <<< "${MY_FULL_PATH}")
-SRC_ROOT="${MAGMA_PATH}/openwrt/gateway/configs"
+OPENWRT_MOD_PATH=$(sed -E 's|/modules/openwrt/.*|/modules/openwrt|'  <<< "${MY_FULL_PATH}")
+SRC_ROOT="${OPENWRT_MOD_PATH}/gateway/configs"
 TGT_CONFIG_DIR="/etc/magma/configs"
 IP="192.168.1.1"
 USER="root"
-PASSWORD="facebook"
-SERVICES="magmad aaa_server radius"
+PASSWORD="magma"
+SERVICES="magmad aaa_server"
 
 check_deploy_tools() {
   echo "Checking PuTTY Secure Copy client tools"
