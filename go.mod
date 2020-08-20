@@ -15,7 +15,7 @@ require (
 	github.com/emakeev/snowflake v0.0.0-20200206205012-767080b052fe
 	github.com/facebookincubator/ent v0.0.0-20191128071424-29c7b0a0d805
 	github.com/facebookincubator/prometheus-configmanager v0.0.0-20200717220759-a8282767b087
-	github.com/fiorix/go-diameter/v4 v4.0.0-00010101000000-000000000000
+	github.com/fiorix/go-diameter/v4 v4.0.1-0.20200317220231-9ea0b9498e1a
 	github.com/go-openapi/analysis v0.18.0 // indirect
 	github.com/go-openapi/errors v0.19.2
 	github.com/go-openapi/jsonpointer v0.18.0 // indirect
