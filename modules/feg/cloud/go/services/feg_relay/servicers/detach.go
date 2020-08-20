@@ -16,8 +16,8 @@ package servicers
 import (
 	"golang.org/x/net/context"
 
-	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/lib/go/protos"
+	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 )
 
 // EPSDetachAc relays the EPSDetachAck sent from VLR->FeG->Access Gateway

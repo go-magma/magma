@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-magma/cwf/cloud/go/services/analytics/mocks"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/services/analytics/mocks"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/common/model"

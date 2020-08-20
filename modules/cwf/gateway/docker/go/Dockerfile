@@ -98,8 +98,8 @@ COPY gateway/go $MAGMA_ROOT/gateway/go
 # -----------------------------------------------------------------------------
 FROM base as builder
 # Enable make gen if proto gen is required
-# RUN make -C $MAGMA_ROOT/cwf/gateway gen
-RUN make -C $MAGMA_ROOT/cwf/gateway build
+# RUN make -C $MAGMA_ROOT/modules/cwf/gateway gen
+RUN make -C $MAGMA_ROOT/modules/cwf/gateway build
 
 # -----------------------------------------------------------------------------
 # Production image

@@ -13,8 +13,8 @@ limitations under the License.
 package metrics
 
 import (
-	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/lib/go/metrics"
+	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 
 	"github.com/golang/glog"
 	"github.com/prometheus/client_golang/prometheus"

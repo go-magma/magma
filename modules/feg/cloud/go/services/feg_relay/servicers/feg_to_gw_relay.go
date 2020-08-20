@@ -18,13 +18,13 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/go-magma/magma/lib/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/feg_relay/utils"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/directoryd"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/dispatcher/gateway_registry"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/golang/glog"
 	"golang.org/x/net/context"

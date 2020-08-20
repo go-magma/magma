@@ -71,7 +71,7 @@ clean: clean_python  ## Clean all builds
 	rm -rf $(C_BUILD)
 
 clean_python: ## Clean Python-only builds
-	make -C $(MAGMA_ROOT)/lte/gateway/python clean
+	make -C $(MAGMA_ROOT)/modules/lte/gateway/python clean
 
 start: ## Start all services
 	sudo service magma@magmad start
@@ -121,7 +121,7 @@ cd $(1) && ctest --output-on-failure
 endef
 
 build_python: stop ## Build Python environment
-	make -C $(MAGMA_ROOT)/lte/gateway/python buildenv
+	make -C $(MAGMA_ROOT)/modules/lte/gateway/python buildenv
 
 build_common: ## Build shared libraries
 	$(call run_cmake, $(C_BUILD)/magma_common, $(MAGMA_ROOT)/gateway/c/common, )
@@ -148,7 +148,7 @@ format_oai: ## Format OAI
 	clang-format --style=file -i {} \;
 
 test_python: stop ## Run all Python-specific tests
-	make -C $(MAGMA_ROOT)/lte/gateway/python test_all
+	make -C $(MAGMA_ROOT)/modules/lte/gateway/python test_all
 
 test_oai: build_common ## Run all OAI-specific tests
 	$(call run_ctest, $(C_BUILD)/oai, $(GATEWAY_C_DIR)/oai, $(OAI_FLAGS))

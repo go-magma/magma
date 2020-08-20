@@ -14,7 +14,7 @@ limitations under the License.
 package main
 
 import (
-	cwfplugin "github.com/go-magma/cwf/cloud/go/plugin"
+	cwfplugin "github.com/go-magma/magma/modules/cwf/cloud/go/plugin"
 	"github.com/go-magma/magma/orc8r/cloud/go/plugin"
 )
 

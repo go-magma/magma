@@ -17,7 +17,7 @@
 package controller
 
 import (
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/controller/hacluster"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/controller/hacluster"
 )
 
 func init() {

@@ -16,8 +16,8 @@ package servicers
 import (
 	"context"
 
-	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/lib/go/protos"
+	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 )
 
 // MMInformationReq relays the MMInformationRequest sent from VLR->FeG->Access Gateway

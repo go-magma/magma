@@ -17,8 +17,8 @@ import (
 	"github.com/golang/glog"
 	"golang.org/x/net/context"
 
-	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/lib/go/protos"
+	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 )
 
 // VLRResetAck relays the ResetAck sent from VLR->FeG->All Access Gateway

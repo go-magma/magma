@@ -17,11 +17,11 @@ import (
 	"context"
 	"encoding/binary"
 	"fmt"
-	"io"
 	"github.com/go-magma/magma/modules/feg/gateway/services/testcore/hss/servicers"
+	"io"
 	"reflect"
 
-	"github.com/go-magma/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap/providers/aka"
 	"github.com/go-magma/magma/modules/lte/cloud/go/crypto"

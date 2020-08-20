@@ -17,13 +17,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/go-magma/cwf/cloud/go/protos/mconfig"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/events"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/gre_probe"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/service_health"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/system_health"
-	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	orcprotos "github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos/mconfig"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/events"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/gre_probe"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/service_health"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/system_health"
+	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 
 	"github.com/golang/glog"
 )

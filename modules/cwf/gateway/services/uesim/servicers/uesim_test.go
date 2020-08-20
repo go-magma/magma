@@ -17,8 +17,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/go-magma/cwf/cloud/go/protos"
-	"github.com/go-magma/cwf/gateway/services/uesim/servicers"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim/servicers"
 	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
 
 	"github.com/stretchr/testify/assert"

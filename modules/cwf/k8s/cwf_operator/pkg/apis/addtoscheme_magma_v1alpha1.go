@@ -17,7 +17,7 @@
 package apis
 
 import (
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/apis/magma/v1alpha1"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/apis/magma/v1alpha1"
 )
 
 func init() {

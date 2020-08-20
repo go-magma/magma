@@ -17,7 +17,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/go-magma/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -19,12 +19,11 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"fbc/cwf/radius/modules/eap/packet"
-	"fbc/lib/go/radius"
-	"fbc/lib/go/radius/rfc2865"
-	"fbc/lib/go/radius/rfc2866"
-	"fbc/lib/go/radius/rfc2869"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap"
+	"layeh.com/radius"
+	"layeh.com/radius/rfc2865"
+	"layeh.com/radius/rfc2866"
+	"layeh.com/radius/rfc2869"
 
 	"github.com/pkg/errors"
 )
@@ -32,6 +31,10 @@ import (
 // todo Replace constants with configurable fields
 const (
 	Auth = "\x73\xea\x5e\xdf\x10\x25\x45\x3b\x21\x15\xdb\xc2\xa9\x8a\x7c\x99"
+
+	// MessageAuthenticatorAttrLength the length, in bytes, of the Message-Authenticator
+	// attribute, including attribute Type and Length fields
+	MessageAuthenticatorAttrLength uint16 = 18
 )
 
 // HandleRadius routes the Radius packet to the UE with the specified imsi.
@@ -39,17 +42,11 @@ func (srv *UESimServer) HandleRadius(imsi string, calledStationID string, p *rad
 	// todo Validate the packet. (Requires keeping state)
 
 	// Extract EAP packet.
-	eapMessage, err := packet.NewPacketFromRadius(p)
-	if err != nil {
-		err = errors.Wrap(err, "Error extracting EAP message from Radius packet")
+	eapBytes := p.Get(rfc2869.EAPMessage_Type)
+	if eapBytes != nil {
+		err := errors.New("Error extracting EAP message from Radius packet")
 		return nil, err
 	}
-	eapBytes, err := eapMessage.Bytes()
-	if err != nil {
-		err = errors.Wrap(err, "Error converting EAP packet to bytes")
-		return nil, err
-	}
-
 	// Get the specified UE from the blobstore.
 	ue, err := getUE(srv.store, imsi)
 	if err != nil {
@@ -57,7 +54,7 @@ func (srv *UESimServer) HandleRadius(imsi string, calledStationID string, p *rad
 	}
 
 	// Generate EAP response.
-	eapRes, err := srv.HandleEap(ue, eapBytes)
+	eapRes, err := srv.HandleEap(ue, eap.Packet(eapBytes))
 	if err != nil {
 		return nil, err
 	}
@@ -78,9 +75,8 @@ func (srv *UESimServer) EapToRadius(eapP eap.Packet, imsi string, calledStationI
 
 	// Hardcode in the auth.
 	copy(radiusP.Authenticator[:], []byte(Auth)[:])
-	radiusP.Attributes[rfc2865.UserName_Type] = []radius.Attribute{
-		[]byte(imsi + IdentityPostfix),
-	}
+	radiusP.Set(rfc2865.UserName_Type, radius.Attribute([]byte(imsi+IdentityPostfix)))
+
 	// TODO: Fetch UE MAC addr and use as CallingStationID
 	err := rfc2865.CallingStationID_SetString(radiusP, srv.cfg.brMac)
 	if err != nil {
@@ -131,14 +127,14 @@ func (srv *UESimServer) MakeAccountingStopRequest(calledStationID string) (*radi
 // Attribute to a RADIUS packet.
 func (srv *UESimServer) addMessageAuthenticator(encoded []byte) []byte {
 	// Calculate new size
-	size := uint16(len(encoded)) + radius.MessageAuthenticatorAttrLength
+	size := uint16(len(encoded)) + MessageAuthenticatorAttrLength
 	binary.BigEndian.PutUint16(encoded[2:4], uint16(size))
 
 	// Append the empty Message-Authenticator Attribute to the packet
 	encoded = append(
 		encoded,
 		uint8(rfc2869.MessageAuthenticator_Type),
-		uint8(radius.MessageAuthenticatorAttrLength),
+		uint8(MessageAuthenticatorAttrLength),
 	)
 	encoded = append(encoded, make([]byte, 16)...)
 

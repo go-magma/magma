@@ -17,15 +17,15 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/go-magma/cwf/gateway/registry"
+	"github.com/go-magma/magma/lib/go/protos"
+	orc8rprotos "github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/registry"
 	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/gateway/object_store"
 	"github.com/go-magma/magma/modules/feg/gateway/policydb"
 	"github.com/go-magma/magma/modules/feg/gateway/services/testcore/hss"
 	lteprotos "github.com/go-magma/magma/modules/lte/cloud/go/protos"
 	registryTestUtils "github.com/go-magma/magma/orc8r/cloud/go/test_utils"
-	"github.com/go-magma/magma/lib/go/protos"
-	orc8rprotos "github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/go-redis/redis"
 	"github.com/golang/glog"

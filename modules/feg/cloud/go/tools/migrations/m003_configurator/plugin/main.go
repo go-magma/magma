@@ -14,10 +14,10 @@
 package main
 
 import (
+	"github.com/go-magma/magma/lib/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/tools/migrations/m003_configurator/plugin/types"
 	"github.com/go-magma/magma/orc8r/cloud/go/sqorc"
 	"github.com/go-magma/magma/orc8r/cloud/go/tools/migrations/m003_configurator/migration"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/Masterminds/squirrel"
 )

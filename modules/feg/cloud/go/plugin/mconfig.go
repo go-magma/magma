@@ -16,19 +16,19 @@ package plugin
 import (
 	"fmt"
 
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos/mconfig"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 	configuratorprotos "github.com/go-magma/magma/orc8r/cloud/go/services/configurator/protos"
-	merrors "github.com/go-magma/magma/lib/go/errors"
-	"github.com/go-magma/magma/lib/go/protos"
 
+	"github.com/go-openapi/swag"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/any"
 	"github.com/pkg/errors"
-	"github.com/go-openapi/swag"
 )
 
 type Builder struct{}

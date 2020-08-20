@@ -17,6 +17,7 @@ import (
 	"fmt"
 	"net/http"
 
+	merrors "github.com/go-magma/magma/lib/go/errors"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	fegModels "github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/health"
@@ -28,7 +29,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
 	orc8rModels "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/storage"
-	merrors "github.com/go-magma/magma/lib/go/errors"
 
 	"github.com/labstack/echo"
 	"github.com/pkg/errors"

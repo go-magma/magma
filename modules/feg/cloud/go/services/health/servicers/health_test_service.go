@@ -14,11 +14,11 @@ limitations under the License.
 package servicers
 
 import (
+	"github.com/go-magma/magma/lib/go/protos"
 	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/health/storage"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/health/test_utils"
 	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"golang.org/x/net/context"
 )

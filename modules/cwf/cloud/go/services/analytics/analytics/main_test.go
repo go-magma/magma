@@ -17,8 +17,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/go-magma/cwf/cloud/go/services/analytics"
 	"github.com/go-magma/magma/lib/go/metrics"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/services/analytics"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/assert"

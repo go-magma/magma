@@ -17,10 +17,10 @@ package integration
 
 import (
 	"fmt"
-	"io/ioutil"
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/lte/cloud/go/services/policydb/obsidian/models"
+	"io/ioutil"
 	"strings"
 	"testing"
 	"time"

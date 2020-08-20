@@ -16,9 +16,9 @@ package test_init
 import (
 	"testing"
 
-	"github.com/go-magma/cwf/cloud/go/protos"
-	"github.com/go-magma/cwf/gateway/registry"
-	"github.com/go-magma/cwf/gateway/services/uesim/servicers"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/registry"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim/servicers"
 	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
 	"github.com/go-magma/magma/orc8r/cloud/go/test_utils"
 

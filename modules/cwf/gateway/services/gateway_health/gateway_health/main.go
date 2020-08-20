@@ -18,15 +18,15 @@ import (
 	"net"
 	"strings"
 
-	mconfigprotos "github.com/go-magma/cwf/cloud/go/protos/mconfig"
-	"github.com/go-magma/cwf/gateway/registry"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/gre_probe"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/service_health"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/system_health"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/servicers"
-	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/gateway/go/mconfig"
 	"github.com/go-magma/magma/lib/go/service"
+	mconfigprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos/mconfig"
+	"github.com/go-magma/magma/modules/cwf/gateway/registry"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/gre_probe"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/service_health"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/system_health"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/servicers"
+	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 
 	"github.com/golang/glog"
 )

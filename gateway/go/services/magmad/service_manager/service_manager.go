@@ -22,6 +22,7 @@ import (
 	"strings"
 	"sync/atomic"
 
+	"github.com/go-magma/magma/gateway/go/services/magmad/service/generic_command"
 	"github.com/golang/glog"
 
 	"github.com/go-magma/magma/gateway/go/config"
@@ -56,14 +57,17 @@ func Get() ServiceController {
 func StartCmdWithStderrStdoutTailer(cmd *exec.Cmd) (chan string, *os.Process, error) {
 	stderr, err := cmd.StderrPipe()
 	if err != nil {
-		return nil, nil, fmt.Errorf("failed to cerate stderr pipe for command '%s': %v", cmd.String(), err)
+		return nil, nil, fmt.Errorf(
+			"failed to cerate stderr pipe for command '%s': %v", generic_command.ToString(cmd), err)
 	}
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
-		return nil, nil, fmt.Errorf("failed to cerate stdout pipe for command '%s': %v", cmd.String(), err)
+		return nil, nil, fmt.Errorf(
+			"failed to cerate stdout pipe for command '%s': %v", generic_command.ToString(cmd), err)
 	}
 	if err = cmd.Start(); err != nil {
-		return nil, nil, fmt.Errorf("failed start command '%s': %v", cmd.String(), err)
+		return nil, nil, fmt.Errorf(
+			"failed start command '%s': %v", generic_command.ToString(cmd), err)
 	}
 	c := make(chan string)
 	var streamsDone = new(int32)

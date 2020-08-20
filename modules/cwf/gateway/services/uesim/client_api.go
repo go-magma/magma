@@ -21,8 +21,8 @@ import (
 	"errors"
 	"fmt"
 
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
-	"github.com/go-magma/cwf/gateway/registry"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/registry"
 
 	"github.com/golang/glog"
 	"google.golang.org/grpc"

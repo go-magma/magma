@@ -17,13 +17,13 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-magma/cwf/cloud/go/cwf"
-	"github.com/go-magma/cwf/cloud/go/services/analytics"
+	"github.com/go-magma/magma/lib/go/metrics"
+	"github.com/go-magma/magma/lib/go/service/config"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/cwf"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/services/analytics"
 	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
 	"github.com/go-magma/magma/orc8r/cloud/go/service"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
-	"github.com/go-magma/magma/lib/go/metrics"
-	"github.com/go-magma/magma/lib/go/service/config"
 
 	"github.com/golang/glog"
 	promAPI "github.com/prometheus/client_golang/api"

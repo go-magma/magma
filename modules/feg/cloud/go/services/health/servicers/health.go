@@ -17,6 +17,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/go-magma/magma/lib/go/protos"
 	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/health/metrics"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/health/storage"
@@ -24,7 +25,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/clock"
 	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/golang/glog"
 	"golang.org/x/net/context"

@@ -25,15 +25,15 @@ import (
 	"sync"
 	"time"
 
-	"fbc/lib/go/radius"
-	"fbc/lib/go/radius/rfc2869"
-	"github.com/go-magma/cwf/cloud/go/protos"
-	"github.com/go-magma/cwf/gateway/registry"
-	"github.com/go-magma/cwf/gateway/services/uesim"
+	"github.com/go-magma/magma/lib/go/service/config"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/registry"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap"
 	"github.com/go-magma/magma/modules/lte/cloud/go/crypto"
 	"github.com/go-magma/magma/orc8r/cloud/go/tools/commands"
-	"github.com/go-magma/magma/lib/go/service/config"
+	"layeh.com/radius"
+	"layeh.com/radius/rfc2869"
 
 	"github.com/golang/glog"
 )

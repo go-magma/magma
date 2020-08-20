@@ -129,6 +129,14 @@ def _create_build_context_if_necessary(args: argparse.Namespace) -> None:
         os.path.join(HOST_MAGMA_ROOT, 'gateway', 'go'),
         gw_path,
     )
+    shutil.copy(
+        os.path.join(HOST_MAGMA_ROOT, 'go.mod'),
+        os.path.join(BUILD_CONTEXT, SRC_ROOT, GUEST_MAGMA_ROOT)
+    )
+    shutil.copy(
+        os.path.join(HOST_MAGMA_ROOT, 'go.sum'),
+        os.path.join(BUILD_CONTEXT, SRC_ROOT, GUEST_MAGMA_ROOT)
+    )
 
     modules = []
     for module in _get_modules():

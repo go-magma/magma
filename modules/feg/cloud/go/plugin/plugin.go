@@ -17,6 +17,8 @@ limitations under the License.
 package plugin
 
 import (
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/service/config"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
@@ -25,8 +27,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/services/metricsd"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/providers"
-	"github.com/go-magma/magma/lib/go/registry"
-	"github.com/go-magma/magma/lib/go/service/config"
 )
 
 // FegOrchestratorPlugin is an implementation of OrchestratorPlugin for the

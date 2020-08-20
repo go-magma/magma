@@ -22,9 +22,9 @@ import (
 	"strconv"
 	"testing"
 
-	magmav1alpha1 "github.com/go-magma/cwf/k8s/cwf_operator/pkg/apis/magma/v1alpha1"
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/health_client"
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/registry"
+	magmav1alpha1 "github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/apis/magma/v1alpha1"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/health_client"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/registry"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	orcprotos "github.com/go-magma/magma/lib/go/protos"
 

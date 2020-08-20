@@ -14,7 +14,8 @@
 package models
 
 import (
-	"github.com/go-magma/cwf/cloud/go/cwf"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/cwf"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	fegModels "github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
 	"github.com/go-magma/magma/modules/lte/cloud/go/lte"
@@ -25,7 +26,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
 	orc8rModels "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/storage"
-	merrors "github.com/go-magma/magma/lib/go/errors"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"

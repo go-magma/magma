@@ -17,7 +17,7 @@ import (
 	"errors"
 	"regexp"
 
-	"github.com/go-magma/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 )
 
 // validateUEData ensures that a UE data proto is not nil and that it contains

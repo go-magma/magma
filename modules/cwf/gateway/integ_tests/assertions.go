@@ -18,10 +18,10 @@ import (
 	"reflect"
 	"time"
 
-	"fbc/lib/go/radius"
-	"fbc/lib/go/radius/rfc2869"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap"
+	"layeh.com/radius"
+	"layeh.com/radius/rfc2869"
 
 	"github.com/stretchr/testify/assert"
 )

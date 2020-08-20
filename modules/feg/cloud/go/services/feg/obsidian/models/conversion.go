@@ -14,6 +14,8 @@
 package models
 
 import (
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos/mconfig"
 	"github.com/go-magma/magma/modules/lte/cloud/go/lte"
@@ -25,8 +27,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/handlers"
 	orc8rModels "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/storage"
-	merrors "github.com/go-magma/magma/lib/go/errors"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"

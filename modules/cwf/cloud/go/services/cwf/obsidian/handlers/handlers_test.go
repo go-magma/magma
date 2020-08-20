@@ -17,10 +17,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-magma/cwf/cloud/go/cwf"
-	plugin2 "github.com/go-magma/cwf/cloud/go/plugin"
-	"github.com/go-magma/cwf/cloud/go/services/cwf/obsidian/handlers"
-	models2 "github.com/go-magma/cwf/cloud/go/services/cwf/obsidian/models"
+	"github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/cwf"
+	plugin2 "github.com/go-magma/magma/modules/cwf/cloud/go/plugin"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/services/cwf/obsidian/handlers"
+	models2 "github.com/go-magma/magma/modules/cwf/cloud/go/services/cwf/obsidian/models"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	plugin3 "github.com/go-magma/magma/modules/feg/cloud/go/plugin"
 	models3 "github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
@@ -40,7 +41,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
 	stateTestInit "github.com/go-magma/magma/orc8r/cloud/go/services/state/test_init"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/state/test_utils"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"

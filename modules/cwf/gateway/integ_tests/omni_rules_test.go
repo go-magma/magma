@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/lte/cloud/go/services/policydb/obsidian/models"
@@ -103,7 +103,7 @@ func TestOmnipresentRules(t *testing.T) {
 		ResultCode:    diam.Success,
 	}
 	gyInitRequest := protos.NewGyCCRequest(imsi, protos.CCRequestType_INITIAL)
-	gyInitAnswer:= protos.NewGyCCAnswer(diam.Success).SetQuotaGrant(quotaGrant)
+	gyInitAnswer := protos.NewGyCCAnswer(diam.Success).SetQuotaGrant(quotaGrant)
 	gyInitExpectation := protos.NewGyCreditControlExpectation().Expect(gyInitRequest).Return(gyInitAnswer)
 	gyExpectations := []*protos.GyCreditControlExpectation{gyInitExpectation}
 	assert.NoError(t, setOCSExpectations(gyExpectations, nil))
@@ -205,7 +205,7 @@ func testGxDisabledOmnipresentRules(t *testing.T) {
 		ResultCode:    diam.Success,
 	}
 	gyInitRequest := protos.NewGyCCRequest(imsi, protos.CCRequestType_INITIAL)
-	gyInitAnswer:= protos.NewGyCCAnswer(diam.Success).SetQuotaGrant(quotaGrant)
+	gyInitAnswer := protos.NewGyCCAnswer(diam.Success).SetQuotaGrant(quotaGrant)
 	gyInitExpectation := protos.NewGyCreditControlExpectation().Expect(gyInitRequest).Return(gyInitAnswer)
 	gyExpectations := []*protos.GyCreditControlExpectation{gyInitExpectation}
 	assert.NoError(t, setOCSExpectations(gyExpectations, nil))

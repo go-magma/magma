@@ -18,8 +18,8 @@ import (
 	"reflect"
 	"testing"
 
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
-	"github.com/go-magma/cwf/gateway/services/uesim/servicers"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim/servicers"
 	fegprotos "github.com/go-magma/magma/modules/feg/gateway/services/aaa/protos"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap"
 	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"

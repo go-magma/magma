@@ -18,6 +18,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/go-magma/magma/lib/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	plugin2 "github.com/go-magma/magma/modules/feg/cloud/go/plugin"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/handlers"
@@ -39,7 +40,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 	stateTestInit "github.com/go-magma/magma/orc8r/cloud/go/services/state/test_init"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/state/test_utils"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"

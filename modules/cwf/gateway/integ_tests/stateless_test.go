@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	cwfProtos "github.com/go-magma/cwf/cloud/go/protos"
+	cwfProtos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	lteProtos "github.com/go-magma/magma/modules/lte/cloud/go/protos"
 	"github.com/go-magma/magma/modules/lte/cloud/go/services/policydb/obsidian/models"

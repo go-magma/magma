@@ -14,8 +14,10 @@ limitations under the License.
 package plugin
 
 import (
-	"github.com/go-magma/cwf/cloud/go/cwf"
-	"github.com/go-magma/cwf/cloud/go/services/cwf/obsidian/models"
+	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/lib/go/service/config"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/cwf"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/services/cwf/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
 	"github.com/go-magma/magma/orc8r/cloud/go/serde"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
@@ -23,8 +25,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/state/indexer"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/streamer/providers"
-	"github.com/go-magma/magma/lib/go/registry"
-	"github.com/go-magma/magma/lib/go/service/config"
 )
 
 // CwfOrchestratorPlugin implements OrchestratorPlugin for the CWF module

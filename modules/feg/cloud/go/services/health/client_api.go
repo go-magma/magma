@@ -20,9 +20,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/lib/go/errors"
 	"github.com/go-magma/magma/lib/go/registry"
+	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 
 	"github.com/golang/glog"
 )

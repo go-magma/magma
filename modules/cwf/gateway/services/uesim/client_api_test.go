@@ -16,9 +16,9 @@ package uesim_test
 import (
 	"testing"
 
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
-	"github.com/go-magma/cwf/gateway/services/uesim"
-	"github.com/go-magma/cwf/gateway/services/uesim/test_init"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim/test_init"
 	"github.com/go-magma/magma/modules/lte/cloud/go/crypto"
 
 	"github.com/stretchr/testify/assert"

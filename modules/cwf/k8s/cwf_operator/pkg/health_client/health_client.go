@@ -16,7 +16,7 @@ package health_client
 import (
 	"context"
 
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/registry"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/registry"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	orc8rprotos "github.com/go-magma/magma/lib/go/protos"
 )

@@ -20,6 +20,8 @@ import (
 	"fmt"
 	"testing"
 
+	orcprotos "github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/lib/go/registry"
 	plugin2 "github.com/go-magma/magma/modules/feg/cloud/go/plugin"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/health"
@@ -29,8 +31,6 @@ import (
 	"github.com/go-magma/magma/orc8r/cloud/go/pluginimpl"
 	configurator_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/configurator/test_init"
 	device_test_init "github.com/go-magma/magma/orc8r/cloud/go/services/device/test_init"
-	orcprotos "github.com/go-magma/magma/lib/go/protos"
-	"github.com/go-magma/magma/lib/go/registry"
 
 	"github.com/stretchr/testify/assert"
 )

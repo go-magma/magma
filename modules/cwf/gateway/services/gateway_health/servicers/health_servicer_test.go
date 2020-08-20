@@ -17,11 +17,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/go-magma/cwf/cloud/go/protos/mconfig"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/gre_probe"
-	"github.com/go-magma/cwf/gateway/services/gateway_health/health/system_health"
-	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	orc8rprotos "github.com/go-magma/magma/lib/go/protos"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos/mconfig"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/gre_probe"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/gateway_health/health/system_health"
+	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

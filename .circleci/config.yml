@@ -480,7 +480,7 @@ jobs:
           name: make feg precommit
           command: |
             cd ${MAGMA_ROOT}/feg/gateway
-            make -C ${MAGMA_ROOT}/feg/gateway precommit
+            make -C ${MAGMA_ROOT}/modules/feg/gateway precommit
       - magma_slack_notify
 
   feg-build:
@@ -521,8 +521,8 @@ jobs:
          workdir: ${MAGMA_ROOT}/cwf/gateway
       - run:
           command: |
-            cd ${MAGMA_ROOT}/cwf/gateway
-            make -C ${MAGMA_ROOT}/cwf/gateway precommit
+            cd ${MAGMA_ROOT}/modules/cwf/gateway
+            make -C ${MAGMA_ROOT}/modules/cwf/gateway precommit
       - magma_slack_notify
 
   cwf-integ-test:
@@ -598,7 +598,7 @@ jobs:
             sudo rm -rf protoc3.zip protoc3
             mkdir ${CODEGEN_ROOT}
             wget https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar -O $SWAGGER_CODEGEN_JAR
-            make -C $MAGMA_ROOT/lte/gateway/python test_all
+            make -C $MAGMA_ROOT/modules/lte/gateway/python test_all
       - magma_slack_notify
 
   lte-integ-test:
@@ -642,7 +642,7 @@ jobs:
       - run:
           command: |
             cd ${MAGMA_ROOT}/cwf/k8s/cwf_operator
-            make -C ${MAGMA_ROOT}/cwf/k8s/cwf_operator precommit
+            make -C ${MAGMA_ROOT}/modules/cwf/k8s/cwf_operator precommit
       - magma_slack_notify
 
   cwf-operator-build:

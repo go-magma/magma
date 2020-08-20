@@ -18,7 +18,7 @@ package integration
 import (
 	"encoding/json"
 	"fmt"
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	fegProtos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	lteProtos "github.com/go-magma/magma/modules/lte/cloud/go/protos"

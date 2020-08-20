@@ -18,8 +18,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/go-magma/cwf/cloud/go/cwf"
-	cwfModels "github.com/go-magma/cwf/cloud/go/services/cwf/obsidian/models"
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/cwf"
+	cwfModels "github.com/go-magma/magma/modules/cwf/cloud/go/services/cwf/obsidian/models"
 	fegModels "github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
 	lteHandlers "github.com/go-magma/magma/modules/lte/cloud/go/services/lte/obsidian/handlers"
 	policyModels "github.com/go-magma/magma/modules/lte/cloud/go/services/policydb/obsidian/models"
@@ -32,7 +33,6 @@ import (
 	orc8rModels "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/state"
 	"github.com/go-magma/magma/orc8r/cloud/go/storage"
-	merrors "github.com/go-magma/magma/lib/go/errors"
 
 	"github.com/labstack/echo"
 	"github.com/pkg/errors"

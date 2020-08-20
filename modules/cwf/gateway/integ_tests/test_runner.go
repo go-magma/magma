@@ -21,12 +21,12 @@ import (
 	"testing"
 	"time"
 
-	"fbc/lib/go/radius"
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
-	"github.com/go-magma/cwf/gateway/registry"
-	"github.com/go-magma/cwf/gateway/services/uesim"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/modules/cwf/gateway/registry"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim"
 	"github.com/go-magma/magma/modules/lte/cloud/go/crypto"
 	lteprotos "github.com/go-magma/magma/modules/lte/cloud/go/protos"
+	"layeh.com/radius"
 
 	"github.com/pkg/errors"
 )

@@ -14,9 +14,9 @@
 package main
 
 import (
-	"github.com/go-magma/cwf/cloud/go/cwf"
-	cwf_service "github.com/go-magma/cwf/cloud/go/services/cwf"
-	"github.com/go-magma/cwf/cloud/go/services/cwf/obsidian/handlers"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/cwf"
+	cwf_service "github.com/go-magma/magma/modules/cwf/cloud/go/services/cwf"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/services/cwf/obsidian/handlers"
 	"github.com/go-magma/magma/orc8r/cloud/go/obsidian"
 	"github.com/go-magma/magma/orc8r/cloud/go/service"
 

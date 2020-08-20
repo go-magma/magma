@@ -14,8 +14,8 @@ limitations under the License.
 package servicers
 
 import (
-	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/lib/go/protos"
+	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 
 	"golang.org/x/net/context"
 )

@@ -38,9 +38,9 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/apis"
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/controller"
-	"github.com/go-magma/cwf/k8s/cwf_operator/version"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/apis"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/controller"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/version"
 
 	"github.com/go-logr/glogr"
 	"github.com/operator-framework/operator-sdk/pkg/k8sutil"

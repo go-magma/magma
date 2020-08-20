@@ -14,7 +14,7 @@
 package servicers
 
 import (
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 	fegprotos "github.com/go-magma/magma/modules/feg/gateway/services/aaa/protos"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap"
 

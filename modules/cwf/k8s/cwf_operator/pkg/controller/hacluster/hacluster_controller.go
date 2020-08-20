@@ -36,8 +36,8 @@ import (
 	"strconv"
 	"time"
 
-	magmav1alpha1 "github.com/go-magma/cwf/k8s/cwf_operator/pkg/apis/magma/v1alpha1"
-	"github.com/go-magma/cwf/k8s/cwf_operator/pkg/health_client"
+	magmav1alpha1 "github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/apis/magma/v1alpha1"
+	"github.com/go-magma/magma/modules/cwf/k8s/cwf_operator/pkg/health_client"
 	"github.com/go-magma/magma/modules/feg/cloud/go/protos"
 
 	corev1 "k8s.io/api/core/v1"

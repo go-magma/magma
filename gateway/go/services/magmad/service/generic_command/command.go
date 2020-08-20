@@ -75,7 +75,7 @@ func Execute(ctx context.Context, req *protos.GenericCommandParams) (*protos.Gen
 	execCtx, cancel := context.WithTimeout(ctx, Timeout)
 	defer cancel()
 	exeCmd := exec.CommandContext(execCtx, cmdList[0], cmdList[1:]...)
-	glog.Infof("executing command '%s'", exeCmd.String())
+	glog.Infof("executing command '%s'", ToString(exeCmd))
 	var errBuff, outBuff bytes.Buffer
 	exeCmd.Stderr = &errBuff
 	exeCmd.Stdout = &outBuff
@@ -115,4 +115,22 @@ func addValue(params []interface{}, val *structpb.Value) []interface{} {
 		}
 	}
 	return params
+}
+
+// ToString returns a human-readable description of c.
+// It is intended only for debugging.
+// In particular, it is not suitable for use as input to a shell.
+// The output of String may vary across Go releases.
+func ToString(c *exec.Cmd) string {
+	if c == nil {
+		return ""
+	}
+	// report the exact executable path (plus args)
+	b := new(strings.Builder)
+	b.WriteString(c.Path)
+	for _, a := range c.Args[1:] {
+		b.WriteByte(' ')
+		b.WriteString(a)
+	}
+	return b.String()
 }

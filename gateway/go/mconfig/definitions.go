@@ -15,7 +15,7 @@ limitations under the License.
 // Managed Configs are stored in proto JSON marshaled form in gateway.mconfig by external process (magmad)
 // and periodically (MCONFOG_REFRESH_INTERVAL) refreshed by a dedicated routine
 //
-//go:generate bash -c "MAGMA_MODULES='$MAGMA_ROOT/orc8r $MAGMA_ROOT/lte $MAGMA_ROOT/feg' make -C $MAGMA_ROOT/orc8r/cloud gen"
+//***   go:generate bash -c "MAGMA_MODULES='$MAGMA_ROOT/orc8r $MAGMA_ROOT/modules/lte $MAGMA_ROOT/modules/feg' make -C $MAGMA_ROOT/orc8r/cloud gen"
 //
 package mconfig
 

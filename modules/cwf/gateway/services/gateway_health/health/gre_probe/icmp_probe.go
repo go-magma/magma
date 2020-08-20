@@ -17,7 +17,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-magma/cwf/cloud/go/protos/mconfig"
+	"github.com/go-magma/magma/modules/cwf/cloud/go/protos/mconfig"
 
 	"github.com/sparrc/go-ping"
 )

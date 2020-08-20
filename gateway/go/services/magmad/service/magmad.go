@@ -111,10 +111,10 @@ func (m *magmadService) RunNetworkTests(ctx context.Context, req *protos.Network
 		}
 		packets := strconv.FormatInt(int64(pingRes.NumPackets), 10)
 		cmd := exec.CommandContext(execCtx, "ping", "-c", packets, png.HostOrIp)
-		glog.Info(cmd.String())
+		glog.Info(generic_command.ToString(cmd))
 		out, err := cmd.Output()
 		if err != nil {
-			pingRes.Error = fmt.Sprintf("error executing '%s': %v", cmd.String(), err)
+			pingRes.Error = fmt.Sprintf("error executing '%s': %v", generic_command.ToString(cmd), err)
 		}
 		if len(out) > 0 {
 			ping.ParseResult(out, pingRes)

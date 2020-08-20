@@ -21,11 +21,11 @@ import (
 	"strconv"
 	"strings"
 
-	"fbc/lib/go/radius"
-	cwfprotos "github.com/go-magma/cwf/cloud/go/protos"
+	"github.com/go-magma/magma/lib/go/protos"
+	cwfprotos "github.com/go-magma/magma/modules/cwf/cloud/go/protos"
 	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
 	"github.com/go-magma/magma/orc8r/cloud/go/storage"
-	"github.com/go-magma/magma/lib/go/protos"
+	"layeh.com/radius"
 
 	"github.com/golang/glog"
 	"github.com/pkg/errors"

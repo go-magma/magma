@@ -17,14 +17,14 @@ package utils
 import (
 	"fmt"
 
+	merrors "github.com/go-magma/magma/lib/go/errors"
+	"github.com/go-magma/magma/lib/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/feg"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/feg/obsidian/models"
 	"github.com/go-magma/magma/orc8r/cloud/go/orc8r"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/configurator"
 	"github.com/go-magma/magma/orc8r/cloud/go/services/device"
 	orc8rModels "github.com/go-magma/magma/orc8r/cloud/go/services/orchestrator/obsidian/models"
-	merrors "github.com/go-magma/magma/lib/go/errors"
-	"github.com/go-magma/magma/lib/go/protos"
 
 	"github.com/go-openapi/swag"
 	"github.com/golang/glog"

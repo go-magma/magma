@@ -17,8 +17,8 @@ import (
 	"encoding/hex"
 	"net"
 
-	"github.com/go-magma/cwf/gateway/registry"
 	"github.com/go-magma/magma/lib/go/service/config"
+	"github.com/go-magma/magma/modules/cwf/gateway/registry"
 
 	"github.com/golang/glog"
 	"github.com/pkg/errors"

@@ -16,11 +16,11 @@ package storage
 import (
 	"time"
 
+	"github.com/go-magma/magma/lib/go/protos"
 	fegprotos "github.com/go-magma/magma/modules/feg/cloud/go/protos"
 	"github.com/go-magma/magma/modules/feg/cloud/go/services/health"
 	"github.com/go-magma/magma/orc8r/cloud/go/blobstore"
 	"github.com/go-magma/magma/orc8r/cloud/go/clock"
-	"github.com/go-magma/magma/lib/go/protos"
 )
 
 // HealthToBlob converts a gatewayID and healthStats proto to a Blobstore blob

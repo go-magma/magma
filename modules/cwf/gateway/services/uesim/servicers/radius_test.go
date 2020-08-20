@@ -18,11 +18,11 @@ import (
 	"reflect"
 	"testing"
 
-	"fbc/lib/go/radius"
-	"fbc/lib/go/radius/rfc2865"
-	"fbc/lib/go/radius/rfc2869"
-	"github.com/go-magma/cwf/gateway/services/uesim/servicers"
+	"github.com/go-magma/magma/modules/cwf/gateway/services/uesim/servicers"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap"
+	"layeh.com/radius"
+	"layeh.com/radius/rfc2865"
+	"layeh.com/radius/rfc2869"
 
 	"github.com/stretchr/testify/assert"
 )
