@@ -73,8 +73,8 @@ func TestBuilder_Build(t *testing.T) {
 	}
 	actual = map[string]proto.Message{}
 	expected = map[string]proto.Message{
-		"eap_aka": &fegmconfig.EapProviderConfig{LogLevel: 1,
-			Timeout: &fegmconfig.EapProviderConfig_Timeouts{
+		"eap_aka": &fegmconfig.EapAkaConfig{LogLevel: 1,
+			Timeout: &fegmconfig.EapAkaConfig_Timeouts{
 				ChallengeMs:            20000,
 				ErrorNotificationMs:    10000,
 				SessionMs:              43200000,
