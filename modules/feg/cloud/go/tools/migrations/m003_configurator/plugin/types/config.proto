@@ -127,5 +127,4 @@ message Config {
     EapAkaConfig eap_aka = 11;
     AAAConfig aaa_server = 12;
     EapProviderConfig eap_sim = 13;
-
 }
