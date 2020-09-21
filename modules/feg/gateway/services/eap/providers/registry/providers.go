@@ -16,8 +16,10 @@ package registry
 
 import (
 	aka_provider "github.com/go-magma/magma/modules/feg/gateway/services/eap/providers/aka/provider"
+	sim_provider "github.com/go-magma/magma/modules/feg/gateway/services/eap/providers/sim/provider"
 )
 
 func init() {
 	Register(aka_provider.New())
+	Register(sim_provider.New())
 }

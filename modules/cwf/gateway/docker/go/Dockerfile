@@ -62,22 +62,6 @@ ENV GOPROXY https://proxy.golang.org
 
 RUN printenv > /etc/environment
 
-
-# Copy just the go.mod and go.sum files to download the golang deps.
-# This step allows us to cache the downloads, and prevents reaching out to
-# the internet unless any of the go.mod or go.sum files are changed.
-COPY modules/cwf/cloud/go/go.* $MAGMA_ROOT/modules/cwf/cloud/go/
-COPY modules/cwf/gateway/go.* $MAGMA_ROOT/modules/cwf/gateway/
-COPY modules/lte/cloud/go/go.* $MAGMA_ROOT/modules/lte/cloud/go/
-COPY modules/feg/cloud/go/go.* $MAGMA_ROOT/modules/feg/cloud/go/
-COPY modules/feg/cloud/go/protos/go.* $MAGMA_ROOT/modules/feg/cloud/go/protos/
-COPY modules/feg/gateway/go.* $MAGMA_ROOT/modules/feg/gateway/
-COPY lib/go/go.* $MAGMA_ROOT/lib/go/
-COPY lib/go/protos/go.* $MAGMA_ROOT/lib/go/protos/
-COPY orc8r/cloud/go/go.* $MAGMA_ROOT/orc8r/cloud/go/
-COPY gateway/go/go.* $MAGMA_ROOT/gateway/go/
-WORKDIR $MAGMA_ROOT/cwf/gateway
-RUN go mod download; exit 0
 # Install protoc-gen-go
 RUN go install github.com/golang/protobuf/protoc-gen-go; exit 0
 

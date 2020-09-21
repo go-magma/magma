@@ -30,20 +30,6 @@ ENV GO111MODULE on
 # Use public go modules proxy
 ENV GOPROXY https://proxy.golang.org
 
-# Copy just the go.mod and go.sum files to download the golang deps.
-# This step allows us to cache the downloads, and prevents reaching out to
-# the internet unless any of the go.mod or go.sum files are changed.
-COPY modules/cwf/k8s/cwf_operator/go.*  $MAGMA_ROOT/modules/cwf/k8s/cwf_operator/
-COPY modules/lte/cloud/go/go.* $MAGMA_ROOT/modules/lte/cloud/go/
-COPY modules/feg/cloud/go/go.* $MAGMA_ROOT/modules/feg/cloud/go/
-COPY modules/feg/cloud/go/protos/go.* $MAGMA_ROOT/modules/feg/cloud/go/protos/
-COPY lib/go/go.* $MAGMA_ROOT/lib/go/
-COPY lib/go/protos/go.* $MAGMA_ROOT/lib/go/protos/
-COPY orc8r/cloud/go/go.* $MAGMA_ROOT/orc8r/cloud/go/
-COPY gateway/go/go.* $MAGMA_ROOT/gateway/go/
-WORKDIR $MAGMA_ROOT/modules/cwf/k8s/cwf_operator
-RUN go mod download; exit 0
-
 # Copy and build the go code.
 COPY modules/feg/cloud/go/protos $MAGMA_ROOT/modules/feg/cloud/go/protos
 COPY modules/lte/cloud/go/protos $MAGMA_ROOT/modules/lte/cloud/go/protos

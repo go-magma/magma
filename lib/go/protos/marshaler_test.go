@@ -49,7 +49,7 @@ var marshaledSrc = `{
    "dhcpServerEnabled": true
   },
   "eap_aka": {
-   "@type": "type.googleapis.com/magma.mconfig.EapAkaConfig",
+   "@type": "type.googleapis.com/magma.mconfig.EapProviderConfig",
    "logLevel": "INFO",
    "timeout": {
     "ChallengeMs": 20000,
