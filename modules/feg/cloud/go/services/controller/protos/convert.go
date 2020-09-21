@@ -52,6 +52,17 @@ func (profile *HSSConfig_SubscriptionProfile) ToMconfig() *mconfig.HSSConfig_Sub
 	}
 }
 
+// ToMconfig creates new mconfig.EapAkaConfig_Timeouts, copies config proto to a managed config proto & returns
+// the new mconfig.EapAkaConfig_Timeouts
+func (config *EapAkaConfig_Timeouts) ToMconfig() *mconfig.EapAkaConfig_Timeouts {
+	return &mconfig.EapAkaConfig_Timeouts{
+		ChallengeMs:            config.GetChallengeMs(),
+		ErrorNotificationMs:    config.GetErrorNotificationMs(),
+		SessionMs:              config.GetSessionMs(),
+		SessionAuthenticatedMs: config.GetSessionAuthenticatedMs(),
+	}
+}
+
 // ToMconfig creates new mconfig.EapProviderConfig_Timeouts, copies config proto to a managed config proto & returns
 // the new mconfig.EapProviderConfig_Timeouts
 func (config *EapProviderConfig_Timeouts) ToMconfig() *mconfig.EapProviderConfig_Timeouts {
