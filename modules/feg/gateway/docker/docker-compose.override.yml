@@ -8,6 +8,7 @@ services:
       target: base
       context: ${BUILD_CONTEXT}
       dockerfile: modules/feg/gateway/docker/go/Dockerfile
+    working_dir: /magma/modules/feg
     network_mode: host
     volumes:
       - ../../../../:/magma

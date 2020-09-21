@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// Package aka implements EAP-AKA provider
+// Package sim implements EAP-SIM provider
 package provider
 
 import (
@@ -28,50 +28,50 @@ import (
 	"github.com/go-magma/magma/modules/feg/gateway/services/aaa/protos"
 	eapp "github.com/go-magma/magma/modules/feg/gateway/services/eap/protos"
 	"github.com/go-magma/magma/modules/feg/gateway/services/eap/providers"
-	"github.com/go-magma/magma/modules/feg/gateway/services/eap/providers/aka/servicers"
-	_ "github.com/go-magma/magma/modules/feg/gateway/services/eap/providers/aka/servicers/handlers"
+	"github.com/go-magma/magma/modules/feg/gateway/services/eap/providers/sim/servicers"
+	_ "github.com/go-magma/magma/modules/feg/gateway/services/eap/providers/sim/servicers/handlers"
 )
 
 // Wrapper to provide a wrapper for GRPC Client to extend it with Cleanup
 // functionality
-type akaClient struct {
+type simClient struct {
 	eapp.EapServiceClient
 	cc *grpc.ClientConn
 }
 
-func (cl *akaClient) Cleanup() {
+func (cl *simClient) Cleanup() {
 	if cl != nil && cl.cc != nil {
 		cl.cc.Close()
 	}
 }
 
-// getAKAClient is a utility function to get a RPC connection to the EAP service
-func getAKAClient() (*akaClient, error) {
-	conn, err := registry.GetConnection(registry.EAP_AKA)
+// getSIMClient is a utility function to get a RPC connection to the EAP service
+func getSIMClient() (*simClient, error) {
+	conn, err := registry.GetConnection(registry.EAP_SIM)
 	if err != nil {
-		errMsg := fmt.Sprintf("EAP client initialization error: %s", err)
+		errMsg := fmt.Sprintf("EAP SIM client initialization error: %s", err)
 		glog.Error(errMsg)
 		return nil, errors.New(errMsg)
 	}
-	return &akaClient{
+	return &simClient{
 		eapp.NewEapServiceClient(conn),
 		conn,
 	}, err
 }
 
-// Handle handles passed EAP-AKA payload & returns corresponding result
-// this Handle implementation is using GRPC based AKA provider service
+// Handle handles passed EAP-SIM payload & returns corresponding result
+// this Handle implementation is using GRPC based SIM provider service
 func (*providerImpl) Handle(msg *protos.Eap) (*protos.Eap, error) {
 	if msg == nil {
-		return nil, errors.New("Invalid EAP AKA Message")
+		return nil, errors.New("Invalid EAP SIM Message")
 	}
-	cli, err := getAKAClient()
+	cli, err := getSIMClient()
 	if err != nil {
 		return nil, err
 	}
 	return cli.Handle(context.Background(), msg)
 }
 
-func NewService(_ *servicers.EapAkaSrv) providers.Method {
+func NewService(_ *servicers.EapSimSrv) providers.Method {
 	return New()
 }

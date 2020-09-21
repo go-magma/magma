@@ -805,6 +805,69 @@ func (x *EapAkaConfig) GetPlmnIds() []string {
 	return nil
 }
 
+type EapProviderConfig struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	LogLevel protos.LogLevel             `protobuf:"varint,1,opt,name=log_level,json=logLevel,proto3,enum=magma.orc8r.LogLevel" json:"log_level,omitempty"`
+	Timeout  *EapProviderConfig_Timeouts `protobuf:"bytes,2,opt,name=timeout,proto3" json:"timeout,omitempty"`
+	PlmnIds  []string                    `protobuf:"bytes,3,rep,name=PlmnIds,proto3" json:"PlmnIds,omitempty"`
+}
+
+func (x *EapProviderConfig) Reset() {
+	*x = EapProviderConfig{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_mconfigs_proto_msgTypes[8]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *EapProviderConfig) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*EapProviderConfig) ProtoMessage() {}
+
+func (x *EapProviderConfig) ProtoReflect() protoreflect.Message {
+	mi := &file_mconfigs_proto_msgTypes[8]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use EapProviderConfig.ProtoReflect.Descriptor instead.
+func (*EapProviderConfig) Descriptor() ([]byte, []int) {
+	return file_mconfigs_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *EapProviderConfig) GetLogLevel() protos.LogLevel {
+	if x != nil {
+		return x.LogLevel
+	}
+	return protos.LogLevel_DEBUG
+}
+
+func (x *EapProviderConfig) GetTimeout() *EapProviderConfig_Timeouts {
+	if x != nil {
+		return x.Timeout
+	}
+	return nil
+}
+
+func (x *EapProviderConfig) GetPlmnIds() []string {
+	if x != nil {
+		return x.PlmnIds
+	}
+	return nil
+}
+
 type AAAConfig struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -825,7 +888,7 @@ type AAAConfig struct {
 func (x *AAAConfig) Reset() {
 	*x = AAAConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[8]
+		mi := &file_mconfigs_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -838,7 +901,7 @@ func (x *AAAConfig) String() string {
 func (*AAAConfig) ProtoMessage() {}
 
 func (x *AAAConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[8]
+	mi := &file_mconfigs_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -851,7 +914,7 @@ func (x *AAAConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AAAConfig.ProtoReflect.Descriptor instead.
 func (*AAAConfig) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{8}
+	return file_mconfigs_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *AAAConfig) GetLogLevel() protos.LogLevel {
@@ -916,7 +979,7 @@ type RadiusConfig struct {
 func (x *RadiusConfig) Reset() {
 	*x = RadiusConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[9]
+		mi := &file_mconfigs_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -929,7 +992,7 @@ func (x *RadiusConfig) String() string {
 func (*RadiusConfig) ProtoMessage() {}
 
 func (x *RadiusConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[9]
+	mi := &file_mconfigs_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -942,7 +1005,7 @@ func (x *RadiusConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RadiusConfig.ProtoReflect.Descriptor instead.
 func (*RadiusConfig) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{9}
+	return file_mconfigs_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *RadiusConfig) GetSecret() []byte {
@@ -995,7 +1058,7 @@ type GatewayHealthConfig struct {
 func (x *GatewayHealthConfig) Reset() {
 	*x = GatewayHealthConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[10]
+		mi := &file_mconfigs_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1008,7 +1071,7 @@ func (x *GatewayHealthConfig) String() string {
 func (*GatewayHealthConfig) ProtoMessage() {}
 
 func (x *GatewayHealthConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[10]
+	mi := &file_mconfigs_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1021,7 +1084,7 @@ func (x *GatewayHealthConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GatewayHealthConfig.ProtoReflect.Descriptor instead.
 func (*GatewayHealthConfig) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{10}
+	return file_mconfigs_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *GatewayHealthConfig) GetRequiredServices() []string {
@@ -1080,7 +1143,7 @@ type HSSConfig struct {
 func (x *HSSConfig) Reset() {
 	*x = HSSConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[11]
+		mi := &file_mconfigs_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1093,7 +1156,7 @@ func (x *HSSConfig) String() string {
 func (*HSSConfig) ProtoMessage() {}
 
 func (x *HSSConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[11]
+	mi := &file_mconfigs_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1106,7 +1169,7 @@ func (x *HSSConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HSSConfig.ProtoReflect.Descriptor instead.
 func (*HSSConfig) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{11}
+	return file_mconfigs_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *HSSConfig) GetServer() *DiamServerConfig {
@@ -1169,7 +1232,7 @@ type RadiusdConfig struct {
 func (x *RadiusdConfig) Reset() {
 	*x = RadiusdConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[12]
+		mi := &file_mconfigs_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1182,7 +1245,7 @@ func (x *RadiusdConfig) String() string {
 func (*RadiusdConfig) ProtoMessage() {}
 
 func (x *RadiusdConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[12]
+	mi := &file_mconfigs_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1195,7 +1258,7 @@ func (x *RadiusdConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RadiusdConfig.ProtoReflect.Descriptor instead.
 func (*RadiusdConfig) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{12}
+	return file_mconfigs_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *RadiusdConfig) GetRadiusMetricsPort() uint32 {
@@ -1238,7 +1301,7 @@ type SCTPClientConfig struct {
 func (x *SCTPClientConfig) Reset() {
 	*x = SCTPClientConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[13]
+		mi := &file_mconfigs_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1251,7 +1314,7 @@ func (x *SCTPClientConfig) String() string {
 func (*SCTPClientConfig) ProtoMessage() {}
 
 func (x *SCTPClientConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[13]
+	mi := &file_mconfigs_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1264,7 +1327,7 @@ func (x *SCTPClientConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SCTPClientConfig.ProtoReflect.Descriptor instead.
 func (*SCTPClientConfig) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{13}
+	return file_mconfigs_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *SCTPClientConfig) GetServerAddress() string {
@@ -1293,7 +1356,7 @@ type CsfbConfig struct {
 func (x *CsfbConfig) Reset() {
 	*x = CsfbConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[14]
+		mi := &file_mconfigs_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1306,7 +1369,7 @@ func (x *CsfbConfig) String() string {
 func (*CsfbConfig) ProtoMessage() {}
 
 func (x *CsfbConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[14]
+	mi := &file_mconfigs_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1319,7 +1382,7 @@ func (x *CsfbConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CsfbConfig.ProtoReflect.Descriptor instead.
 func (*CsfbConfig) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{14}
+	return file_mconfigs_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *CsfbConfig) GetLogLevel() protos.LogLevel {
@@ -1350,7 +1413,7 @@ type EapAkaConfig_Timeouts struct {
 func (x *EapAkaConfig_Timeouts) Reset() {
 	*x = EapAkaConfig_Timeouts{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[15]
+		mi := &file_mconfigs_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1363,7 +1426,7 @@ func (x *EapAkaConfig_Timeouts) String() string {
 func (*EapAkaConfig_Timeouts) ProtoMessage() {}
 
 func (x *EapAkaConfig_Timeouts) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[15]
+	mi := &file_mconfigs_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1407,6 +1470,77 @@ func (x *EapAkaConfig_Timeouts) GetSessionAuthenticatedMs() uint32 {
 	return 0
 }
 
+type EapProviderConfig_Timeouts struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ChallengeMs            uint32 `protobuf:"varint,1,opt,name=ChallengeMs,proto3" json:"ChallengeMs,omitempty"`
+	ErrorNotificationMs    uint32 `protobuf:"varint,2,opt,name=ErrorNotificationMs,proto3" json:"ErrorNotificationMs,omitempty"`
+	SessionMs              uint32 `protobuf:"varint,3,opt,name=SessionMs,proto3" json:"SessionMs,omitempty"`
+	SessionAuthenticatedMs uint32 `protobuf:"varint,4,opt,name=SessionAuthenticatedMs,proto3" json:"SessionAuthenticatedMs,omitempty"`
+}
+
+func (x *EapProviderConfig_Timeouts) Reset() {
+	*x = EapProviderConfig_Timeouts{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_mconfigs_proto_msgTypes[17]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *EapProviderConfig_Timeouts) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*EapProviderConfig_Timeouts) ProtoMessage() {}
+
+func (x *EapProviderConfig_Timeouts) ProtoReflect() protoreflect.Message {
+	mi := &file_mconfigs_proto_msgTypes[17]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use EapProviderConfig_Timeouts.ProtoReflect.Descriptor instead.
+func (*EapProviderConfig_Timeouts) Descriptor() ([]byte, []int) {
+	return file_mconfigs_proto_rawDescGZIP(), []int{8, 0}
+}
+
+func (x *EapProviderConfig_Timeouts) GetChallengeMs() uint32 {
+	if x != nil {
+		return x.ChallengeMs
+	}
+	return 0
+}
+
+func (x *EapProviderConfig_Timeouts) GetErrorNotificationMs() uint32 {
+	if x != nil {
+		return x.ErrorNotificationMs
+	}
+	return 0
+}
+
+func (x *EapProviderConfig_Timeouts) GetSessionMs() uint32 {
+	if x != nil {
+		return x.SessionMs
+	}
+	return 0
+}
+
+func (x *EapProviderConfig_Timeouts) GetSessionAuthenticatedMs() uint32 {
+	if x != nil {
+		return x.SessionAuthenticatedMs
+	}
+	return 0
+}
+
 type HSSConfig_SubscriptionProfile struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1421,7 +1555,7 @@ type HSSConfig_SubscriptionProfile struct {
 func (x *HSSConfig_SubscriptionProfile) Reset() {
 	*x = HSSConfig_SubscriptionProfile{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_mconfigs_proto_msgTypes[16]
+		mi := &file_mconfigs_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1434,7 +1568,7 @@ func (x *HSSConfig_SubscriptionProfile) String() string {
 func (*HSSConfig_SubscriptionProfile) ProtoMessage() {}
 
 func (x *HSSConfig_SubscriptionProfile) ProtoReflect() protoreflect.Message {
-	mi := &file_mconfigs_proto_msgTypes[16]
+	mi := &file_mconfigs_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1447,7 +1581,7 @@ func (x *HSSConfig_SubscriptionProfile) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HSSConfig_SubscriptionProfile.ProtoReflect.Descriptor instead.
 func (*HSSConfig_SubscriptionProfile) Descriptor() ([]byte, []int) {
-	return file_mconfigs_proto_rawDescGZIP(), []int{11, 0}
+	return file_mconfigs_proto_rawDescGZIP(), []int{12, 0}
 }
 
 func (x *HSSConfig_SubscriptionProfile) GetMaxUlBitRate() uint64 {
@@ -1624,6 +1758,28 @@ var file_mconfigs_proto_rawDesc = []byte{
 	0x6f, 0x6e, 0x41, 0x75, 0x74, 0x68, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x74, 0x65, 0x64, 0x4d,
 	0x73, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x16, 0x53, 0x65, 0x73, 0x73, 0x69, 0x6f, 0x6e,
 	0x41, 0x75, 0x74, 0x68, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x74, 0x65, 0x64, 0x4d, 0x73, 0x22,
+	0xdd, 0x02, 0x0a, 0x11, 0x45, 0x61, 0x70, 0x50, 0x72, 0x6f, 0x76, 0x69, 0x64, 0x65, 0x72, 0x43,
+	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x32, 0x0a, 0x09, 0x6c, 0x6f, 0x67, 0x5f, 0x6c, 0x65, 0x76,
+	0x65, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x15, 0x2e, 0x6d, 0x61, 0x67, 0x6d, 0x61,
+	0x2e, 0x6f, 0x72, 0x63, 0x38, 0x72, 0x2e, 0x4c, 0x6f, 0x67, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x52,
+	0x08, 0x6c, 0x6f, 0x67, 0x4c, 0x65, 0x76, 0x65, 0x6c, 0x12, 0x43, 0x0a, 0x07, 0x74, 0x69, 0x6d,
+	0x65, 0x6f, 0x75, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x29, 0x2e, 0x6d, 0x61, 0x67,
+	0x6d, 0x61, 0x2e, 0x6d, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x45, 0x61, 0x70, 0x50, 0x72,
+	0x6f, 0x76, 0x69, 0x64, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x54, 0x69, 0x6d,
+	0x65, 0x6f, 0x75, 0x74, 0x73, 0x52, 0x07, 0x74, 0x69, 0x6d, 0x65, 0x6f, 0x75, 0x74, 0x12, 0x18,
+	0x0a, 0x07, 0x50, 0x6c, 0x6d, 0x6e, 0x49, 0x64, 0x73, 0x18, 0x03, 0x20, 0x03, 0x28, 0x09, 0x52,
+	0x07, 0x50, 0x6c, 0x6d, 0x6e, 0x49, 0x64, 0x73, 0x1a, 0xb4, 0x01, 0x0a, 0x08, 0x54, 0x69, 0x6d,
+	0x65, 0x6f, 0x75, 0x74, 0x73, 0x12, 0x20, 0x0a, 0x0b, 0x43, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e,
+	0x67, 0x65, 0x4d, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x0b, 0x43, 0x68, 0x61, 0x6c,
+	0x6c, 0x65, 0x6e, 0x67, 0x65, 0x4d, 0x73, 0x12, 0x30, 0x0a, 0x13, 0x45, 0x72, 0x72, 0x6f, 0x72,
+	0x4e, 0x6f, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x4d, 0x73, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0d, 0x52, 0x13, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x4e, 0x6f, 0x74, 0x69, 0x66,
+	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x4d, 0x73, 0x12, 0x1c, 0x0a, 0x09, 0x53, 0x65, 0x73,
+	0x73, 0x69, 0x6f, 0x6e, 0x4d, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x09, 0x53, 0x65,
+	0x73, 0x73, 0x69, 0x6f, 0x6e, 0x4d, 0x73, 0x12, 0x36, 0x0a, 0x16, 0x53, 0x65, 0x73, 0x73, 0x69,
+	0x6f, 0x6e, 0x41, 0x75, 0x74, 0x68, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x74, 0x65, 0x64, 0x4d,
+	0x73, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x16, 0x53, 0x65, 0x73, 0x73, 0x69, 0x6f, 0x6e,
+	0x41, 0x75, 0x74, 0x68, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x74, 0x65, 0x64, 0x4d, 0x73, 0x22,
 	0xc6, 0x02, 0x0a, 0x09, 0x41, 0x41, 0x41, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x32, 0x0a,
 	0x09, 0x6c, 0x6f, 0x67, 0x5f, 0x6c, 0x65, 0x76, 0x65, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e,
 	0x32, 0x15, 0x2e, 0x6d, 0x61, 0x67, 0x6d, 0x61, 0x2e, 0x6f, 0x72, 0x63, 0x38, 0x72, 0x2e, 0x4c,
@@ -1759,7 +1915,7 @@ func file_mconfigs_proto_rawDescGZIP() []byte {
 }
 
 var file_mconfigs_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_mconfigs_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
+var file_mconfigs_proto_msgTypes = make([]protoimpl.MessageInfo, 20)
 var file_mconfigs_proto_goTypes = []interface{}{
 	(GyInitMethod)(0),                     // 0: magma.mconfig.GyInitMethod
 	(*DiamClientConfig)(nil),              // 1: magma.mconfig.DiamClientConfig
@@ -1770,47 +1926,51 @@ var file_mconfigs_proto_goTypes = []interface{}{
 	(*SessionProxyConfig)(nil),            // 6: magma.mconfig.SessionProxyConfig
 	(*SwxConfig)(nil),                     // 7: magma.mconfig.SwxConfig
 	(*EapAkaConfig)(nil),                  // 8: magma.mconfig.EapAkaConfig
-	(*AAAConfig)(nil),                     // 9: magma.mconfig.AAAConfig
-	(*RadiusConfig)(nil),                  // 10: magma.mconfig.RadiusConfig
-	(*GatewayHealthConfig)(nil),           // 11: magma.mconfig.GatewayHealthConfig
-	(*HSSConfig)(nil),                     // 12: magma.mconfig.HSSConfig
-	(*RadiusdConfig)(nil),                 // 13: magma.mconfig.RadiusdConfig
-	(*SCTPClientConfig)(nil),              // 14: magma.mconfig.SCTPClientConfig
-	(*CsfbConfig)(nil),                    // 15: magma.mconfig.CsfbConfig
-	(*EapAkaConfig_Timeouts)(nil),         // 16: magma.mconfig.EapAkaConfig.Timeouts
-	(*HSSConfig_SubscriptionProfile)(nil), // 17: magma.mconfig.HSSConfig.SubscriptionProfile
-	nil,                                   // 18: magma.mconfig.HSSConfig.SubProfilesEntry
-	(protos.LogLevel)(0),                  // 19: magma.orc8r.LogLevel
+	(*EapProviderConfig)(nil),             // 9: magma.mconfig.EapProviderConfig
+	(*AAAConfig)(nil),                     // 10: magma.mconfig.AAAConfig
+	(*RadiusConfig)(nil),                  // 11: magma.mconfig.RadiusConfig
+	(*GatewayHealthConfig)(nil),           // 12: magma.mconfig.GatewayHealthConfig
+	(*HSSConfig)(nil),                     // 13: magma.mconfig.HSSConfig
+	(*RadiusdConfig)(nil),                 // 14: magma.mconfig.RadiusdConfig
+	(*SCTPClientConfig)(nil),              // 15: magma.mconfig.SCTPClientConfig
+	(*CsfbConfig)(nil),                    // 16: magma.mconfig.CsfbConfig
+	(*EapAkaConfig_Timeouts)(nil),         // 17: magma.mconfig.EapAkaConfig.Timeouts
+	(*EapProviderConfig_Timeouts)(nil),    // 18: magma.mconfig.EapProviderConfig.Timeouts
+	(*HSSConfig_SubscriptionProfile)(nil), // 19: magma.mconfig.HSSConfig.SubscriptionProfile
+	nil,                                   // 20: magma.mconfig.HSSConfig.SubProfilesEntry
+	(protos.LogLevel)(0),                  // 21: magma.orc8r.LogLevel
 }
 var file_mconfigs_proto_depIdxs = []int32{
-	19, // 0: magma.mconfig.S6aConfig.log_level:type_name -> magma.orc8r.LogLevel
+	21, // 0: magma.mconfig.S6aConfig.log_level:type_name -> magma.orc8r.LogLevel
 	1,  // 1: magma.mconfig.S6aConfig.server:type_name -> magma.mconfig.DiamClientConfig
 	1,  // 2: magma.mconfig.GxConfig.server:type_name -> magma.mconfig.DiamClientConfig
 	1,  // 3: magma.mconfig.GxConfig.servers:type_name -> magma.mconfig.DiamClientConfig
 	1,  // 4: magma.mconfig.GyConfig.server:type_name -> magma.mconfig.DiamClientConfig
 	0,  // 5: magma.mconfig.GyConfig.init_method:type_name -> magma.mconfig.GyInitMethod
 	1,  // 6: magma.mconfig.GyConfig.servers:type_name -> magma.mconfig.DiamClientConfig
-	19, // 7: magma.mconfig.SessionProxyConfig.log_level:type_name -> magma.orc8r.LogLevel
+	21, // 7: magma.mconfig.SessionProxyConfig.log_level:type_name -> magma.orc8r.LogLevel
 	4,  // 8: magma.mconfig.SessionProxyConfig.gx:type_name -> magma.mconfig.GxConfig
 	5,  // 9: magma.mconfig.SessionProxyConfig.gy:type_name -> magma.mconfig.GyConfig
-	19, // 10: magma.mconfig.SwxConfig.log_level:type_name -> magma.orc8r.LogLevel
+	21, // 10: magma.mconfig.SwxConfig.log_level:type_name -> magma.orc8r.LogLevel
 	1,  // 11: magma.mconfig.SwxConfig.server:type_name -> magma.mconfig.DiamClientConfig
 	1,  // 12: magma.mconfig.SwxConfig.servers:type_name -> magma.mconfig.DiamClientConfig
-	19, // 13: magma.mconfig.EapAkaConfig.log_level:type_name -> magma.orc8r.LogLevel
-	16, // 14: magma.mconfig.EapAkaConfig.timeout:type_name -> magma.mconfig.EapAkaConfig.Timeouts
-	19, // 15: magma.mconfig.AAAConfig.log_level:type_name -> magma.orc8r.LogLevel
-	10, // 16: magma.mconfig.AAAConfig.RadiusConfig:type_name -> magma.mconfig.RadiusConfig
-	2,  // 17: magma.mconfig.HSSConfig.server:type_name -> magma.mconfig.DiamServerConfig
-	18, // 18: magma.mconfig.HSSConfig.sub_profiles:type_name -> magma.mconfig.HSSConfig.SubProfilesEntry
-	17, // 19: magma.mconfig.HSSConfig.default_sub_profile:type_name -> magma.mconfig.HSSConfig.SubscriptionProfile
-	19, // 20: magma.mconfig.CsfbConfig.log_level:type_name -> magma.orc8r.LogLevel
-	14, // 21: magma.mconfig.CsfbConfig.client:type_name -> magma.mconfig.SCTPClientConfig
-	17, // 22: magma.mconfig.HSSConfig.SubProfilesEntry.value:type_name -> magma.mconfig.HSSConfig.SubscriptionProfile
-	23, // [23:23] is the sub-list for method output_type
-	23, // [23:23] is the sub-list for method input_type
-	23, // [23:23] is the sub-list for extension type_name
-	23, // [23:23] is the sub-list for extension extendee
-	0,  // [0:23] is the sub-list for field type_name
+	21, // 13: magma.mconfig.EapAkaConfig.log_level:type_name -> magma.orc8r.LogLevel
+	17, // 14: magma.mconfig.EapAkaConfig.timeout:type_name -> magma.mconfig.EapAkaConfig.Timeouts
+	21, // 15: magma.mconfig.EapProviderConfig.log_level:type_name -> magma.orc8r.LogLevel
+	18, // 16: magma.mconfig.EapProviderConfig.timeout:type_name -> magma.mconfig.EapProviderConfig.Timeouts
+	21, // 17: magma.mconfig.AAAConfig.log_level:type_name -> magma.orc8r.LogLevel
+	11, // 18: magma.mconfig.AAAConfig.RadiusConfig:type_name -> magma.mconfig.RadiusConfig
+	2,  // 19: magma.mconfig.HSSConfig.server:type_name -> magma.mconfig.DiamServerConfig
+	20, // 20: magma.mconfig.HSSConfig.sub_profiles:type_name -> magma.mconfig.HSSConfig.SubProfilesEntry
+	19, // 21: magma.mconfig.HSSConfig.default_sub_profile:type_name -> magma.mconfig.HSSConfig.SubscriptionProfile
+	21, // 22: magma.mconfig.CsfbConfig.log_level:type_name -> magma.orc8r.LogLevel
+	15, // 23: magma.mconfig.CsfbConfig.client:type_name -> magma.mconfig.SCTPClientConfig
+	19, // 24: magma.mconfig.HSSConfig.SubProfilesEntry.value:type_name -> magma.mconfig.HSSConfig.SubscriptionProfile
+	25, // [25:25] is the sub-list for method output_type
+	25, // [25:25] is the sub-list for method input_type
+	25, // [25:25] is the sub-list for extension type_name
+	25, // [25:25] is the sub-list for extension extendee
+	0,  // [0:25] is the sub-list for field type_name
 }
 
 func init() { file_mconfigs_proto_init() }
@@ -1916,7 +2076,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AAAConfig); i {
+			switch v := v.(*EapProviderConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1928,7 +2088,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RadiusConfig); i {
+			switch v := v.(*AAAConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1940,7 +2100,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GatewayHealthConfig); i {
+			switch v := v.(*RadiusConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1952,7 +2112,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HSSConfig); i {
+			switch v := v.(*GatewayHealthConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1964,7 +2124,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RadiusdConfig); i {
+			switch v := v.(*HSSConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1976,7 +2136,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SCTPClientConfig); i {
+			switch v := v.(*RadiusdConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1988,7 +2148,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CsfbConfig); i {
+			switch v := v.(*SCTPClientConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2000,7 +2160,7 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*EapAkaConfig_Timeouts); i {
+			switch v := v.(*CsfbConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2012,6 +2172,30 @@ func file_mconfigs_proto_init() {
 			}
 		}
 		file_mconfigs_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*EapAkaConfig_Timeouts); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_mconfigs_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*EapProviderConfig_Timeouts); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_mconfigs_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*HSSConfig_SubscriptionProfile); i {
 			case 0:
 				return &v.state
@@ -2030,7 +2214,7 @@ func file_mconfigs_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_mconfigs_proto_rawDesc,
 			NumEnums:      1,
-			NumMessages:   18,
+			NumMessages:   20,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

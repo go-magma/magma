@@ -62,3 +62,14 @@ func (config *EapAkaConfig_Timeouts) ToMconfig() *mconfig.EapAkaConfig_Timeouts 
 		SessionAuthenticatedMs: config.GetSessionAuthenticatedMs(),
 	}
 }
+
+// ToMconfig creates new mconfig.EapProviderConfig_Timeouts, copies config proto to a managed config proto & returns
+// the new mconfig.EapProviderConfig_Timeouts
+func (config *EapProviderConfig_Timeouts) ToMconfig() *mconfig.EapProviderConfig_Timeouts {
+	return &mconfig.EapProviderConfig_Timeouts{
+		ChallengeMs:            config.GetChallengeMs(),
+		ErrorNotificationMs:    config.GetErrorNotificationMs(),
+		SessionMs:              config.GetSessionMs(),
+		SessionAuthenticatedMs: config.GetSessionAuthenticatedMs(),
+	}
+}
